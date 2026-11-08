@@ -1,9 +1,13 @@
+
 import json
+import time
 
 from vectoredb import search
-from llm import ask_llm, GENERATOR_MODEL , ROUTER_MODEL , JUDGE_MODEL
+from llm import ask_llm, GENERATOR_MODEL, ROUTER_MODEL, JUDGE_MODEL
 from web_search import web_search
+from logger_config import setup_logger
 
+logger = setup_logger()
 
 
 SYSTEM = (
@@ -19,8 +23,8 @@ def parse_json(text):
     try:
         return json.loads(text)
     except json.JSONDecodeError as e:
+        logger.error("LLM returned invalid JSON")
         raise ValueError(f"Invalid JSON returned by LLM: {text}") from e
-
 
 
 def route_question(question):
@@ -42,6 +46,7 @@ Return JSON only:
 
 Question: {question}
 """
+
     result = ask_llm(
         prompt,
         model=ROUTER_MODEL,
@@ -52,7 +57,12 @@ Question: {question}
     decision = parse_json(result)
     route = decision.get("route", "search")
 
-    return route if route in ("search", "direct") else "search"
+    if route not in ("search", "direct"):
+        logger.warning("Invalid route %r; defaulting to search", route)
+        route = "search"
+
+    logger.info("Question routed to: %s", route)
+    return route
 
 
 def classify_retrieval(question):
@@ -84,8 +94,13 @@ Question: {question}
     hop_type = decision.get("hop_type", "single-hop")
 
     if hop_type not in ("single-hop", "multi-hop"):
+        logger.warning(
+            "Invalid hop type %r; defaulting to single-hop",
+            hop_type
+        )
         return "single-hop"
 
+    logger.info("Retrieval classified as: %s", hop_type)
     return hop_type
 
 
@@ -112,6 +127,9 @@ Question:
     questions = data.get("sub_questions", [])
 
     if not isinstance(questions, list):
+        logger.warning(
+            "Sub-questions were not a list; using original question"
+        )
         return [question]
 
     questions = [
@@ -120,22 +138,48 @@ Question:
         if isinstance(q, str) and q.strip()
     ]
 
-    return questions[:3] if questions else [question]
+    selected = questions[:3] if questions else [question]
+
+    logger.info(
+        "Question decomposed into %d sub-questions",
+        len(selected)
+    )
+
+    return selected
+
 
 def retrieve_chunks(question, k=5):
     hop_type = classify_retrieval(question)
 
     if hop_type == "single-hop":
+        logger.debug("Starting single-hop retrieval (k=%d)", k)
+
         chunks = search(question, k=k)
+
+        logger.info(
+            "Single-hop retrieved %d chunks",
+            len(chunks)
+        )
+
         return chunks, hop_type
 
     sub_questions = decompose_question(question)
+
+    logger.debug(
+        "Starting multi-hop retrieval with %d searches",
+        len(sub_questions)
+    )
 
     all_chunks = []
     seen = set()
 
     for sub_question in sub_questions:
         chunks = search(sub_question, k=k)
+
+        logger.debug(
+            "Sub-question retrieval returned %d chunks",
+            len(chunks)
+        )
 
         for chunk in chunks:
             key = chunk.get("id") or (
@@ -148,12 +192,20 @@ def retrieve_chunks(question, k=5):
                 seen.add(key)
                 all_chunks.append(chunk)
 
+    logger.info(
+        "Multi-hop retrieved %d unique chunks",
+        len(all_chunks)
+    )
+
     return all_chunks, hop_type
 
 
 def evaluate_retrieval(question, chunks):
     """Judge whether the retrieved chunks are relevant to the question."""
+
     if not chunks:
+        logger.warning("Retrieval evaluation received no chunks")
+
         return {
             "relevant": False,
             "rewritten_query": question,
@@ -179,20 +231,24 @@ Question:
 Retrieved passages:
 {context}
 """
+
     result = ask_llm(
         prompt,
         model=JUDGE_MODEL,
         temperature=0,
         json_mode=True,
     )
+
     decision = parse_json(result)
 
+    relevant = decision.get("relevant") is True
+
+    logger.info("Retrieval relevance: %s", relevant)
+
     return {
-        "relevant": decision.get("relevant") is True,
+        "relevant": relevant,
         "rewritten_query": decision.get("rewritten_query") or question,
     }
-
-
 
 
 def build_prompt(question, chunks):
@@ -208,7 +264,6 @@ def build_prompt(question, chunks):
     )
 
 
-
 def build_web_context(results):
     return "\n\n".join(
         f"[{i}] {result['title']}\n"
@@ -217,10 +272,20 @@ def build_web_context(results):
         for i, result in enumerate(results, start=1)
     )
 
+
 def answer_from_web(question):
+    logger.warning("Falling back to web search")
+
     results = web_search(question, max_results=5)
 
+    logger.info(
+        "Web search returned %d results",
+        len(results)
+    )
+
     if not results:
+        logger.warning("No web search results available")
+
         return {
             "answer": "I could not find a useful answer in the documents or on the web.",
             "sources": [],
@@ -252,12 +317,13 @@ Rules:
         return_meta=True,
     )
 
+    logger.info("Web-based answer generated")
+
     return {
         "answer": text,
         "sources": [result["url"] for result in results],
         "meta": meta,
     }
-
 
 
 def format_history(history):
@@ -272,7 +338,15 @@ def format_history(history):
 
 def rewrite_query(question, history=None):
     if not history:
+        logger.debug(
+            "No conversation history; query rewrite skipped"
+        )
         return question
+
+    logger.debug(
+        "Rewriting query using %d history messages",
+        min(len(history), 6)
+    )
 
     conversation = format_history(history)
 
@@ -295,16 +369,19 @@ Latest question: {question}
     rewritten = ask_llm(
         prompt,
         model=ROUTER_MODEL,
-        temperature=0
+        temperature=0,
     )
+
+    logger.info("Standalone question rewrite completed")
 
     return rewritten.strip() or question
 
 
-   
-
-
 def answer(question, k=5, history=None):
+    start_time = time.perf_counter()
+
+    logger.info("RAG request started (k=%d)", k)
+
     history = history or []
 
     standalone_question = rewrite_query(question, history)
@@ -313,10 +390,17 @@ def answer(question, k=5, history=None):
 
     # 1. Direct answer
     if route == "direct":
+        logger.debug("Generating direct answer")
+
         text, meta = ask_llm(
             standalone_question,
             model=GENERATOR_MODEL,
             return_meta=True,
+        )
+
+        logger.info(
+            "RAG completed | route=direct | duration=%.2fs",
+            time.perf_counter() - start_time
         )
 
         return {
@@ -332,29 +416,64 @@ def answer(question, k=5, history=None):
         }
 
     # 2. Single-Hop or Multi-Hop retrieval
-    chunks, hop_type = retrieve_chunks(standalone_question, k=k)
+    chunks, hop_type = retrieve_chunks(
+        standalone_question,
+        k=k
+    )
 
-    evaluation = evaluate_retrieval(standalone_question, chunks)
+    evaluation = evaluate_retrieval(
+        standalone_question,
+        chunks
+    )
+
     retried = False
 
     # 3. Retry if retrieval is weak
     if not evaluation["relevant"]:
+        logger.warning(
+            "Initial retrieval judged insufficient; retrying"
+        )
+
         new_query = evaluation["rewritten_query"]
 
         retry_chunks = search(new_query, k=k)
+
+        logger.info(
+            "Retry retrieved %d chunks",
+            len(retry_chunks)
+        )
 
         retry_evaluation = evaluate_retrieval(
             standalone_question,
             retry_chunks,
         )
+
         retried = True
+
+        logger.info(
+            "Retry relevance: %s",
+            retry_evaluation["relevant"]
+        )
 
         if retry_evaluation["relevant"]:
             chunks = retry_chunks
 
         else:
             # 4. Web Search Fallback
-            web_result = answer_from_web(standalone_question)
+            logger.warning(
+                "Retry insufficient; switching to web fallback"
+            )
+
+            web_result = answer_from_web(
+                standalone_question
+            )
+
+            logger.info(
+                "RAG completed | route=web_search | "
+                "hop=%s | retried=True | duration=%.2fs",
+                hop_type,
+                time.perf_counter() - start_time
+            )
 
             return {
                 "question": question,
@@ -369,11 +488,25 @@ def answer(question, k=5, history=None):
             }
 
     # 5. Generate answer from retrieved PDF chunks
+    logger.debug(
+        "Generating PDF-based answer from %d chunks",
+        len(chunks)
+    )
+
     text, meta = ask_llm(
         build_prompt(standalone_question, chunks),
         model=GENERATOR_MODEL,
         system=SYSTEM,
         return_meta=True,
+    )
+
+    logger.info(
+        "RAG completed | route=search | hop=%s | "
+        "retried=%s | chunks=%d | duration=%.2fs",
+        hop_type,
+        retried,
+        len(chunks),
+        time.perf_counter() - start_time
     )
 
     return {
@@ -392,16 +525,18 @@ def answer(question, k=5, history=None):
     }
 
 
-
 if __name__ == "__main__":
-
     history = []
+
+    logger.info("Adaptive RAG application started")
 
     while True:
         q = input("\nQuestion (or q to quit): ").strip()
 
         if q.lower() == "q":
+            logger.info("Adaptive RAG application stopped")
             break
+
         if not q:
             continue
 
@@ -417,11 +552,18 @@ if __name__ == "__main__":
             print("Meta:", result["meta"])
 
             # Save conversation in history
-            history.append({"role": "user", "content": q})
+            history.append({
+                "role": "user",
+                "content": q
+            })
+
             history.append({
                 "role": "assistant",
                 "content": result["answer"]
             })
 
         except Exception as e:
+            logger.exception(
+                "Error while processing RAG question"
+            )
             print(f"Error: {e}")
