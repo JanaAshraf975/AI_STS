@@ -42,6 +42,8 @@ def index_chunks(chunks, reset=False, batch=256):
     return collection.count()
 
 
+
+
 def search(question, k=5, source=None):
     """source: optional, limits the search to one PDF"""
     collection = get_collection()
@@ -64,3 +66,39 @@ def search(question, k=5, source=None):
 
 def count():
     return get_collection().count()
+
+
+
+
+
+
+def get_all_chunks(batch_size=1000, source=None):
+    collection = get_collection()
+
+    all_chunks = []
+    offset = 0
+
+    while True:
+        res = collection.get(
+            limit=batch_size,
+            offset=offset,
+            where={"source": source} if source else None,
+            include=["documents", "metadatas"]
+        )
+
+        if not res["ids"]:
+            break
+
+        for i in range(len(res["ids"])):
+            metadata = res["metadatas"][i]
+
+            all_chunks.append({
+                "id": res["ids"][i],
+                "text": res["documents"][i],
+                "source": metadata["source"],
+                "page": metadata["page"]
+            })
+
+        offset += len(res["ids"])
+
+    return all_chunks

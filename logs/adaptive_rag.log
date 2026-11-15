@@ -1,0 +1,12 @@
+2026-11-15 12:42:13 | INFO | adaptive_rag | Adaptive RAG application started
+2026-11-15 12:42:42 | INFO | adaptive_rag | New question received
+2026-11-15 12:42:42 | DEBUG | adaptive_rag | Conversation history: 0 messages
+2026-11-15 12:42:42 | DEBUG | adaptive_rag | No conversation history to rewrite query
+2026-11-15 12:42:43 | INFO | adaptive_rag | Available PDF documents: 3
+2026-11-15 12:42:45 | INFO | adaptive_rag | Question routed to: search
+2026-11-15 12:42:45 | INFO | adaptive_rag | Selected route: search
+2026-11-15 12:42:46 | INFO | adaptive_rag | Retrieval type: single-hop
+2026-11-15 12:42:50 | INFO | adaptive_rag | Single-hop retrieval: 5 chunks retrieved
+2026-11-15 12:42:51 | INFO | adaptive_rag | Retrieval evaluation: relevant=True
+2026-11-15 12:42:52 | INFO | adaptive_rag | Answer generated successfully
+2026-11-15 12:42:52 | DEBUG | adaptive_rag | Conversation history now contains 2 messages
