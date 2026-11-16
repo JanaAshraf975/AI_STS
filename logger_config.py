@@ -1,5 +1,4 @@
 
-import json
 import logging
 import uuid
 from pathlib import Path
@@ -20,27 +19,33 @@ class RequestIDFilter(logging.Filter):
         return True
 
 
-# Format log records as structured JSON
-class JSONFormatter(logging.Formatter):
+# Format log records as readable text
+class TextFormatter(logging.Formatter):
 
     def format(self, record):
 
-        log_data = {
-            "timestamp": datetime.fromtimestamp(
-                record.created, tz=timezone.utc
-            ).isoformat(),
-            "request_id": record.request_id,
-            "level": record.levelname,
-            "component": getattr(record, "component", record.name),
-            "event": getattr(record, "event", "general"),
-            "message": record.getMessage(),
-            "details": getattr(record, "details", {})
-        }
+        timestamp = datetime.fromtimestamp(
+            record.created, tz=timezone.utc
+        ).isoformat()
+
+        component = getattr(record, "component", record.name)
+        event = getattr(record, "event", "general")
+        details = getattr(record, "details", {})
+
+        log_message = (
+            f"{timestamp} | "
+            f"{record.levelname} | "
+            f"Request ID: {record.request_id} | "
+            f"Component: {component} | "
+            f"Event: {event} | "
+            f"Message: {record.getMessage()} | "
+            f"Details: {details}"
+        )
 
         if record.exc_info:
-            log_data["error"] = self.formatException(record.exc_info)
+            log_message += "\n" + self.formatException(record.exc_info)
 
-        return json.dumps(log_data, ensure_ascii=False, default=str)
+        return log_message
 
 
 # Configure logging
@@ -50,7 +55,7 @@ def setup_logging():
     log_dir = Path(__file__).resolve().parent / "logs"
     log_dir.mkdir(exist_ok=True)
 
-    formatter = JSONFormatter()
+    formatter = TextFormatter()
     request_filter = RequestIDFilter()
 
     # Console handler
@@ -61,7 +66,7 @@ def setup_logging():
 
     # Application log handler
     app_file = RotatingFileHandler(
-        log_dir / "app.jsonl",
+        log_dir / "app.log",
         maxBytes=5_000_000,
         backupCount=5,
         encoding="utf-8"
@@ -72,7 +77,7 @@ def setup_logging():
 
     # Error log handler
     error_file = RotatingFileHandler(
-        log_dir / "error.jsonl",
+        log_dir / "error.log",
         maxBytes=5_000_000,
         backupCount=5,
         encoding="utf-8"
@@ -87,7 +92,9 @@ def setup_logging():
     logger.propagate = False
 
     # Clear existing handlers to avoid duplicates
-    logger.handlers.clear()
+    for handler in logger.handlers[:]:
+        logger.removeHandler(handler)
+        handler.close()
 
     # Add handlers
     logger.addHandler(console)
