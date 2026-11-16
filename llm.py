@@ -9,13 +9,24 @@ from logger_config import log_event
 
 load_dotenv()
 
+# --------------------------------------------------
 # Model configuration
+# --------------------------------------------------
+
 ROUTER_MODEL = "openai/gpt-4o-mini"
 GENERATOR_MODEL = "openai/gpt-4o-mini"
 JUDGE_MODEL = "openai/gpt-4o-mini"
 
+# USD per 1 million tokens
+INPUT_PRICE_PER_MILLION = 0.15
+OUTPUT_PRICE_PER_MILLION = 0.60
+
 _client = None
 
+
+# --------------------------------------------------
+# OpenRouter client
+# --------------------------------------------------
 
 def _get_client():
     global _client
@@ -60,6 +71,46 @@ def _get_client():
     return _client
 
 
+# --------------------------------------------------
+# Token cost calculation
+# --------------------------------------------------
+
+def calculate_token_cost(prompt_tokens, completion_tokens):
+    """
+    Calculate estimated LLM API cost in USD.
+
+    Returns None for costs when token usage is unavailable.
+    """
+
+    input_cost = (
+        prompt_tokens * INPUT_PRICE_PER_MILLION / 1_000_000
+        if prompt_tokens is not None
+        else None
+    )
+
+    output_cost = (
+        completion_tokens * OUTPUT_PRICE_PER_MILLION / 1_000_000
+        if completion_tokens is not None
+        else None
+    )
+
+    total_cost = (
+        input_cost + output_cost
+        if input_cost is not None and output_cost is not None
+        else None
+    )
+
+    return {
+        "input_cost_usd": input_cost,
+        "output_cost_usd": output_cost,
+        "total_cost_usd": total_cost,
+    }
+
+
+# --------------------------------------------------
+# Ask LLM
+# --------------------------------------------------
+
 def ask_llm(
     prompt,
     model=GENERATOR_MODEL,
@@ -71,8 +122,16 @@ def ask_llm(
     return_meta=False
 ):
     """
-    Sends a prompt to OpenRouter and returns the answer text.
-    If return_meta=True, returns (text, meta).
+    Send a prompt to OpenRouter.
+
+    If return_meta=False:
+        Returns answer text.
+
+    If return_meta=True:
+        Returns (answer text, metadata).
+
+    Metadata includes token usage, latency,
+    and estimated input/output costs.
     """
 
     messages = []
@@ -130,7 +189,9 @@ def ask_llm(
                 max_attempts=retries
             )
 
-            resp = _get_client().chat.completions.create(**kwargs)
+            resp = _get_client().chat.completions.create(
+                **kwargs
+            )
 
             latency = time.perf_counter() - start
 
@@ -139,17 +200,43 @@ def ask_llm(
             usage = resp.usage
 
             prompt_tokens = getattr(
-                usage, "prompt_tokens", None
+                usage,
+                "prompt_tokens",
+                None
             )
 
             completion_tokens = getattr(
-                usage, "completion_tokens", None
+                usage,
+                "completion_tokens",
+                None
             )
 
             total_tokens = getattr(
-                usage, "total_tokens", None
+                usage,
+                "total_tokens",
+                None
             )
 
+            if (
+                total_tokens is None
+                and prompt_tokens is not None
+                and completion_tokens is not None
+            ):
+                total_tokens = (
+                    prompt_tokens + completion_tokens
+                )
+
+            # Calculate estimated token costs
+            costs = calculate_token_cost(
+                prompt_tokens,
+                completion_tokens
+            )
+
+            input_cost = costs["input_cost_usd"]
+            output_cost = costs["output_cost_usd"]
+            total_cost = costs["total_cost_usd"]
+
+            # Log token usage and cost
             log_event(
                 logging.INFO,
                 "llm",
@@ -161,6 +248,9 @@ def ask_llm(
                 prompt_tokens=prompt_tokens,
                 completion_tokens=completion_tokens,
                 total_tokens=total_tokens,
+                input_cost_usd=input_cost,
+                output_cost_usd=output_cost,
+                total_cost_usd=total_cost,
                 response_length=len(text)
             )
 
@@ -172,6 +262,10 @@ def ask_llm(
                 "latency": round(latency, 3),
                 "prompt_tokens": prompt_tokens,
                 "completion_tokens": completion_tokens,
+                "total_tokens": total_tokens,
+                "input_cost_usd": input_cost,
+                "output_cost_usd": output_cost,
+                "total_cost_usd": total_cost,
             }
 
             return text, meta
@@ -190,7 +284,8 @@ def ask_llm(
                 max_attempts=retries,
                 error_type=type(e).__name__,
                 latency_ms=round(
-                    (time.perf_counter() - start) * 1000, 2
+                    (time.perf_counter() - start) * 1000,
+                    2
                 )
             )
 
@@ -215,8 +310,10 @@ def ask_llm(
         "LLM API request failed after all attempts",
         model=model,
         attempts=retries,
-        error_type=type(last_error).__name__
-        if last_error else None
+        error_type=(
+            type(last_error).__name__
+            if last_error else None
+        )
     )
 
     raise RuntimeError(
@@ -224,11 +321,16 @@ def ask_llm(
     )
 
 
+# --------------------------------------------------
+# Interactive testing
+# --------------------------------------------------
+
 if __name__ == "__main__":
 
     while True:
+
         question = input(
-            "Enter your question (or 'q' to quit): "
+            "\nEnter your question (or 'q' to quit): "
         ).strip()
 
         if question.lower() == "q":
@@ -237,13 +339,41 @@ if __name__ == "__main__":
         if not question:
             continue
 
-        answer, meta = ask_llm(
-            question,
-            return_meta=True
-        )
+        try:
+            answer, meta = ask_llm(
+                question,
+                return_meta=True
+            )
 
-        print("\nAnswer:")
-        print(answer)
+            print("\nAnswer:")
+            print(answer)
 
-        print("\nMetadata:")
-        print(meta)
+            print("\n--- TOKEN USAGE ---")
+            print("Model:", meta["model"])
+            print("Input Tokens:", meta["prompt_tokens"])
+            print("Output Tokens:", meta["completion_tokens"])
+            print("Total Tokens:", meta["total_tokens"])
+
+            print("\n--- ESTIMATED COST ---")
+
+            for label, key in [
+                ("Input Cost", "input_cost_usd"),
+                ("Output Cost", "output_cost_usd"),
+                ("Total Cost", "total_cost_usd"),
+            ]:
+                value = meta[key]
+                formatted = (
+                    f"${value:.8f}"
+                    if value is not None
+                    else "Unavailable"
+                )
+                print(f"{label}: {formatted}")
+
+            print("\nLatency:", meta["latency"], "seconds")
+
+        except Exception as e:
+            print(
+                f"\nLLM request failed: "
+                f"{type(e).__name__}: {e}"
+            )
+            print("Check logs/error.log for details.")
