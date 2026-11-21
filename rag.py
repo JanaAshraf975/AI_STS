@@ -1,10 +1,122 @@
 
 import json
+import logging
+import time
+from functools import wraps
 
-from vectoredb import search, get_all_chunks
-from llm import ask_llm, GENERATOR_MODEL, ROUTER_MODEL, JUDGE_MODEL
+from vectoredb import search, get_all_chunks , save_summary , get_summary
+from llm import (
+    ask_llm,
+    GENERATOR_MODEL,
+    ROUTER_MODEL,
+    JUDGE_MODEL,
+    reset_usage_totals,
+    get_usage_totals,
+)
 from web_search import web_search
-from logger_config import logger
+from logger_config import logger, log_event, start_request, end_request
+
+
+# ==============================
+# Logging Helpers
+# ==============================
+
+def elapsed_ms(start):
+    return round((time.perf_counter() - start) * 1000, 2)
+
+
+def chunk_details(chunks):
+    return [
+        {
+            "id": c.get("id"),
+            "source": c.get("source"),
+            "page": c.get("page"),
+            "similarity": round(c["score"], 4)
+            if isinstance(c.get("score"), (int, float)) else None
+        }
+        for c in chunks
+    ]
+
+
+def log_chunks(event, chunks, start, **details):
+    log_event(
+        logging.INFO,
+        "retrieval",
+        event,
+        "Vector retrieval completed",
+        chunks_retrieved=len(chunks),
+        chunks=chunk_details(chunks),
+        latency_ms=elapsed_ms(start),
+        **details
+    )
+
+
+# ==============================
+# Request Tracking
+# ==============================
+
+def traced_request(func):
+    """Track requests, including calls from evaluation scripts."""
+
+    @wraps(func)
+    def wrapper(question, *args, **kwargs):
+        token = start_request()
+        start = time.perf_counter()
+
+        # Reset usage before starting a new RAG request
+        reset_usage_totals()
+
+        try:
+            log_event(
+                logging.INFO,
+                "pipeline",
+                "request_started",
+                "New RAG request received",
+                question_length=len(question)
+            )
+
+            result = func(question, *args, **kwargs)
+
+            # Collect usage from all LLM calls in this request
+            usage = get_usage_totals()
+
+            # Attach usage information to the result
+            result["usage"] = usage
+
+            log_event(
+                logging.INFO,
+                "pipeline",
+                "request_completed",
+                "RAG request completed successfully",
+                route=result.get("route"),
+                hop_type=result.get("hop_type"),
+                retried=result.get("retried"),
+                sources_count=len(result.get("sources") or []),
+                chunks_count=len(result.get("chunk_ids") or []),
+                model_metadata=result.get("meta"),
+                total_llm_usage=usage,
+                latency_ms=elapsed_ms(start)
+            )
+
+            return result
+
+        except Exception:
+            logger.exception(
+                "RAG request failed",
+                extra={
+                    "component": "pipeline",
+                    "event": "request_failed",
+                    "details": {
+                        "latency_ms": elapsed_ms(start)
+                    }
+                }
+            )
+            raise
+
+        finally:
+            end_request(token)
+
+    return wrapper
 
 
 SYSTEM = (
@@ -23,8 +135,16 @@ def parse_json(text):
     """Parse a JSON response returned by the LLM."""
     try:
         return json.loads(text)
+
     except json.JSONDecodeError:
-        logger.exception("Failed to parse JSON response from LLM")
+        logger.exception(
+            "Failed to parse JSON response from LLM",
+            extra={
+                "component": "llm",
+                "event": "json_parse_failed",
+                "details": {"response_length": len(text)}
+            }
+        )
         raise ValueError(f"Invalid JSON returned by LLM: {text}")
 
 
@@ -33,6 +153,7 @@ def parse_json(text):
 # ==============================
 
 def route_question(question, available_sources):
+    start = time.perf_counter()
 
     prompt = f"""
 You are an intelligent router for a PDF question-answering system.
@@ -115,6 +236,14 @@ Question:
         "summarize_all",
         "summarize_one"
     ):
+        log_event(
+            logging.WARNING,
+            "router",
+            "invalid_route",
+            "Invalid route returned by LLM",
+            returned_route=route,
+            fallback_route="search"
+        )
         route = "search"
 
     if route == "summarize_one" and source:
@@ -122,10 +251,17 @@ Question:
     else:
         source = None
 
-    logger.info(f"Question routed to: {route}")
-
-    if source:
-        logger.info(f"Selected PDF source: {source}")
+    log_event(
+        logging.INFO,
+        "router",
+        "route_selected",
+        "Question routing completed",
+        route=route,
+        selected_source=source,
+        available_sources=len(available_sources),
+        model=ROUTER_MODEL,
+        latency_ms=elapsed_ms(start)
+    )
 
     return {
         "route": route,
@@ -138,6 +274,7 @@ Question:
 # ==============================
 
 def classify_retrieval(question):
+    start = time.perf_counter()
 
     prompt = f"""
 Decide how many retrieval steps are needed to answer
@@ -167,9 +304,24 @@ Question: {question}
     hop_type = decision.get("hop_type", "single-hop")
 
     if hop_type not in ("single-hop", "multi-hop"):
+        log_event(
+            logging.WARNING,
+            "router",
+            "invalid_hop_type",
+            "Invalid retrieval classification",
+            returned_hop_type=hop_type
+        )
         hop_type = "single-hop"
 
-    logger.info(f"Retrieval type: {hop_type}")
+    log_event(
+        logging.INFO,
+        "router",
+        "retrieval_classified",
+        "Retrieval strategy selected",
+        hop_type=hop_type,
+        model=ROUTER_MODEL,
+        latency_ms=elapsed_ms(start)
+    )
 
     return hop_type
 
@@ -179,6 +331,7 @@ Question: {question}
 # ==============================
 
 def decompose_question(question):
+    start = time.perf_counter()
 
     prompt = f"""
 Break the question into 2 or 3 independent sub-questions
@@ -202,7 +355,7 @@ Question:
     questions = data.get("sub_questions", [])
 
     if not isinstance(questions, list):
-        return [question]
+        questions = []
 
     questions = [
         q.strip()
@@ -212,7 +365,15 @@ Question:
 
     questions = questions[:3] if questions else [question]
 
-    logger.info(f"Question decomposed into {len(questions)} sub-questions")
+    log_event(
+        logging.INFO,
+        "retrieval",
+        "question_decomposed",
+        "Multi-hop question decomposed",
+        sub_questions_count=len(questions),
+        sub_question_lengths=[len(q) for q in questions],
+        latency_ms=elapsed_ms(start)
+    )
 
     return questions
 
@@ -221,39 +382,47 @@ Question:
 # Retrieval
 # ==============================
 
-def retrieve_chunks(question, k=5):
+def retrieve_chunks(question, k=5, collection_name="docs"):
+    start = time.perf_counter()
 
     hop_type = classify_retrieval(question)
 
     if hop_type == "single-hop":
+        search_start = time.perf_counter()
 
         chunks = search(question, k=k)
 
-        logger.info(
-            f"Single-hop retrieval: {len(chunks)} chunks retrieved"
+        log_chunks(
+            "single_hop_completed",
+            chunks,
+            search_start,
+            top_k=k,
+            hop_type=hop_type
         )
 
         return chunks, hop_type
 
     sub_questions = decompose_question(question)
 
-    logger.info(
-        f"Multi-hop retrieval: {len(sub_questions)} sub-questions"
-    )
-
     all_chunks = []
     seen = set()
+    total_hits = 0
 
-    for sub_question in sub_questions:
+    for index, sub_question in enumerate(sub_questions, start=1):
+        sub_start = time.perf_counter()
 
         chunks = search(sub_question, k=k)
+        total_hits += len(chunks)
 
-        logger.debug(
-            f"Sub-question retrieved {len(chunks)} chunks"
+        log_chunks(
+            "sub_question_retrieved",
+            chunks,
+            sub_start,
+            sub_question_index=index,
+            top_k=k
         )
 
         for chunk in chunks:
-
             key = chunk.get("id") or (
                 chunk.get("source"),
                 chunk.get("page"),
@@ -264,8 +433,17 @@ def retrieve_chunks(question, k=5):
                 seen.add(key)
                 all_chunks.append(chunk)
 
-    logger.info(
-        f"Total unique chunks retrieved: {len(all_chunks)}"
+    log_event(
+        logging.INFO,
+        "retrieval",
+        "multi_hop_completed",
+        "Multi-hop retrieval completed",
+        sub_questions_count=len(sub_questions),
+        total_hits=total_hits,
+        unique_chunks=len(all_chunks),
+        duplicates_removed=total_hits - len(all_chunks),
+        chunks=chunk_details(all_chunks),
+        latency_ms=elapsed_ms(start)
     )
 
     return all_chunks, hop_type
@@ -278,8 +456,17 @@ def retrieve_chunks(question, k=5):
 def evaluate_retrieval(question, chunks):
     """Judge whether the retrieved chunks are relevant to the question."""
 
+    start = time.perf_counter()
+
     if not chunks:
-        logger.warning("No chunks retrieved for evaluation")
+        log_event(
+            logging.WARNING,
+            "evaluation",
+            "retrieval_empty",
+            "No retrieved chunks available",
+            relevant=False,
+            chunks_count=0
+        )
 
         return {
             "relevant": False,
@@ -317,39 +504,71 @@ Retrieved passages:
     decision = parse_json(result)
 
     relevant = decision.get("relevant") is True
+    rewritten_query = decision.get("rewritten_query") or question
 
-    logger.info(f"Retrieval evaluation: relevant={relevant}")
+    log_event(
+        logging.INFO,
+        "evaluation",
+        "retrieval_evaluated",
+        "Retrieved context evaluated",
+        relevant=relevant,
+        chunks_evaluated=len(chunks),
+        query_rewritten=rewritten_query != question,
+        rewritten_query_length=len(rewritten_query),
+        judge_model=JUDGE_MODEL,
+        latency_ms=elapsed_ms(start)
+    )
 
     return {
         "relevant": relevant,
-        "rewritten_query": decision.get("rewritten_query") or question,
+        "rewritten_query": rewritten_query,
     }
+
+def retrieve_summaries(chunks):
+    summaries = []
+    seen_sources = set()
+
+    for chunk in chunks:
+        source = chunk.get("source")
+
+        if source and source not in seen_sources:
+            seen_sources.add(source)
+
+            summary = get_summary(source)
+
+            if summary:
+                summaries.append(summary)
+
+    return summaries
 
 
 # ==============================
 # Prompt Builder
 # ==============================
 
-def build_prompt(question, chunks):
-
-    context = "\n\n".join(
-        f"[{i}] ({c['source']} p.{c['page']})\n{c['text']}"
+def build_prompt(question, chunks, summaries=None):
+    chunk_context = "\n\n".join(
+        f"[{i}]\n{c['text'] if isinstance(c, dict) else c}"
         for i, c in enumerate(chunks, start=1)
     )
 
-    return (
-        f"Context:\n{context}\n\n"
+    summary_context = "\n\n".join(
+        f"[S{i}] ({s['source']} - PDF Summary)\n{s['text']}"
+        for i, s in enumerate(summaries or [], start=1)
+    )
+
+    prompt = (
+        f"PDF Summaries:\n{summary_context}\n\n"
+        f"Original Retrieved Chunks:\n{chunk_context}\n\n"
         f"Question: {question}\n\n"
         "Answer:"
     )
 
-
-# ==============================
+    return prompt
 # Web Search
 # ==============================
 
 def build_web_context(results):
-
     return "\n\n".join(
         f"[{i}] {result['title']}\n"
         f"URL: {result['url']}\n"
@@ -359,15 +578,38 @@ def build_web_context(results):
 
 
 def answer_from_web(question):
+    start = time.perf_counter()
 
-    logger.info("Starting web search fallback")
+    log_event(
+        logging.WARNING,
+        "web_search",
+        "fallback_started",
+        "Starting web search fallback",
+        max_results=5
+    )
 
+    search_start = time.perf_counter()
+
+    # Original behavior: web_search exceptions are not swallowed
     results = web_search(question, max_results=5)
 
-    logger.info(f"Web search returned {len(results)} results")
+    log_event(
+        logging.INFO,
+        "web_search",
+        "search_completed",
+        "Web search completed",
+        results_count=len(results),
+        search_latency_ms=elapsed_ms(search_start)
+    )
 
     if not results:
-        logger.warning("Web search returned no results")
+        log_event(
+            logging.WARNING,
+            "web_search",
+            "no_results",
+            "Web search returned no results",
+            latency_ms=elapsed_ms(start)
+        )
 
         return {
             "answer": "I could not find a useful answer in the documents or on the web.",
@@ -400,7 +642,16 @@ Rules:
         return_meta=True,
     )
 
-    logger.info("Web answer generated successfully")
+    log_event(
+        logging.INFO,
+        "web_search",
+        "web_answer_generated",
+        "Web fallback answer generated",
+        results_count=len(results),
+        answer_chars=len(text),
+        model_metadata=meta,
+        latency_ms=elapsed_ms(start)
+    )
 
     return {
         "answer": text,
@@ -413,14 +664,28 @@ Rules:
 # PDF Summarization
 # ==============================
 
-def summarize_all_pdfs(selected_sources=None, max_chars=12000):
 
-    logger.info("Starting PDF summarization")
+def summarize_all_pdfs(selected_sources=None, max_chars=12000):
+    start = time.perf_counter()
+
+    log_event(
+        logging.INFO,
+        "summarization",
+        "summarization_started",
+        "Starting PDF summarization",
+        selected_sources=selected_sources,
+        max_chars=max_chars
+    )
 
     chunks = get_all_chunks()
 
     if not chunks:
-        logger.warning("No PDF documents found in database")
+        log_event(
+            logging.WARNING,
+            "summarization",
+            "no_documents",
+            "No PDF documents found in database"
+        )
 
         return "No PDF documents found in the database.", []
 
@@ -442,15 +707,29 @@ def summarize_all_pdfs(selected_sources=None, max_chars=12000):
         }
 
     if not pdfs:
-        logger.warning("Requested PDF was not found")
+        log_event(
+            logging.WARNING,
+            "summarization",
+            "source_not_found",
+            "Requested PDF was not found",
+            selected_sources=selected_sources
+        )
 
         return "The requested PDF was not found.", []
 
     all_pdf_summaries = []
 
     for source, pdf_chunks in pdfs.items():
+        pdf_start = time.perf_counter()
 
-        logger.info(f"Summarizing PDF: {source}")
+        log_event(
+            logging.INFO,
+            "summarization",
+            "pdf_processing_started",
+            "PDF summarization started",
+            source=source,
+            chunks_count=len(pdf_chunks)
+        )
 
         pdf_chunks.sort(key=lambda c: c["page"])
 
@@ -458,7 +737,6 @@ def summarize_all_pdfs(selected_sources=None, max_chars=12000):
         current_batch = ""
 
         for chunk in pdf_chunks:
-
             text = (
                 f"Page {chunk['page']}:\n"
                 f"{chunk['text']}\n\n"
@@ -476,13 +754,20 @@ def summarize_all_pdfs(selected_sources=None, max_chars=12000):
         if current_batch:
             batches.append(current_batch)
 
-        logger.info(
-            f"PDF {source} divided into {len(batches)} batches"
+        log_event(
+            logging.INFO,
+            "summarization",
+            "pdf_batches_created",
+            "PDF divided into batches",
+            source=source,
+            batches_count=len(batches),
+            max_chars=max_chars
         )
 
         partial_summaries = []
 
         for i, batch in enumerate(batches, 1):
+            batch_start = time.perf_counter()
 
             prompt = f"""
 Summarize the following content from the PDF: {source}
@@ -509,8 +794,17 @@ Summary:
 
             partial_summaries.append(partial_summary.strip())
 
-            logger.debug(
-                f"Completed summary batch {i} for {source}"
+            log_event(
+                logging.DEBUG,
+                "summarization",
+                "batch_completed",
+                "PDF summary batch completed",
+                source=source,
+                batch_number=i,
+                total_batches=len(batches),
+                batch_chars=len(batch),
+                summary_chars=len(partial_summary),
+                latency_ms=elapsed_ms(batch_start)
             )
 
         final_prompt = f"""
@@ -530,31 +824,61 @@ Rules:
 Final Summary:
 """
 
+        final_start = time.perf_counter()
+
         final_summary = ask_llm(
             final_prompt,
             model=GENERATOR_MODEL,
             temperature=0,
         )
 
+        final_summary = final_summary.strip()
+
+        # Save the final summary in ChromaDB
+        save_summary(source, final_summary)
+
         all_pdf_summaries.append(
-            f"## {source}\n{final_summary.strip()}"
+            f"## {source}\n{final_summary}"
         )
 
-        logger.info(f"Finished summarizing PDF: {source}")
+        log_event(
+            logging.INFO,
+            "summarization",
+            "pdf_completed",
+            "PDF summarization completed",
+            source=source,
+            batches_count=len(batches),
+            summary_chars=len(final_summary),
+            summary_saved=True,
+            final_summary_latency_ms=elapsed_ms(final_start),
+            latency_ms=elapsed_ms(pdf_start)
+        )
 
-    logger.info("PDF summarization completed")
+    log_event(
+        logging.INFO,
+        "summarization",
+        "summarization_completed",
+        "PDF summarization completed",
+        pdf_count=len(pdfs),
+        latency_ms=elapsed_ms(start)
+    )
 
     return "\n\n".join(all_pdf_summaries), list(pdfs.keys())
-
 
 # ==============================
 # Conversation Memory
 # ==============================
 
 def rewrite_query(question, history, conversation_summary):
+    start = time.perf_counter()
 
     if not history and not conversation_summary:
-        logger.debug("No conversation history to rewrite query")
+        log_event(
+            logging.DEBUG,
+            "memory",
+            "rewrite_skipped",
+            "No conversation history to rewrite query"
+        )
         return question
 
     recent_conversation = "\n".join(
@@ -591,17 +915,22 @@ Rules:
 
     rewritten = rewritten.strip() or question
 
-    logger.info("Question rewritten using conversation history")
-    logger.debug(f"Rewritten question: {rewritten}")
+    log_event(
+        logging.INFO,
+        "memory",
+        "query_rewritten",
+        "Conversation-aware query rewrite completed",
+        changed=rewritten != question,
+        history_messages=len(history),
+        summary_available=bool(conversation_summary),
+        latency_ms=elapsed_ms(start)
+    )
 
     return rewritten
 
 
 def update_conversation_summary(summary, old_messages):
-
-    logger.info(
-        f"Updating conversation summary using {len(old_messages)} older messages"
-    )
+    start = time.perf_counter()
 
     old_conversation = "\n".join(
         f"{m['role']}: {m['content']}"
@@ -634,7 +963,16 @@ Return only the updated summary.
         temperature=0,
     )
 
-    logger.info("Conversation summary updated successfully")
+    log_event(
+        logging.INFO,
+        "memory",
+        "summary_updated",
+        "Conversation summary updated",
+        old_messages_count=len(old_messages),
+        previous_summary_chars=len(summary),
+        updated_summary_chars=len(updated_summary),
+        latency_ms=elapsed_ms(start)
+    )
 
     return updated_summary.strip() or summary
 
@@ -643,12 +981,20 @@ Return only the updated summary.
 # Main Answer Function
 # ==============================
 
-def answer(question, k=5, history=None, conversation_summary=""):
+@traced_request
+def answer(question, k=5, history=None, conversation_summary="", collection_name="docs"):
 
     history = history or []
 
-    logger.info("New question received")
-    logger.debug(f"Conversation history: {len(history)} messages")
+    log_event(
+        logging.DEBUG,
+        "pipeline",
+        "processing_started",
+        "Processing question",
+        history_messages=len(history),
+        top_k=k,
+        has_summary=bool(conversation_summary)
+    )
 
     # 1. Rewrite question using conversation history
     standalone_question = rewrite_query(
@@ -658,12 +1004,21 @@ def answer(question, k=5, history=None, conversation_summary=""):
     )
 
     # 2. Get available PDF documents
+    source_start = time.perf_counter()
+
     available_sources = list({
         chunk["source"]
         for chunk in get_all_chunks()
     })
 
-    logger.info(f"Available PDF documents: {len(available_sources)}")
+    log_event(
+        logging.INFO,
+        "pipeline",
+        "sources_loaded",
+        "Available PDF sources loaded",
+        sources_count=len(available_sources),
+        latency_ms=elapsed_ms(source_start)
+    )
 
     # 3. Route the question
     decision = route_question(
@@ -673,21 +1028,28 @@ def answer(question, k=5, history=None, conversation_summary=""):
 
     route = decision["route"]
 
-    logger.info(f"Selected route: {route}")
+    log_event(
+        logging.INFO,
+        "pipeline",
+        "route_selected",
+        "Question route selected",
+        route=route,
+        selected_source=decision["source"]
+    )
 
     # 4. Summarize ALL PDFs
     if route == "summarize_all":
 
         summary, sources = summarize_all_pdfs()
 
-        logger.info("All PDF summaries generated")
-
         return {
             "question": question,
             "answer": summary,
             "contexts": [],
+            "summaries": [],
             "chunk_ids": [],
             "sources": sources,
+            "summary_sources": [],
             "meta": None,
             "route": "summarize_all",
             "hop_type": None,
@@ -710,8 +1072,13 @@ def answer(question, k=5, history=None, conversation_summary=""):
 
         if not matched_source:
 
-            logger.warning(
-                f"Could not identify requested PDF: {selected_source}"
+            log_event(
+                logging.WARNING,
+                "router",
+                "source_not_identified",
+                "Could not identify requested PDF",
+                selected_source=selected_source,
+                available_sources=available_sources
             )
 
             return {
@@ -725,8 +1092,10 @@ def answer(question, k=5, history=None, conversation_summary=""):
                     )
                 ),
                 "contexts": [],
+                "summaries": [],
                 "chunk_ids": [],
                 "sources": available_sources,
+                "summary_sources": [],
                 "meta": None,
                 "route": "summarize_one",
                 "hop_type": None,
@@ -737,14 +1106,14 @@ def answer(question, k=5, history=None, conversation_summary=""):
             selected_sources=[matched_source]
         )
 
-        logger.info(f"Summary generated for PDF: {matched_source}")
-
         return {
             "question": question,
             "answer": summary,
             "contexts": [],
+            "summaries": [],
             "chunk_ids": [],
             "sources": sources,
+            "summary_sources": [],
             "meta": None,
             "route": "summarize_one",
             "hop_type": None,
@@ -754,20 +1123,32 @@ def answer(question, k=5, history=None, conversation_summary=""):
     # 6. Direct answer
     if route == "direct":
 
+        generation_start = time.perf_counter()
+
         text, meta = ask_llm(
             standalone_question,
             model=GENERATOR_MODEL,
             return_meta=True,
         )
 
-        logger.info("Direct answer generated successfully")
+        log_event(
+            logging.INFO,
+            "generation",
+            "direct_answer_generated",
+            "Direct answer generated",
+            answer_chars=len(text),
+            model_metadata=meta,
+            latency_ms=elapsed_ms(generation_start)
+        )
 
         return {
             "question": question,
             "answer": text,
             "contexts": [],
+            "summaries": [],
             "chunk_ids": [],
             "sources": [],
+            "summary_sources": [],
             "meta": meta,
             "route": "direct",
             "hop_type": None,
@@ -775,23 +1156,41 @@ def answer(question, k=5, history=None, conversation_summary=""):
         }
 
     # 7. Single-Hop or Multi-Hop retrieval
-    chunks, hop_type = retrieve_chunks(standalone_question, k=k)
+    chunks, hop_type = retrieve_chunks(
+        standalone_question,
+        k=k, collection_name=collection_name
+    )
 
     # 8. Evaluate retrieval
-    evaluation = evaluate_retrieval(standalone_question, chunks)
+    evaluation = evaluate_retrieval(
+        standalone_question,
+        chunks
+    )
+
     retried = False
 
     # 9. Retry if retrieval is weak
     if not evaluation["relevant"]:
 
-        logger.warning("Retrieved chunks are not relevant. Retrying retrieval")
+        log_event(
+            logging.WARNING,
+            "retrieval",
+            "retry_started",
+            "Retrieved chunks are not relevant. Retrying retrieval",
+            initial_chunks_count=len(chunks)
+        )
 
         new_query = evaluation["rewritten_query"]
+        retry_start = time.perf_counter()
 
         retry_chunks = search(new_query, k=k)
 
-        logger.info(
-            f"Retry retrieval returned {len(retry_chunks)} chunks"
+        log_chunks(
+            "retry_retrieved",
+            retry_chunks,
+            retry_start,
+            top_k=k,
+            query_changed=new_query != standalone_question
         )
 
         retry_evaluation = evaluate_retrieval(
@@ -802,12 +1201,25 @@ def answer(question, k=5, history=None, conversation_summary=""):
         retried = True
 
         if retry_evaluation["relevant"]:
+
             chunks = retry_chunks
-            logger.info("Retry retrieval succeeded")
+
+            log_event(
+                logging.INFO,
+                "retrieval",
+                "retry_succeeded",
+                "Retry retrieval succeeded",
+                chunks_count=len(chunks)
+            )
 
         else:
-            logger.warning(
-                "Retry retrieval failed. Falling back to web search"
+
+            log_event(
+                logging.WARNING,
+                "retrieval",
+                "web_fallback_triggered",
+                "Retry failed. Falling back to web search",
+                retry_chunks_count=len(retry_chunks)
             )
 
             # 10. Web Search Fallback
@@ -817,32 +1229,77 @@ def answer(question, k=5, history=None, conversation_summary=""):
                 "question": question,
                 "answer": web_result["answer"],
                 "contexts": [],
+                "summaries": [],
                 "chunk_ids": [],
                 "sources": web_result["sources"],
+                "summary_sources": [],
                 "meta": web_result["meta"],
                 "route": "web_search",
                 "hop_type": hop_type,
                 "retried": True,
             }
 
-    # 11. Generate answer from retrieved PDF chunks
+    # 11. Retrieve summaries for PDFs represented in final chunks
+    summaries = retrieve_summaries(chunks)
+
+    log_event(
+        logging.INFO,
+        "retrieval",
+        "summaries_retrieved",
+        "PDF summaries retrieved for generation",
+        summaries_count=len(summaries),
+        summary_sources=[
+            s["source"] for s in summaries
+        ]
+    )
+
+    # 12. Generate answer using chunks + PDF summaries
+    generation_start = time.perf_counter()
+
     text, meta = ask_llm(
-        build_prompt(standalone_question, chunks),
+        build_prompt(
+            standalone_question,
+            chunks,
+            summaries
+        ),
         model=GENERATOR_MODEL,
         system=SYSTEM,
         return_meta=True,
     )
 
-    logger.info("Answer generated successfully")
+    log_event(
+        logging.INFO,
+        "generation",
+        "answer_generated",
+        "Answer generated successfully",
+        chunks_used=len(chunks),
+        summaries_used=len(summaries),
+        sources=[
+            {"source": c["source"], "page": c["page"]}
+            for c in chunks
+        ],
+        summary_sources=[
+            s["source"] for s in summaries
+        ],
+        answer_chars=len(text),
+        model_metadata=meta,
+        latency_ms=elapsed_ms(generation_start)
+    )
 
     return {
         "question": question,
         "answer": text,
         "contexts": [c["text"] for c in chunks],
+        "summaries": [
+            s["text"] for s in summaries
+        ],
         "chunk_ids": [c["id"] for c in chunks],
         "sources": [
             (c["source"], c["page"])
             for c in chunks
+        ],
+        "summary_sources": [
+            s["source"] for s in summaries
         ],
         "meta": meta,
         "route": "search",
@@ -850,9 +1307,8 @@ def answer(question, k=5, history=None, conversation_summary=""):
         "retried": retried,
     }
 
-
 # ==============================
-# Main
+# Main Application
 # ==============================
 
 if __name__ == "__main__":
@@ -860,14 +1316,18 @@ if __name__ == "__main__":
     history = []
     conversation_summary = ""
 
-    logger.info("Adaptive RAG application started")
+    log_event(
+        logging.INFO,
+        "application",
+        "application_started",
+        "Adaptive RAG application started"
+    )
 
     while True:
 
         q = input("\nQuestion (or q to quit): ").strip()
 
         if q.lower() == "q":
-            logger.info("User exited the application")
             break
 
         if not q:
@@ -887,7 +1347,32 @@ if __name__ == "__main__":
             print("\nRoute:")
             print(result["route"])
 
-            # Save user question and assistant answer
+            usage = result["usage"]
+
+            print("\n--- TOTAL LLM USAGE ---")
+            print("LLM Calls:", usage["calls"])
+            print("Input Tokens:", usage["prompt_tokens"])
+            print("Output Tokens:", usage["completion_tokens"])
+            print("Total Tokens:", usage["total_tokens"])
+
+            print("\n--- TOTAL ESTIMATED COST ---")
+
+            for label, key in [
+                ("Input Cost", "input_cost_usd"),
+                ("Output Cost", "output_cost_usd"),
+                ("Total Cost", "total_cost_usd"),
+            ]:
+
+                value = usage[key]
+
+                formatted = (
+                    f"${value:.10f}"
+                    if value is not None
+                    else "Unavailable"
+                )
+
+                print(f"{label}: {formatted}")
+
             history.append({
                 "role": "user",
                 "content": q,
@@ -898,30 +1383,17 @@ if __name__ == "__main__":
                 "content": result["answer"],
             })
 
-            logger.debug(
-                f"Conversation history now contains {len(history)} messages"
-            )
-
-            # Keep only the last 3 question-answer pairs
             if len(history) > 6:
 
                 old_messages = history[:-6]
 
-                try:
-                    conversation_summary = update_conversation_summary(
-                        conversation_summary,
-                        old_messages,
-                    )
+                conversation_summary = update_conversation_summary(
+                    conversation_summary,
+                    old_messages,
+                )
 
-                    history = history[-6:]
+                history = history[-6:]
 
-                    logger.info("Old messages summarized and history trimmed")
-
-                except Exception:
-                    logger.exception("Failed to update conversation summary")
-                    print("Summary update error. Check the log file.")
-
-            # Display current memory
             print("\nHop Type:")
             print(result["hop_type"])
 
@@ -932,7 +1404,13 @@ if __name__ == "__main__":
             print(history)
 
         except Exception:
+
             logger.exception("Error while processing question")
             print("An error occurred. Check the log file.")
 
-    logger.info("Adaptive RAG application stopped")
+    log_event(
+        logging.INFO,
+        "application",
+        "application_stopped",
+        "Adaptive RAG application stopped"
+    )

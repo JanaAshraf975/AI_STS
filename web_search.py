@@ -1,27 +1,19 @@
 
 from ddgs import DDGS
-
+from ddgs.exceptions import DDGSException
 
 def web_search(query, max_results=5):
-    results = DDGS().text(
-        query,
-        max_results=max_results,
-    )
+    try:
+        results = DDGS().text(
+            query,
+            max_results=max_results,
+        )
+        return results or []
 
-    return [
-        {
-            "title": result.get("title", ""),
-            "url": result.get("href", ""),
-            "text": result.get("body", ""),
-        }
-        for result in results
-    ]
+    except DDGSException as e:
+        print(f"Web search failed: {e}")
+        return []
 
-if __name__ == "__main__":
-    results = web_search("What is Adaptive RAG?")
-
-    for result in results:
-        print(result["title"])
-        print(result["url"])
-        print(result["text"])
-        print("-" * 50)
+    except Exception as e:
+        print(f"Unexpected web search error: {e}")
+        return []

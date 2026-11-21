@@ -1,6 +1,12 @@
+
+import os
+
+# Store Hugging Face models on D instead of C
+os.environ["HF_HOME"] = "D:/huggingface"
+
 from sentence_transformers import SentenceTransformer
 
-MODEL_NAME = "BAAI/bge-small-en-v1.5"
+MODEL_NAME = "BAAI/bge-m3"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 
 _model = None

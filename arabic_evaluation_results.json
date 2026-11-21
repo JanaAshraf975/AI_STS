@@ -1,0 +1,644 @@
+{
+    "C": {
+        "collection": "solar_1000_200",
+        "total_questions": 25,
+        "precision": 0.21077777777777787,
+        "recall": 0.9200000000000002,
+        "f1": 0.33278965478965467,
+        "route_accuracy": 1.0,
+        "hop_type_accuracy": 0.84,
+        "details": [
+            {
+                "question": "ما هي الطاقة الشمسية؟",
+                "expected_answer": "الطاقة الشمسية هي الطاقة التي نحصل عليها من أشعة الشمس، وهي مصدر متجدد ونظيف للطاقة.",
+                "generated_answer": "الطاقة الشمسية هي الطاقة التي نحصل عليها من أشعة الشمس، وتُعد من أنظف مصادر الطاقة المتجددة وأكثرها وفرة على كوكب الأرض. تُستخدم الطاقة الشمسية بطريقتين رئيسيتين: الأولى هي تحويل الضوء مباشرة إلى كهرباء باستخدام الخلايا الكهروضوئية، والثانية هي استخدام حرارة الشمس لتسخين المياه أو لتوليد البخار الذي يدير توربينات الكهرباء [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p3_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p12_c1",
+                    "solar_energy_arabic_p13_c1",
+                    "solar_energy_arabic_p10_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p3_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "كيف تعمل الخلية الشمسية على توليد الكهرباء؟",
+                "expected_answer": "تمتص الخلية الفوتونات من ضوء الشمس، فتنقل طاقتها إلى الإلكترونات وتحررها، ثم يحركها المجال الكهربائي الداخلي فينتج تيار كهربائي مستمر.",
+                "generated_answer": "تعمل الخلية الشمسية على توليد الكهرباء من خلال عدة خطوات. تتكون الخلية الشمسية من طبقتين: طبقة سالبة تحتوي على فائض من الإلكترونات، وطبقة موجبة تحتوي على نقص فيها. عند التقاء الطبقتين، ينشأ مجال كهربائي داخلي. عندما يسقط ضوء الشمس على الخلية، تمتص الفوتونات، وهي جسيمات الضوء، وتُنقل طاقتها إلى الإلكترونات فتتحرر من أماكنها. يدفع المجال الكهربائي الداخلي هذه الإلكترونات للحركة في اتجاه واحد، مما ينتج تيار كهربائي مستمر يُسمى التيار المباشر (DC) [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p5_c0",
+                    "solar_energy_arabic_p4_c0",
+                    "solar_energy_arabic_p10_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p3_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p5_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "لماذا يتم توصيل عدد كبير من الخلايا الشمسية معًا لتكوين لوح شمسي؟",
+                "expected_answer": "لأن الخلية الشمسية الواحدة تنتج جهدًا صغيرًا يبلغ نحو نصف فولت فقط.",
+                "generated_answer": "يتم توصيل عدد كبير من الخلايا الشمسية معًا لتكوين لوح شمسي لأن الخلية الواحدة تنتج جهدًا صغيرًا يبلغ نحو نصف فولت فقط، وبالتالي يتطلب الأمر ربط العديد من الخلايا معًا لزيادة الجهد والإنتاج الكلي للطاقة. عادةً ما يحتوي اللوح الشمسي النموذجي على حوالي 60 خلية، مما يزيد من قدرته الإنتاجية إلى ما بين 400 و600 وات [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p5_c0",
+                    "solar_energy_arabic_p17_c0",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p6_c0",
+                    "solar_energy_arabic_p2_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p5_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما الحد النظري الأقصى لكفاءة خلية السيليكون أحادية الوصلة؟",
+                "expected_answer": "يبلغ الحد النظري لكفاءتها نحو 33 بالمئة، ويُعرف باسم حد شوكلي وكويسر.",
+                "generated_answer": "I could not find this in the documents.",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p5_c1",
+                    "solar_energy_arabic_p5_c0",
+                    "solar_energy_arabic_p8_c0",
+                    "01_AsterHome_Product_Catalog_p13_c1",
+                    "01_AsterHome_Product_Catalog_p4_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p5_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما العوامل التي تؤثر على كمية الكهرباء التي تنتجها الألواح الشمسية؟",
+                "expected_answer": "تتأثر كمية الكهرباء بشدة الإشعاع الشمسي، وزاوية ميل اللوح، واتجاهه، ودرجة الحرارة، ووجود الغبار أو الظل.",
+                "generated_answer": "تتأثر كمية الكهرباء المنتجة من الألواح الشمسية بعوامل متعددة، أهمها شدة الإشعاع الشمسي، وزاوية ميل اللوح، واتجاهه، ودرجة الحرارة، ووجود الغبار أو الظل. ومن المفارقات أن ارتفاع درجة حرارة اللوح يقلل كفاءته قليلًا [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p6_c0",
+                    "solar_energy_arabic_p13_c0",
+                    "solar_energy_arabic_p14_c1",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p4_c1",
+                    "solar_energy_arabic_p14_c0",
+                    "solar_energy_arabic_p17_c0",
+                    "solar_energy_arabic_p7_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p6_c0"
+                ],
+                "precision": 0.125,
+                "recall": 1.0,
+                "f1": 0.2222222222222222,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "multi-hop",
+                "hop_correct": false
+            },
+            {
+                "question": "ما الفرق بين الألواح أحادية البلورة ومتعددة البلورات من حيث الكفاءة؟",
+                "expected_answer": "تتراوح كفاءة الألواح أحادية البلورة بين 18 و23 بالمئة، بينما تتراوح كفاءة الألواح متعددة البلورات بين 15 و17 بالمئة.",
+                "generated_answer": "الألواح أحادية البلورة تتميز بكفاءة أعلى تتراوح بين 18 و23 بالمئة، بينما الألواح متعددة البلورات كفاءتها أقل قليلاً وتتراوح بين 15 و17 بالمئة [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p6_c0",
+                    "solar_energy_arabic_p6_c1",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p5_c1",
+                    "solar_energy_arabic_p14_c0",
+                    "01_AsterHome_Product_Catalog_p3_c1",
+                    "02_AsterHome_Installation_Guide_p5_c1",
+                    "solar_energy_arabic_p14_c1",
+                    "01_AsterHome_Product_Catalog_p18_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p6_c0"
+                ],
+                "precision": 0.1111111111111111,
+                "recall": 1.0,
+                "f1": 0.19999999999999998,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "multi-hop",
+                "hop_correct": false
+            },
+            {
+                "question": "ما مميزات الألواح الشمسية رقيقة الغشاء؟",
+                "expected_answer": "تتميز بأنها خفيفة ومرنة ويمكن استخدامها على الأسطح المنحنية، وتتراوح كفاءتها بين 10 و13 بالمئة.",
+                "generated_answer": "الألواح الشمسية رقيقة الغشاء تتميز بأنها خفيفة ومرنة، ويمكن استخدامها على الأسطح المنحنية، رغم أن كفاءتها أقل مقارنة بأنواع الألواح الأخرى وتتراوح بين 10% و13% [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p6_c1",
+                    "solar_energy_arabic_p6_c0",
+                    "solar_energy_arabic_p14_c1",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p13_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p6_c0",
+                    "solar_energy_arabic_p6_c1"
+                ],
+                "precision": 0.4,
+                "recall": 1.0,
+                "f1": 0.5714285714285715,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما العمر الافتراضي للألواح الشمسية؟",
+                "expected_answer": "يتراوح العمر الافتراضي للألواح الشمسية بين 25 و30 عامًا.",
+                "generated_answer": "يتراوح العمر الافتراضي للألواح الشمسية بين 25 و30 عامًا [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p14_c0",
+                    "solar_energy_arabic_p18_c0",
+                    "solar_energy_arabic_p4_c1",
+                    "solar_energy_arabic_p17_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p7_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما وظيفة الإنفرتر في النظام الشمسي؟",
+                "expected_answer": "يحول الإنفرتر التيار المستمر DC الصادر من الألواح الشمسية إلى تيار متردد AC تستخدمه الأجهزة المنزلية.",
+                "generated_answer": "الإنفرتر هو الجهاز الذي يقوم بتحويل التيار المستمر (DC) الناتج عن الألواح الشمسية إلى تيار متردد (AC) الذي تعمل به الأجهزة المنزلية. يُعتبر الإنفرتر \"عقل النظام\" لأنه يلعب دورًا حيويًا في جعل الكهرباء الناتجة قابلة للاستخدام [3].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p17_c0",
+                    "solar_energy_arabic_p16_c1",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p18_c1",
+                    "solar_energy_arabic_p15_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p7_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما وظيفة منظم الشحن وتقنية MPPT؟",
+                "expected_answer": "يحمي منظم الشحن البطاريات من الشحن الزائد ويتحكم في تدفق الكهرباء إليها، بينما تستخرج تقنية MPPT أقصى طاقة ممكنة من الألواح.",
+                "generated_answer": "I could not find this in the documents.",
+                "retrieved_chunk_ids": [
+                    "03_AsterHome_Support_Policies_p13_c1",
+                    "02_AsterHome_Installation_Guide_p10_c1",
+                    "02_AsterHome_Installation_Guide_p11_c1",
+                    "01_AsterHome_Product_Catalog_p13_c1",
+                    "03_AsterHome_Support_Policies_p2_c1",
+                    "solar_energy_arabic_p8_c0",
+                    "01_AsterHome_Product_Catalog_p3_c1",
+                    "02_AsterHome_Installation_Guide_p5_c1",
+                    "solar_energy_arabic_p11_c0",
+                    "02_AsterHome_Installation_Guide_p8_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p7_c1",
+                    "solar_energy_arabic_p8_c0"
+                ],
+                "precision": 0.1,
+                "recall": 0.3333333333333333,
+                "f1": 0.15384615384615383,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "multi-hop",
+                "hop_correct": false
+            },
+            {
+                "question": "ما الفرق بين النظام الشمسي المتصل بالشبكة والنظام المستقل عن الشبكة؟",
+                "expected_answer": "النظام المتصل بالشبكة يرتبط بشبكة الكهرباء العامة ويمكنه إرسال الكهرباء الفائضة إليها ولا يحتاج إلى بطاريات، أما النظام المستقل فلا يرتبط بالشبكة ويعتمد بالكامل على الألواح والبطاريات.",
+                "generated_answer": "I could not find this in the documents.",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p9_c0",
+                    "solar_energy_arabic_p8_c0",
+                    "solar_energy_arabic_p13_c0",
+                    "solar_energy_arabic_p16_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p13_c1",
+                    "solar_energy_arabic_p8_c1",
+                    "02_AsterHome_Installation_Guide_p9_c1",
+                    "solar_energy_arabic_p18_c1",
+                    "01_AsterHome_Product_Catalog_p1_c1",
+                    "02_AsterHome_Installation_Guide_p12_c1",
+                    "01_AsterHome_Product_Catalog_p18_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p8_c0"
+                ],
+                "precision": 0.08333333333333333,
+                "recall": 1.0,
+                "f1": 0.15384615384615385,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "multi-hop",
+                "hop_correct": false
+            },
+            {
+                "question": "لماذا يُستخدم النظام الشمسي الهجين؟",
+                "expected_answer": "لأنه يجمع بين الاتصال بشبكة الكهرباء والبطاريات، مما يسمح بتخزين الطاقة واستخدامها ليلًا أو عند انقطاع الشبكة.",
+                "generated_answer": "يُستخدم النظام الشمسي الهجين لأنه يجمع بين مزايا النظامين المتصل بالشبكة والنظام المستقل. فهو متصل بالشبكة ويحتوي أيضًا على بطاريات لتخزين الطاقة، مما يسمح له بتزويد المنزل بالكهرباء عند انقطاع الشبكة وتخزين الفائض لاستخدامه ليلًا. ومع ذلك، فهو أغلى من النظام المتصل بالشبكة [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p9_c0",
+                    "solar_energy_arabic_p18_c0",
+                    "solar_energy_arabic_p4_c1",
+                    "solar_energy_arabic_p12_c1",
+                    "solar_energy_arabic_p13_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p9_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "كيف تُستخدم الطاقة الشمسية في الزراعة؟",
+                "expected_answer": "تُستخدم لتشغيل مضخات الري في الآبار، وتجفيف المحاصيل، وتشغيل البيوت المحمية، كما تُستخدم في الزراعة الكهروضوئية التي تسمح بإنتاج الكهرباء والزراعة في الوقت نفسه.",
+                "generated_answer": "تُستخدم الطاقة الشمسية في الزراعة لتشغيل مضخات الري في الآبار، وهو تطبيق مهم في المناطق الصحراوية بعيدًا عن الشبكة. كما تُستخدم في تجفيف المحاصيل وتشغيل البيوت المحمية. وهناك ما يعرف بالزراعة الكهروضوئية، حيث تُركب الألواح فوق الأراضي الزراعية بارتفاع مناسب فتنتج الكهرباء مع السماح بالزراعة تحتها [1][3].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p10_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p9_c1",
+                    "solar_energy_arabic_p3_c0",
+                    "solar_energy_arabic_p12_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p9_c0",
+                    "solar_energy_arabic_p10_c0"
+                ],
+                "precision": 0.2,
+                "recall": 0.5,
+                "f1": 0.28571428571428575,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "كيف تعمل تقنية الطاقة الشمسية المركزة CSP؟",
+                "expected_answer": "تعتمد على مرايا كبيرة تعكس وتركز أشعة الشمس على نقطة أو خط صغير، مما ينتج حرارة عالية تُستخدم لتسخين سائل أو توليد بخار يدير توربينًا متصلًا بمولد كهربائي.",
+                "generated_answer": "تقنية الطاقة الشمسية المركزة (CSP) تعتمد على مرايا كبيرة تعكس وتركز أشعة الشمس على نقطة أو خط صغير، مما يؤدي إلى ارتفاع الحرارة هناك إلى مئات الدرجات المئوية. تُستخدم هذه الحرارة العالية لتسخين سائل خاص أو لتوليد بخار الماء، وهذا البخار يمكن استخدامه لتوليد الكهرباء [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p10_c0",
+                    "solar_energy_arabic_p8_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p3_c0",
+                    "solar_energy_arabic_p5_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p10_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما فائدة تخزين الحرارة في خزانات الأملاح المنصهرة في محطات الطاقة الشمسية المركزة؟",
+                "expected_answer": "يسمح بتوليد الكهرباء حتى بعد غروب الشمس.",
+                "generated_answer": "تخزين الحرارة في خزانات من الأملاح المنصهرة في محطات الطاقة الشمسية المركزة يسمح بتوليد الكهرباء حتى بعد غروب الشمس، مما يعزز من كفاءة استخدام الطاقة الشمسية ويضمن توفرها على مدار الساعة [2].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p10_c0",
+                    "solar_energy_arabic_p11_c0",
+                    "solar_energy_arabic_p17_c1",
+                    "solar_energy_arabic_p10_c1",
+                    "solar_energy_arabic_p2_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p11_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما القدرة الإجمالية لمجمع بنبان للطاقة الشمسية في مصر؟",
+                "expected_answer": "تبلغ القدرة الإجمالية لمجمع بنبان حوالي 1.8 جيجاوات.",
+                "generated_answer": "القدرة الإجمالية لمجمع بنبان للطاقة الشمسية في مصر تبلغ 1650 ميجاوات [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p11_c1",
+                    "solar_energy_arabic_p11_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p12_c0",
+                    "solar_energy_arabic_p18_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p11_c0",
+                    "solar_energy_arabic_p11_c1",
+                    "solar_energy_arabic_p12_c0"
+                ],
+                "precision": 0.6,
+                "recall": 1.0,
+                "f1": 0.7499999999999999,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما الهدف الذي تسعى إليه استراتيجية مصر للطاقة المتجددة بحلول عام 2035؟",
+                "expected_answer": "تهدف إلى وصول نسبة الطاقة المتجددة إلى نحو 42 بالمئة من مزيج الكهرباء بحلول عام 2035.",
+                "generated_answer": "الهدف الذي تسعى إليه استراتيجية مصر للطاقة المتجددة بحلول عام 2035 هو أن تصل نسبة الطاقة المتجددة إلى نحو 42 بالمئة من مزيج الكهرباء [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p12_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p18_c0",
+                    "01_AsterHome_Product_Catalog_p18_c1",
+                    "02_AsterHome_Installation_Guide_p8_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p12_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما أبرز التحديات التي تواجه استخدام الطاقة الشمسية؟",
+                "expected_answer": "من أبرز التحديات تقطع إنتاج الطاقة بسبب عدم سطوع الشمس ليلًا وانخفاضه في الأيام الغائمة، وارتفاع تكلفة التركيب الأولية، والحاجة إلى مساحات كبيرة، وتأثير الغبار والرمال، وصعوبة إعادة تدوير الألواح.",
+                "generated_answer": "أبرز التحديات التي تواجه استخدام الطاقة الشمسية تشمل:\n\n1. التقطع، حيث أن الشمس لا تسطع ليلًا وتقل في الأيام الغائمة، مما يتطلب بطاريات أو مصادر طاقة أخرى مكملة.\n2. تكلفة التركيب الأولية التي قد تكون مرتفعة على بعض الأسر، رغم أنها تُسترد بمرور الوقت.\n3. الحاجة إلى مساحات كبيرة لإنشاء المحطات الضخمة.\n4. تأثير الغبار والرمال في المناطق الصحراوية الذي يقلل الإنتاج إذا لم تُنظف الألواح بانتظام.\n5. صعوبة إعادة تدوير الألواح المنتهية الصلاحية.\n6. الحاجة إلى تطوير الشبكة القومية وإنشاء أنظمة تخزين للحفاظ على استقرار التيار الكهربائي [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p13_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p12_c1",
+                    "solar_energy_arabic_p4_c1",
+                    "solar_energy_arabic_p17_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p12_c0",
+                    "solar_energy_arabic_p13_c0"
+                ],
+                "precision": 0.2,
+                "recall": 0.5,
+                "f1": 0.28571428571428575,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما المقصود بالتكلفة المستوية للكهرباء LCOE؟",
+                "expected_answer": "هي متوسط تكلفة إنتاج الكيلوواط ساعة الواحدة على مدى عمر المحطة.",
+                "generated_answer": "I could not find this in the documents.",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p15_c0",
+                    "01_AsterHome_Product_Catalog_p6_c1",
+                    "01_AsterHome_Product_Catalog_p10_c0",
+                    "03_AsterHome_Support_Policies_p2_c1",
+                    "02_AsterHome_Installation_Guide_p8_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p15_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما المدة المتوقعة لاسترداد تكلفة تركيب نظام شمسي منزلي؟",
+                "expected_answer": "تتراوح فترة استرداد التكلفة عادة بين 5 و8 سنوات تقريبًا، وتختلف حسب سعر الكهرباء وحجم النظام وكمية الإشعاع الشمسي في المنطقة.",
+                "generated_answer": "I could not find this in the documents.",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p15_c0",
+                    "solar_energy_arabic_p16_c0",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p13_c0",
+                    "03_AsterHome_Support_Policies_p9_c1"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p15_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما اتجاه الألواح الشمسية المناسب في مصر للحصول على أكبر قدر من أشعة الشمس؟",
+                "expected_answer": "يجب أن تواجه الألواح الجنوب في مصر لأنها تقع في نصف الكرة الشمالي.",
+                "generated_answer": "يجب أن تواجه الألواح الشمسية الجنوب في نصف الكرة الشمالي، ومنها مصر، لتحصل على أكبر قدر من الشمس [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p16_c0",
+                    "solar_energy_arabic_p11_c1",
+                    "solar_energy_arabic_p11_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p12_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p16_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما زاوية الميل المناسبة للألواح الشمسية في القاهرة على مدار العام؟",
+                "expected_answer": "تكون زاوية الميل المناسبة قريبة من 30 درجة، وهي قريبة من خط عرض القاهرة.",
+                "generated_answer": "زاوية الميل المناسبة للألواح الشمسية في القاهرة على مدار العام هي 30 درجة، حيث يبلغ خط العرض نحو 30 درجة [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p16_c0",
+                    "solar_energy_arabic_p11_c1",
+                    "solar_energy_arabic_p11_c0",
+                    "01_AsterHome_Product_Catalog_p18_c1",
+                    "solar_energy_arabic_p2_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p16_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "هل تعمل الألواح الشمسية في الأيام الغائمة؟",
+                "expected_answer": "نعم، تعمل الألواح بالضوء المنتشر أيضًا، لكن إنتاجها ينخفض في الأيام الغائمة مقارنة بالأيام المشمسة.",
+                "generated_answer": "نعم، تعمل الألواح الشمسية في الأيام الغائمة، لكن بإنتاج أقل. تعمل الألواح بالضوء المنتشر أيضًا، وقد ينخفض الإنتاج في الأيام الغائمة إلى نسبة صغيرة من الإنتاج في الأيام المشمسة [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p18_c0",
+                    "solar_energy_arabic_p17_c1",
+                    "solar_energy_arabic_p13_c0",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p10_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p18_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "ما الفرق بين التيار المستمر والتيار المتردد في النظام الشمسي؟",
+                "expected_answer": "الألواح الشمسية تنتج تيارًا مستمرًا DC، بينما تعمل أجهزة المنزل بتيار متردد AC، ويقوم الإنفرتر بالتحويل بينهما.",
+                "generated_answer": "الفرق بين التيار المستمر والتيار المتردد في النظام الشمسي هو أن الألواح الشمسية تنتج تيارًا مستمرًا (DC)، بينما الإنفرتر هو الذي يقوم بتحويل هذا التيار إلى تيار متردد (AC) الذي تعمل به الأجهزة المنزلية [6].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p18_c0",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p3_c0",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p13_c1",
+                    "solar_energy_arabic_p18_c1",
+                    "solar_energy_arabic_p11_c0",
+                    "solar_energy_arabic_p9_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p5_c0",
+                    "solar_energy_arabic_p7_c0",
+                    "solar_energy_arabic_p18_c0"
+                ],
+                "precision": 0.25,
+                "recall": 0.6666666666666666,
+                "f1": 0.36363636363636365,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "multi-hop",
+                "actual_hop_type": "multi-hop",
+                "hop_correct": true
+            },
+            {
+                "question": "هل يمكن تشغيل التكييف بالطاقة الشمسية؟",
+                "expected_answer": "نعم، بشرط أن يكون النظام مصممًا بقدرة كافية، ويُفضل استخدام مكيفات الإنفرتر الموفرة للطاقة.",
+                "generated_answer": "نعم، يمكن تشغيل التكييف بالطاقة الشمسية بشرط أن يكون النظام مصممًا بقدرة كافية، لأن المكيفات من أكثر الأجهزة استهلاكًا للكهرباء. ويُفضل استخدام مكيفات الإنفرتر الموفرة للطاقة [1].",
+                "retrieved_chunk_ids": [
+                    "solar_energy_arabic_p19_c0",
+                    "solar_energy_arabic_p13_c1",
+                    "solar_energy_arabic_p2_c0",
+                    "solar_energy_arabic_p9_c0",
+                    "solar_energy_arabic_p10_c0"
+                ],
+                "relevant_chunk_ids": [
+                    "solar_energy_arabic_p19_c0"
+                ],
+                "precision": 0.2,
+                "recall": 1.0,
+                "f1": 0.33333333333333337,
+                "expected_route": "search",
+                "actual_route": "search",
+                "route_correct": true,
+                "expected_hop_type": "single-hop",
+                "actual_hop_type": "single-hop",
+                "hop_correct": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "test_case": "TC1 - Basic Summary",
+        "generated_summary": "User is building an Adaptive RAG project that combines retrieval and generation. They use ChromaDB to store document embeddings, which can store and retrieve vector embeddings. Additionally, they utilize BGE embeddings, which convert text into vector representations.",
+        "evaluation": {
+            "preserved_facts": [
+                "The user is building an Adaptive RAG project.",
+                "The user uses ChromaDB.",
+                "The user uses BGE embeddings."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 3
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC2 - User Preferences",
+        "generated_summary": "User prefers explanations in simple English and requests step-by-step explanations. They also like practical examples and code examples to be included when explaining concepts.",
+        "evaluation": {
+            "preserved_facts": [
+                "The user prefers simple English explanations.",
+                "The user prefers step-by-step explanations.",
+                "The user likes practical examples.",
+                "The user likes code examples."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 4
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC3 - Important Technical Details",
+        "generated_summary": "User's backend API uses the endpoint /api/v1/search. They utilize Redis for caching, with a cache TTL of 3600 seconds, meaning cached data expires after that duration.",
+        "evaluation": {
+            "preserved_facts": [
+                "The API endpoint is /api/v1/search.",
+                "The project uses Redis for caching.",
+                "The cache TTL is 3600 seconds."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 3
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC4 - Previous Summary Preservation",
+        "generated_summary": "The user is building an Adaptive RAG project that uses ChromaDB and BGE embeddings. They added FastAPI to create the API and incorporated Redis for caching to improve response time.",
+        "evaluation": {
+            "preserved_facts": [
+                "The user is building an Adaptive RAG project.",
+                "The project uses ChromaDB.",
+                "The project uses BGE embeddings.",
+                "The project uses FastAPI.",
+                "The project uses Redis for caching."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 5
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC5 - Conflicting Information",
+        "generated_summary": "The project uses Redis for caching. The cache TTL has been changed from 3600 seconds to 1800 seconds.",
+        "evaluation": {
+            "preserved_facts": [
+                "The project uses Redis for caching.",
+                "The new cache TTL is 1800 seconds."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 2
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC6 - Long Conversation",
+        "generated_summary": "The project is an Adaptive RAG application using ChromaDB. We use BGE embeddings and the backend is built with FastAPI. Redis is utilized for caching, with a cache TTL of 1800 seconds. For retrieval, we use cosine similarity.",
+        "evaluation": {
+            "preserved_facts": [
+                "The project is an Adaptive RAG application.",
+                "The project uses ChromaDB.",
+                "The project uses BGE embeddings.",
+                "The backend uses FastAPI.",
+                "The project uses Redis for caching.",
+                "The cache TTL is 1800 seconds.",
+                "The project uses cosine similarity for retrieval."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 7
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    },
+    {
+        "test_case": "TC7 - Important Detail Preservation",
+        "generated_summary": "The project uses FastAPI and Redis. The search endpoint is /api/v2/search, which accepts POST requests and returns JSON responses.",
+        "evaluation": {
+            "preserved_facts": [
+                "The project uses FastAPI.",
+                "The project uses Redis.",
+                "The search endpoint is /api/v2/search.",
+                "The endpoint accepts POST requests.",
+                "The endpoint returns JSON responses."
+            ],
+            "missing_facts": [],
+            "hallucinated_facts": [],
+            "summary_fact_count": 5
+        },
+        "fact_retention_rate": 100.0,
+        "hallucination_rate": 0.0
+    }
+]

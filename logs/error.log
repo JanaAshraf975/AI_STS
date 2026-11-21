@@ -1,0 +1,61 @@
+2026-11-21T01:19:11.759699+00:00 | ERROR | Request ID: a744e965e2fb | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 10918.82}
+Traceback (most recent call last):
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 594, in answer_from_web
+    results = web_search(question, max_results=5)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\web_search.py", line 6, in web_search
+    results = DDGS().text(
+        query,
+        max_results=max_results,
+    )
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\.venv\Lib\site-packages\ddgs\ddgs.py", line 228, in text
+    return self._search_sync("text", query, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\.venv\Lib\site-packages\ddgs\ddgs.py", line 224, in _search_sync
+    raise DDGSException(err or "No results found.")
+ddgs.exceptions.DDGSException: No results found.
+2026-11-21T01:29:10.775623+00:00 | ERROR | Request ID: 7019c8c924ac | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 4431.82}
+Traceback (most recent call last):
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 1024, in answer
+    decision = route_question(
+        standalone_question,
+        available_sources
+    )
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 221, in route_question
+    result = ask_llm(
+        prompt,
+    ...<2 lines>...
+        json_mode=True,
+    )
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\llm.py", line 267, in ask_llm
+    raise RuntimeError(
+        f"LLM call failed after {retries} attempts: {last_error}"
+    )
+RuntimeError: LLM call failed after 3 attempts: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 800 tokens, but can only afford 659. To increase, visit https://openrouter.ai/workspaces/default/keys/65c9f48796e54af7d3d06036be083b320875d5e5d85fe80d4c71230aac4efa57 and adjust the key's total limit
+2026-11-21T01:57:13.339837+00:00 | ERROR | Request ID: cdd035960280 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 7235.64}
+Traceback (most recent call last):
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\24SRV\OneDrive\Desktop\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
