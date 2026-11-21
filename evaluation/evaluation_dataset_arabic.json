@@ -1,0 +1,22 @@
+[
+  {
+    "question": "ما هي الطاقة الشمسية؟",
+    "expected_answer": "الطاقة الشمسية هي الطاقة التي نحصل عليها من أشعة الشمس، وهي مصدر متجدد ونظيف للطاقة.",
+    "relevant_chunk_ids": [
+      "solar_energy_arabic_p3_c0"
+    ],
+    "expected_route": "search",
+    "expected_hop_type": "single-hop",
+    "answerable": true
+  },
+  {
+    "question": "كيف تعمل الخلية الشمسية على توليد الكهرباء؟",
+    "expected_answer": "تمتص الخلية الفوتونات من ضوء الشمس، فتنقل طاقتها إلى الإلكترونات وتحررها، ثم يحركها المجال الكهربائي الداخلي فينتج تيار كهربائي مستمر.",
+    "relevant_chunk_ids": [
+      "solar_energy_arabic_p5_c0"
+    ],
+    "expected_route": "search",
+    "expected_hop_type": "single-hop",
+    "answerable": true
+  }
+]
