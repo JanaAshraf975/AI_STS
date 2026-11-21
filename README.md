@@ -258,15 +258,48 @@ User: What does it detect?
 
 The second question is rewritten using conversation history before document retrieval.
 
-## Future Improvements
+# Chunking Strategy Evaluation Report for (Arabic documents)
 
-- Add a reranking stage to improve retrieval relevance.
-- Improve multi-hop retrieval and query decomposition.
-- Add more advanced retrieval evaluation metrics.
-- Improve conversation memory management.
-- Compare different embedding models and retrieval configurations.
-- Optimize latency and LLM usage.
+## 1. Objective
 
-## License
+The objective of this experiment is to compare different chunking strategies and identify which configuration provides better retrieval performance for the Arabic solar energy PDF.
 
-This project is developed for educational and portfolio purposes.
+## 2. Experimental Setup
+
+Three chunking configurations were tested using the same 25 evaluation questions.
+
+| Experiment | Chunk Size | Overlap |
+|---|---:|---:|
+| A | 800 | 150 |
+| B | 500 | 100 |
+| C | 1000 | 200 |
+
+Each configuration was indexed into a separate vector database collection. The same questions were used across all experiments, while the relevant chunk IDs were updated according to each collection.
+
+## 3. Evaluation Metrics
+
+- **Precision:** Measures how many retrieved chunks are relevant.
+- **Recall:** Measures how many relevant chunks were successfully retrieved.
+- **F1 Score:** Measures the balance between Precision and Recall.
+
+## 4. Results
+
+| Metric | Experiment A | Experiment B | Experiment C |
+|---|---:|---:|---:|
+| Precision | 0.204 | 0.168 | 0.211 |
+| Recall | 0.940 | 0.633 | 0.920 |
+| F1 Score | 0.332 | 0.259 | 0.333 |
+
+## 5. Results Analysis
+
+- **Experiment A (800/150):** Achieved the highest Recall (0.940), meaning it retrieved most of the relevant chunks.
+- **Experiment B (500/100):** Achieved the lowest performance across all three metrics.
+- **Experiment C (1000/200):** Achieved the highest Precision (0.211) and F1 Score (0.333), with results very close to Experiment A.
+
+## 6. Conclusion
+
+Experiment A (Chunk Size = 800, Overlap = 150) was selected as the preferred configuration.
+
+Although Experiment C achieved a slightly higher F1 Score, the difference was very small (0.001). Experiment A achieved higher Recall, making it a reasonable choice when retrieving as much relevant information as possible is important.
+
+This configuration will be used for the next stages of the Adaptive RAG pipeline.
