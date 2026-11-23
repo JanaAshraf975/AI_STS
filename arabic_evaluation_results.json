@@ -1,644 +1,1070 @@
 {
-    "C": {
-        "collection": "solar_1000_200",
-        "total_questions": 25,
-        "precision": 0.21077777777777787,
-        "recall": 0.9200000000000002,
-        "f1": 0.33278965478965467,
-        "route_accuracy": 1.0,
-        "hop_type_accuracy": 0.84,
-        "details": [
-            {
-                "question": "ما هي الطاقة الشمسية؟",
-                "expected_answer": "الطاقة الشمسية هي الطاقة التي نحصل عليها من أشعة الشمس، وهي مصدر متجدد ونظيف للطاقة.",
-                "generated_answer": "الطاقة الشمسية هي الطاقة التي نحصل عليها من أشعة الشمس، وتُعد من أنظف مصادر الطاقة المتجددة وأكثرها وفرة على كوكب الأرض. تُستخدم الطاقة الشمسية بطريقتين رئيسيتين: الأولى هي تحويل الضوء مباشرة إلى كهرباء باستخدام الخلايا الكهروضوئية، والثانية هي استخدام حرارة الشمس لتسخين المياه أو لتوليد البخار الذي يدير توربينات الكهرباء [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p3_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p12_c1",
-                    "solar_energy_arabic_p13_c1",
-                    "solar_energy_arabic_p10_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p3_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "كيف تعمل الخلية الشمسية على توليد الكهرباء؟",
-                "expected_answer": "تمتص الخلية الفوتونات من ضوء الشمس، فتنقل طاقتها إلى الإلكترونات وتحررها، ثم يحركها المجال الكهربائي الداخلي فينتج تيار كهربائي مستمر.",
-                "generated_answer": "تعمل الخلية الشمسية على توليد الكهرباء من خلال عدة خطوات. تتكون الخلية الشمسية من طبقتين: طبقة سالبة تحتوي على فائض من الإلكترونات، وطبقة موجبة تحتوي على نقص فيها. عند التقاء الطبقتين، ينشأ مجال كهربائي داخلي. عندما يسقط ضوء الشمس على الخلية، تمتص الفوتونات، وهي جسيمات الضوء، وتُنقل طاقتها إلى الإلكترونات فتتحرر من أماكنها. يدفع المجال الكهربائي الداخلي هذه الإلكترونات للحركة في اتجاه واحد، مما ينتج تيار كهربائي مستمر يُسمى التيار المباشر (DC) [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p5_c0",
-                    "solar_energy_arabic_p4_c0",
-                    "solar_energy_arabic_p10_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p3_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p5_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "لماذا يتم توصيل عدد كبير من الخلايا الشمسية معًا لتكوين لوح شمسي؟",
-                "expected_answer": "لأن الخلية الشمسية الواحدة تنتج جهدًا صغيرًا يبلغ نحو نصف فولت فقط.",
-                "generated_answer": "يتم توصيل عدد كبير من الخلايا الشمسية معًا لتكوين لوح شمسي لأن الخلية الواحدة تنتج جهدًا صغيرًا يبلغ نحو نصف فولت فقط، وبالتالي يتطلب الأمر ربط العديد من الخلايا معًا لزيادة الجهد والإنتاج الكلي للطاقة. عادةً ما يحتوي اللوح الشمسي النموذجي على حوالي 60 خلية، مما يزيد من قدرته الإنتاجية إلى ما بين 400 و600 وات [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p5_c0",
-                    "solar_energy_arabic_p17_c0",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p6_c0",
-                    "solar_energy_arabic_p2_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p5_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما الحد النظري الأقصى لكفاءة خلية السيليكون أحادية الوصلة؟",
-                "expected_answer": "يبلغ الحد النظري لكفاءتها نحو 33 بالمئة، ويُعرف باسم حد شوكلي وكويسر.",
-                "generated_answer": "I could not find this in the documents.",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p5_c1",
-                    "solar_energy_arabic_p5_c0",
-                    "solar_energy_arabic_p8_c0",
-                    "01_AsterHome_Product_Catalog_p13_c1",
-                    "01_AsterHome_Product_Catalog_p4_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p5_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما العوامل التي تؤثر على كمية الكهرباء التي تنتجها الألواح الشمسية؟",
-                "expected_answer": "تتأثر كمية الكهرباء بشدة الإشعاع الشمسي، وزاوية ميل اللوح، واتجاهه، ودرجة الحرارة، ووجود الغبار أو الظل.",
-                "generated_answer": "تتأثر كمية الكهرباء المنتجة من الألواح الشمسية بعوامل متعددة، أهمها شدة الإشعاع الشمسي، وزاوية ميل اللوح، واتجاهه، ودرجة الحرارة، ووجود الغبار أو الظل. ومن المفارقات أن ارتفاع درجة حرارة اللوح يقلل كفاءته قليلًا [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p6_c0",
-                    "solar_energy_arabic_p13_c0",
-                    "solar_energy_arabic_p14_c1",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p4_c1",
-                    "solar_energy_arabic_p14_c0",
-                    "solar_energy_arabic_p17_c0",
-                    "solar_energy_arabic_p7_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p6_c0"
-                ],
-                "precision": 0.125,
-                "recall": 1.0,
-                "f1": 0.2222222222222222,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "multi-hop",
-                "hop_correct": false
-            },
-            {
-                "question": "ما الفرق بين الألواح أحادية البلورة ومتعددة البلورات من حيث الكفاءة؟",
-                "expected_answer": "تتراوح كفاءة الألواح أحادية البلورة بين 18 و23 بالمئة، بينما تتراوح كفاءة الألواح متعددة البلورات بين 15 و17 بالمئة.",
-                "generated_answer": "الألواح أحادية البلورة تتميز بكفاءة أعلى تتراوح بين 18 و23 بالمئة، بينما الألواح متعددة البلورات كفاءتها أقل قليلاً وتتراوح بين 15 و17 بالمئة [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p6_c0",
-                    "solar_energy_arabic_p6_c1",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p5_c1",
-                    "solar_energy_arabic_p14_c0",
-                    "01_AsterHome_Product_Catalog_p3_c1",
-                    "02_AsterHome_Installation_Guide_p5_c1",
-                    "solar_energy_arabic_p14_c1",
-                    "01_AsterHome_Product_Catalog_p18_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p6_c0"
-                ],
-                "precision": 0.1111111111111111,
-                "recall": 1.0,
-                "f1": 0.19999999999999998,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "multi-hop",
-                "hop_correct": false
-            },
-            {
-                "question": "ما مميزات الألواح الشمسية رقيقة الغشاء؟",
-                "expected_answer": "تتميز بأنها خفيفة ومرنة ويمكن استخدامها على الأسطح المنحنية، وتتراوح كفاءتها بين 10 و13 بالمئة.",
-                "generated_answer": "الألواح الشمسية رقيقة الغشاء تتميز بأنها خفيفة ومرنة، ويمكن استخدامها على الأسطح المنحنية، رغم أن كفاءتها أقل مقارنة بأنواع الألواح الأخرى وتتراوح بين 10% و13% [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p6_c1",
-                    "solar_energy_arabic_p6_c0",
-                    "solar_energy_arabic_p14_c1",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p13_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p6_c0",
-                    "solar_energy_arabic_p6_c1"
-                ],
-                "precision": 0.4,
-                "recall": 1.0,
-                "f1": 0.5714285714285715,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما العمر الافتراضي للألواح الشمسية؟",
-                "expected_answer": "يتراوح العمر الافتراضي للألواح الشمسية بين 25 و30 عامًا.",
-                "generated_answer": "يتراوح العمر الافتراضي للألواح الشمسية بين 25 و30 عامًا [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p14_c0",
-                    "solar_energy_arabic_p18_c0",
-                    "solar_energy_arabic_p4_c1",
-                    "solar_energy_arabic_p17_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p7_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما وظيفة الإنفرتر في النظام الشمسي؟",
-                "expected_answer": "يحول الإنفرتر التيار المستمر DC الصادر من الألواح الشمسية إلى تيار متردد AC تستخدمه الأجهزة المنزلية.",
-                "generated_answer": "الإنفرتر هو الجهاز الذي يقوم بتحويل التيار المستمر (DC) الناتج عن الألواح الشمسية إلى تيار متردد (AC) الذي تعمل به الأجهزة المنزلية. يُعتبر الإنفرتر \"عقل النظام\" لأنه يلعب دورًا حيويًا في جعل الكهرباء الناتجة قابلة للاستخدام [3].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p17_c0",
-                    "solar_energy_arabic_p16_c1",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p18_c1",
-                    "solar_energy_arabic_p15_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p7_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما وظيفة منظم الشحن وتقنية MPPT؟",
-                "expected_answer": "يحمي منظم الشحن البطاريات من الشحن الزائد ويتحكم في تدفق الكهرباء إليها، بينما تستخرج تقنية MPPT أقصى طاقة ممكنة من الألواح.",
-                "generated_answer": "I could not find this in the documents.",
-                "retrieved_chunk_ids": [
-                    "03_AsterHome_Support_Policies_p13_c1",
-                    "02_AsterHome_Installation_Guide_p10_c1",
-                    "02_AsterHome_Installation_Guide_p11_c1",
-                    "01_AsterHome_Product_Catalog_p13_c1",
-                    "03_AsterHome_Support_Policies_p2_c1",
-                    "solar_energy_arabic_p8_c0",
-                    "01_AsterHome_Product_Catalog_p3_c1",
-                    "02_AsterHome_Installation_Guide_p5_c1",
-                    "solar_energy_arabic_p11_c0",
-                    "02_AsterHome_Installation_Guide_p8_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p7_c1",
-                    "solar_energy_arabic_p8_c0"
-                ],
-                "precision": 0.1,
-                "recall": 0.3333333333333333,
-                "f1": 0.15384615384615383,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "multi-hop",
-                "hop_correct": false
-            },
-            {
-                "question": "ما الفرق بين النظام الشمسي المتصل بالشبكة والنظام المستقل عن الشبكة؟",
-                "expected_answer": "النظام المتصل بالشبكة يرتبط بشبكة الكهرباء العامة ويمكنه إرسال الكهرباء الفائضة إليها ولا يحتاج إلى بطاريات، أما النظام المستقل فلا يرتبط بالشبكة ويعتمد بالكامل على الألواح والبطاريات.",
-                "generated_answer": "I could not find this in the documents.",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p9_c0",
-                    "solar_energy_arabic_p8_c0",
-                    "solar_energy_arabic_p13_c0",
-                    "solar_energy_arabic_p16_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p13_c1",
-                    "solar_energy_arabic_p8_c1",
-                    "02_AsterHome_Installation_Guide_p9_c1",
-                    "solar_energy_arabic_p18_c1",
-                    "01_AsterHome_Product_Catalog_p1_c1",
-                    "02_AsterHome_Installation_Guide_p12_c1",
-                    "01_AsterHome_Product_Catalog_p18_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p8_c0"
-                ],
-                "precision": 0.08333333333333333,
-                "recall": 1.0,
-                "f1": 0.15384615384615385,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "multi-hop",
-                "hop_correct": false
-            },
-            {
-                "question": "لماذا يُستخدم النظام الشمسي الهجين؟",
-                "expected_answer": "لأنه يجمع بين الاتصال بشبكة الكهرباء والبطاريات، مما يسمح بتخزين الطاقة واستخدامها ليلًا أو عند انقطاع الشبكة.",
-                "generated_answer": "يُستخدم النظام الشمسي الهجين لأنه يجمع بين مزايا النظامين المتصل بالشبكة والنظام المستقل. فهو متصل بالشبكة ويحتوي أيضًا على بطاريات لتخزين الطاقة، مما يسمح له بتزويد المنزل بالكهرباء عند انقطاع الشبكة وتخزين الفائض لاستخدامه ليلًا. ومع ذلك، فهو أغلى من النظام المتصل بالشبكة [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p9_c0",
-                    "solar_energy_arabic_p18_c0",
-                    "solar_energy_arabic_p4_c1",
-                    "solar_energy_arabic_p12_c1",
-                    "solar_energy_arabic_p13_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p9_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "كيف تُستخدم الطاقة الشمسية في الزراعة؟",
-                "expected_answer": "تُستخدم لتشغيل مضخات الري في الآبار، وتجفيف المحاصيل، وتشغيل البيوت المحمية، كما تُستخدم في الزراعة الكهروضوئية التي تسمح بإنتاج الكهرباء والزراعة في الوقت نفسه.",
-                "generated_answer": "تُستخدم الطاقة الشمسية في الزراعة لتشغيل مضخات الري في الآبار، وهو تطبيق مهم في المناطق الصحراوية بعيدًا عن الشبكة. كما تُستخدم في تجفيف المحاصيل وتشغيل البيوت المحمية. وهناك ما يعرف بالزراعة الكهروضوئية، حيث تُركب الألواح فوق الأراضي الزراعية بارتفاع مناسب فتنتج الكهرباء مع السماح بالزراعة تحتها [1][3].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p10_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p9_c1",
-                    "solar_energy_arabic_p3_c0",
-                    "solar_energy_arabic_p12_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p9_c0",
-                    "solar_energy_arabic_p10_c0"
-                ],
-                "precision": 0.2,
-                "recall": 0.5,
-                "f1": 0.28571428571428575,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "كيف تعمل تقنية الطاقة الشمسية المركزة CSP؟",
-                "expected_answer": "تعتمد على مرايا كبيرة تعكس وتركز أشعة الشمس على نقطة أو خط صغير، مما ينتج حرارة عالية تُستخدم لتسخين سائل أو توليد بخار يدير توربينًا متصلًا بمولد كهربائي.",
-                "generated_answer": "تقنية الطاقة الشمسية المركزة (CSP) تعتمد على مرايا كبيرة تعكس وتركز أشعة الشمس على نقطة أو خط صغير، مما يؤدي إلى ارتفاع الحرارة هناك إلى مئات الدرجات المئوية. تُستخدم هذه الحرارة العالية لتسخين سائل خاص أو لتوليد بخار الماء، وهذا البخار يمكن استخدامه لتوليد الكهرباء [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p10_c0",
-                    "solar_energy_arabic_p8_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p3_c0",
-                    "solar_energy_arabic_p5_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p10_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما فائدة تخزين الحرارة في خزانات الأملاح المنصهرة في محطات الطاقة الشمسية المركزة؟",
-                "expected_answer": "يسمح بتوليد الكهرباء حتى بعد غروب الشمس.",
-                "generated_answer": "تخزين الحرارة في خزانات من الأملاح المنصهرة في محطات الطاقة الشمسية المركزة يسمح بتوليد الكهرباء حتى بعد غروب الشمس، مما يعزز من كفاءة استخدام الطاقة الشمسية ويضمن توفرها على مدار الساعة [2].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p10_c0",
-                    "solar_energy_arabic_p11_c0",
-                    "solar_energy_arabic_p17_c1",
-                    "solar_energy_arabic_p10_c1",
-                    "solar_energy_arabic_p2_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p11_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما القدرة الإجمالية لمجمع بنبان للطاقة الشمسية في مصر؟",
-                "expected_answer": "تبلغ القدرة الإجمالية لمجمع بنبان حوالي 1.8 جيجاوات.",
-                "generated_answer": "القدرة الإجمالية لمجمع بنبان للطاقة الشمسية في مصر تبلغ 1650 ميجاوات [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p11_c1",
-                    "solar_energy_arabic_p11_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p12_c0",
-                    "solar_energy_arabic_p18_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p11_c0",
-                    "solar_energy_arabic_p11_c1",
-                    "solar_energy_arabic_p12_c0"
-                ],
-                "precision": 0.6,
-                "recall": 1.0,
-                "f1": 0.7499999999999999,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما الهدف الذي تسعى إليه استراتيجية مصر للطاقة المتجددة بحلول عام 2035؟",
-                "expected_answer": "تهدف إلى وصول نسبة الطاقة المتجددة إلى نحو 42 بالمئة من مزيج الكهرباء بحلول عام 2035.",
-                "generated_answer": "الهدف الذي تسعى إليه استراتيجية مصر للطاقة المتجددة بحلول عام 2035 هو أن تصل نسبة الطاقة المتجددة إلى نحو 42 بالمئة من مزيج الكهرباء [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p12_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p18_c0",
-                    "01_AsterHome_Product_Catalog_p18_c1",
-                    "02_AsterHome_Installation_Guide_p8_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p12_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما أبرز التحديات التي تواجه استخدام الطاقة الشمسية؟",
-                "expected_answer": "من أبرز التحديات تقطع إنتاج الطاقة بسبب عدم سطوع الشمس ليلًا وانخفاضه في الأيام الغائمة، وارتفاع تكلفة التركيب الأولية، والحاجة إلى مساحات كبيرة، وتأثير الغبار والرمال، وصعوبة إعادة تدوير الألواح.",
-                "generated_answer": "أبرز التحديات التي تواجه استخدام الطاقة الشمسية تشمل:\n\n1. التقطع، حيث أن الشمس لا تسطع ليلًا وتقل في الأيام الغائمة، مما يتطلب بطاريات أو مصادر طاقة أخرى مكملة.\n2. تكلفة التركيب الأولية التي قد تكون مرتفعة على بعض الأسر، رغم أنها تُسترد بمرور الوقت.\n3. الحاجة إلى مساحات كبيرة لإنشاء المحطات الضخمة.\n4. تأثير الغبار والرمال في المناطق الصحراوية الذي يقلل الإنتاج إذا لم تُنظف الألواح بانتظام.\n5. صعوبة إعادة تدوير الألواح المنتهية الصلاحية.\n6. الحاجة إلى تطوير الشبكة القومية وإنشاء أنظمة تخزين للحفاظ على استقرار التيار الكهربائي [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p13_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p12_c1",
-                    "solar_energy_arabic_p4_c1",
-                    "solar_energy_arabic_p17_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p12_c0",
-                    "solar_energy_arabic_p13_c0"
-                ],
-                "precision": 0.2,
-                "recall": 0.5,
-                "f1": 0.28571428571428575,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما المقصود بالتكلفة المستوية للكهرباء LCOE؟",
-                "expected_answer": "هي متوسط تكلفة إنتاج الكيلوواط ساعة الواحدة على مدى عمر المحطة.",
-                "generated_answer": "I could not find this in the documents.",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p15_c0",
-                    "01_AsterHome_Product_Catalog_p6_c1",
-                    "01_AsterHome_Product_Catalog_p10_c0",
-                    "03_AsterHome_Support_Policies_p2_c1",
-                    "02_AsterHome_Installation_Guide_p8_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p15_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما المدة المتوقعة لاسترداد تكلفة تركيب نظام شمسي منزلي؟",
-                "expected_answer": "تتراوح فترة استرداد التكلفة عادة بين 5 و8 سنوات تقريبًا، وتختلف حسب سعر الكهرباء وحجم النظام وكمية الإشعاع الشمسي في المنطقة.",
-                "generated_answer": "I could not find this in the documents.",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p15_c0",
-                    "solar_energy_arabic_p16_c0",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p13_c0",
-                    "03_AsterHome_Support_Policies_p9_c1"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p15_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما اتجاه الألواح الشمسية المناسب في مصر للحصول على أكبر قدر من أشعة الشمس؟",
-                "expected_answer": "يجب أن تواجه الألواح الجنوب في مصر لأنها تقع في نصف الكرة الشمالي.",
-                "generated_answer": "يجب أن تواجه الألواح الشمسية الجنوب في نصف الكرة الشمالي، ومنها مصر، لتحصل على أكبر قدر من الشمس [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p16_c0",
-                    "solar_energy_arabic_p11_c1",
-                    "solar_energy_arabic_p11_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p12_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p16_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما زاوية الميل المناسبة للألواح الشمسية في القاهرة على مدار العام؟",
-                "expected_answer": "تكون زاوية الميل المناسبة قريبة من 30 درجة، وهي قريبة من خط عرض القاهرة.",
-                "generated_answer": "زاوية الميل المناسبة للألواح الشمسية في القاهرة على مدار العام هي 30 درجة، حيث يبلغ خط العرض نحو 30 درجة [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p16_c0",
-                    "solar_energy_arabic_p11_c1",
-                    "solar_energy_arabic_p11_c0",
-                    "01_AsterHome_Product_Catalog_p18_c1",
-                    "solar_energy_arabic_p2_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p16_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "هل تعمل الألواح الشمسية في الأيام الغائمة؟",
-                "expected_answer": "نعم، تعمل الألواح بالضوء المنتشر أيضًا، لكن إنتاجها ينخفض في الأيام الغائمة مقارنة بالأيام المشمسة.",
-                "generated_answer": "نعم، تعمل الألواح الشمسية في الأيام الغائمة، لكن بإنتاج أقل. تعمل الألواح بالضوء المنتشر أيضًا، وقد ينخفض الإنتاج في الأيام الغائمة إلى نسبة صغيرة من الإنتاج في الأيام المشمسة [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p18_c0",
-                    "solar_energy_arabic_p17_c1",
-                    "solar_energy_arabic_p13_c0",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p10_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p18_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "ما الفرق بين التيار المستمر والتيار المتردد في النظام الشمسي؟",
-                "expected_answer": "الألواح الشمسية تنتج تيارًا مستمرًا DC، بينما تعمل أجهزة المنزل بتيار متردد AC، ويقوم الإنفرتر بالتحويل بينهما.",
-                "generated_answer": "الفرق بين التيار المستمر والتيار المتردد في النظام الشمسي هو أن الألواح الشمسية تنتج تيارًا مستمرًا (DC)، بينما الإنفرتر هو الذي يقوم بتحويل هذا التيار إلى تيار متردد (AC) الذي تعمل به الأجهزة المنزلية [6].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p18_c0",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p3_c0",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p13_c1",
-                    "solar_energy_arabic_p18_c1",
-                    "solar_energy_arabic_p11_c0",
-                    "solar_energy_arabic_p9_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p5_c0",
-                    "solar_energy_arabic_p7_c0",
-                    "solar_energy_arabic_p18_c0"
-                ],
-                "precision": 0.25,
-                "recall": 0.6666666666666666,
-                "f1": 0.36363636363636365,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "multi-hop",
-                "actual_hop_type": "multi-hop",
-                "hop_correct": true
-            },
-            {
-                "question": "هل يمكن تشغيل التكييف بالطاقة الشمسية؟",
-                "expected_answer": "نعم، بشرط أن يكون النظام مصممًا بقدرة كافية، ويُفضل استخدام مكيفات الإنفرتر الموفرة للطاقة.",
-                "generated_answer": "نعم، يمكن تشغيل التكييف بالطاقة الشمسية بشرط أن يكون النظام مصممًا بقدرة كافية، لأن المكيفات من أكثر الأجهزة استهلاكًا للكهرباء. ويُفضل استخدام مكيفات الإنفرتر الموفرة للطاقة [1].",
-                "retrieved_chunk_ids": [
-                    "solar_energy_arabic_p19_c0",
-                    "solar_energy_arabic_p13_c1",
-                    "solar_energy_arabic_p2_c0",
-                    "solar_energy_arabic_p9_c0",
-                    "solar_energy_arabic_p10_c0"
-                ],
-                "relevant_chunk_ids": [
-                    "solar_energy_arabic_p19_c0"
-                ],
-                "precision": 0.2,
-                "recall": 1.0,
-                "f1": 0.33333333333333337,
-                "expected_route": "search",
-                "actual_route": "search",
-                "route_correct": true,
-                "expected_hop_type": "single-hop",
-                "actual_hop_type": "single-hop",
-                "hop_correct": true
-            }
-        ]
-    }
+    "total_questions": 58,
+    "precision": 0.16052850406298685,
+    "recall": 0.7298850574712644,
+    "f1": 0.2575148032044585,
+    "details": [
+        {
+            "question": "ما الفرق بين نماذج الترانسفورمر ذات المشفر فقط والمفكك فقط؟",
+            "expected_answer": "نماذج المشفر فقط مثل BERT تستخدم أساسا للفهم والتصنيف والتضمين، بينما نماذج المفكك فقط مثل GPT وLLaMA تستخدم أساسا لتوليد النصوص والمحادثة.",
+            "generated_answer": "نماذج الترانسفورمر ذات المشفر فقط (مثل BERT وRoBERTa) تُستخدم لفهم النصوص وتصنيفها، بينما نماذج المفكك فقط (مثل GPT وLLaMA) تُستخدم لتوليد النصوص والمحادثة. [4]",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p39_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p33_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p40_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p94_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p39_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p40_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "ما أبرز مهام معالجة اللغة الطبيعية؟",
+            "expected_answer": "تشمل تحليل المشاعر، والتعرف على الكيانات المسماة، والإجابة عن الأسئلة، والتلخيص، والترجمة الآلية العصبية، والبحث الدلالي واسترجاع المعلومات، وتصحيح الأخطاء النحوية والإملائية.",
+            "generated_answer": "أبرز مهام معالجة اللغة الطبيعية تشمل: تحليل المشاعر، التعرف على الكيانات المسماة، الإجابة عن الأسئلة، التلخيص (إعادة صياغة أو تجريدي)، والترجمة الآلية العصبية، بالإضافة إلى البحث الدلالي واسترجاع المعلومات [2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p36_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p40_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p74_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p40_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0"
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+        },
+        {
+            "question": "لماذا تواجه اللغة العربية تحديات في معالجة اللغة الطبيعية؟",
+            "expected_answer": "بسبب خصائصها الصرفية والإملائية، مثل اتصال الحروف وتغير شكل الحرف حسب موضعه، واختلاف اللهجات، والحاجة إلى معالجة أولية خاصة للنصوص.",
+            "generated_answer": "تواجه اللغة العربية تحديات في معالجة اللغة الطبيعية بسبب عدة عوامل، منها:\n\n1. **الغموض اللغوي**: الكلمات قد تحمل معاني متعددة حسب السياق، مثل كلمة \"عين\" التي يمكن أن تعني عضو الإبصار أو منبع الماء أو الجاسوس [2].\n2. **التراكيب المعقدة**: اللغة العربية تحتوي على تراكيب معقدة ومجاز وسخرية، مما يجعل فهمها أكثر صعوبة [2].\n3. **تعدد اللهجات**: الفصحى الحديثة تختلف عن اللهجات المحلية (مثل المصرية والخليجية والشامية) بشكل كبير في المفردات والنحو [3].\n4. **عدم وجود حركات**: النصوص تُكتب عادة بلا حركات، مما يؤدي إلى تداخل الكلمات المتشابهة في الرسم [3].\n5. **قلة الموارد المفتوحة**: هناك نقص في مجموعات البيانات العربية عالية الجودة والمفتوحة، مما يؤثر على تطوير نماذج فعالة [1][3].\n6. **الخصائص الصرفية والإملائية**: اللغة العربية تتطلب معالجة أولية خاصة بسبب خصائصها الفريدة، مثل الجذور الثلاثية التي تشتق منها آلاف الكلمات [3][5].\n\nهذه العوامل تجعل معالجة اللغة العربية أكثر تعقيدًا مقارنة باللغات الأخرى مثل الإنجليزية.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p74_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p36_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p37_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p75_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c0"
+            ],
+            "precision": 0.2,
+            "recall": 0.3333333333333333,
+            "f1": 0.25
+        },
+        {
+            "question": "ما المهمة الأساسية التي يتدرب النموذج اللغوي الكبير على أدائها؟",
+            "expected_answer": "يتدرب النموذج اللغوي الكبير على توقع الرمز التالي في تسلسل النص، ومن خلال التدريب على كميات ضخمة من النصوص يتعلم أنماط اللغة والمعلومات والعلاقات والاستدلال.",
+            "generated_answer": "يتدرب النموذج اللغوي الكبير على توقع الرمز التالي في التسلسل [2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p42_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p94_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p42_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما المراحل الثلاث الأساسية لبناء نموذج لغوي كبير؟",
+            "expected_answer": "المراحل هي التدريب المسبق على كميات ضخمة من النصوص، ثم الضبط الدقيق الموجه بالتعليمات باستخدام أمثلة للأسئلة والإجابات، ثم المواءمة مع التفضيلات البشرية باستخدام أساليب مثل RLHF.",
+            "generated_answer": "المراحل الثلاث الأساسية لبناء نموذج لغوي كبير هي:\n\n1. **التدريب المسبق (Pre-training)**: يتدرب النموذج على نصوص ضخمة لتوقع الرمز التالي، وتستغرق هذه المرحلة أسابيع أو شهور وتكلف ملايين الدولارات [2].\n\n2. **الضبط الدقيق الموجه بالتعليمات (Instruction Fine-tuning)**: يتم تدريب النموذج على أمثلة من أسئلة وتعليمات مع إجابات نموذجية، مما يساعده على التصرف كمساعد [2].\n\n3. **المواءمة مع التفضيلات البشرية (Human Preference Alignment)**: يستخدم التعلم التعزيزي من التغذية الراجعة البشرية (RLHF) لتحسين النموذج بناءً على تفضيلات البشر [2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p42_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p78_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p19_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c1"
+            ],
+            "precision": 0.14285714285714285,
+            "recall": 0.5,
+            "f1": 0.22222222222222224
+        },
+        {
+            "question": "ما المقصود بتقنية RLHF ولماذا تستخدم؟",
+            "expected_answer": "التعلم التعزيزي من التغذية الراجعة البشرية هو أسلوب يقارن فيه مقيمون بشريون بين إجابات النموذج ويحددون الأفضل، ثم يستخدم نموذج مكافأة هذه التفضيلات لتحسين إجابات النموذج وجعلها أكثر فائدة وصدقًا وأمانًا.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c1"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما ظاهرة الضياع في المنتصف Lost in the Middle؟",
+            "expected_answer": "هي ظاهرة قد يقل فيها انتباه النموذج إلى التفاصيل الموجودة في منتصف السياق الطويل، حتى لو كان النموذج قادرًا على معالجة سياق كبير.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p44_c0"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما أهم الأساليب المستخدمة في هندسة الأوامر؟",
+            "expected_answer": "تشمل كتابة تعليمات واضحة تحدد المهمة والجمهور وشكل الإجابة وطولها، واستخدام أمثلة قليلة Few-shot، وتحديد دور للنموذج، وطلب صيغة إخراج محددة مثل JSON، واستخدام أساليب تساعد على تنظيم الاستدلال.",
+            "generated_answer": "أهم الأساليب المستخدمة في هندسة الأوامر تشمل:\n\n1. **التعليمات الواضحة**: تحديد المهمة والجمهور والشكل المطلوب وطول الإجابة.\n2. **التعلم بأمثلة قليلة (Few-shot)**: إدراج أمثلة على المدخل والمخرج المطلوب داخل الأمر.\n3. **سلسلة التفكير (Chain-of-Thought)**: دفع النموذج إلى شرح خطوات استدلاله لتحسين فعاليته.\n4. **تحديد الدور**: كأن نطلب من النموذج أن يتصرف كمدقق لغوي.\n5. **فرض صيغة معينة للإخراج**: مثل JSON [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p44_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p44_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p25_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p39_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p44_c1"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما المقصود بالهلوسة في النماذج اللغوية، وكيف يمكن تقليلها؟",
+            "expected_answer": "الهلوسة هي إنتاج معلومة تبدو مقنعة لكنها خاطئة أو غير موجودة في المصادر. يمكن تقليلها بربط النموذج بمصادر موثوقة عبر RAG، وطلب الاستشهاد بالمصادر والاعتراف بعدم المعرفة، واستخدام الأدوات الخارجية والمراجعة البشرية، وخفض درجة الحرارة عند الحاجة إلى الدقة.",
+            "generated_answer": "الهلوسة في النماذج اللغوية هي أن يولد النموذج معلومة تبدو مقنعة لكنها خاطئة أو لا أصل لها، ويحدث ذلك بسبب أن النموذج مدرب على توليد النص المحتمل دون التحقق من الحقيقة، مما يؤدي إلى معلومات مضغوطة أو ناقصة أو قديمة [1]. \n\nلتقليل الهلوسة، يمكن اتباع عدة طرق، منها:\n1. ربط النموذج بمصادر موثوقة عبر الاسترجاع (RAG).\n2. مطالبة النموذج بالاستشهاد بمصدر والاعتراف بعدم المعرفة عند الحاجة.\n3. استخدام أدوات خارجية مثل الآلات الحاسبة وقواعد البيانات.\n4. إجراء مراجعة بشرية في المجالات الحساسة.\n5. خفض درجة العشوائية (Temperature) عند الحاجة إلى دقة أعلى [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p45_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p26_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p22_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p79_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p69_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p45_c0"
+            ],
+            "precision": 0.14285714285714285,
+            "recall": 1.0,
+            "f1": 0.25
+        },
+        {
+            "question": "ما الفرق بين درجة الحرارة المنخفضة والمرتفعة في توليد النصوص؟",
+            "expected_answer": "درجة الحرارة المنخفضة تجعل الإجابات أكثر تحفظًا وثباتًا، بينما الدرجة المرتفعة تزيد التنوع والإبداع في النصوص المولدة.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "01_AsterHome_Product_Catalog_p6_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p45_c0",
+                "01_AsterHome_Product_Catalog_p17_c1",
+                "02_AsterHome_Installation_Guide_p8_c1",
+                "01_AsterHome_Product_Catalog_p15_c1",
+                "solar_energy_arabic_p10_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p38_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p37_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p45_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p45_c1"
+            ],
+            "precision": 0.125,
+            "recall": 0.5,
+            "f1": 0.2
+        },
+        {
+            "question": "ما المقصود بالنماذج متعددة الوسائط؟",
+            "expected_answer": "هي نماذج تتعامل مع أكثر من نوع من البيانات في الوقت نفسه، مثل النصوص والصور والصوت والفيديو، ويمكن استخدامها في تحليل الصور وقراءة الوثائق الممسوحة ضوئيًا والتفاعل الصوتي.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c1",
+                "01_AsterHome_Product_Catalog_p18_c1",
+                "01_AsterHome_Product_Catalog_p17_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما دورة عمل الوكيل الذكي Agent؟",
+            "expected_answer": "يفهم الوكيل الهدف، ويخطط، ويختار أداة مناسبة، وينفذها، ثم يلاحظ النتيجة ويكرر العملية عند الحاجة حتى إنجاز المهمة.",
+            "generated_answer": "دورة عمل الوكيل الذكي (Agent) تتكون من فهم الهدف، والتخطيط، واختيار أداة، وتنفيذها، وملاحظة النتيجة، وتكرار ذلك حتى إنجاز المهمة [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما أبرز حدود النماذج اللغوية الكبيرة؟",
+            "expected_answer": "قد تهلوس، وتتوقف معرفتها عند تاريخ قطع التدريب، وقد تعكس تحيزات بيانات التدريب، ويضعف أداؤها في اللغات والمجالات قليلة الموارد، كما أنها حساسة لصياغة الأمر وقد تكون مكلفة في التشغيل.",
+            "generated_answer": "أبرز حدود النماذج اللغوية الكبيرة تشمل أنها قد تهلوس ولها نافذة سياق محدودة، مما يعني أنها قد تنتج معلومات غير دقيقة أو غير منطقية في بعض الأحيان [1][5].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p42_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p82_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p46_c1"
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما المشكلات الأساسية التي يحلها RAG؟",
+            "expected_answer": "يساعد RAG على معالجة ثبات معرفة النموذج عند تاريخ التدريب، وتقليل الهلوسة من خلال الاستناد إلى وثائق مسترجعة، وتمكين النموذج من الوصول إلى بيانات المؤسسة الخاصة والمعلومات الحديثة دون الحاجة إلى إعادة تدريبه بالكامل.",
+            "generated_answer": "RAG يحل ثلاث مشكلات أساسية تعاني منها النماذج اللغوية الكبيرة: عدم معرفتها بالأحداث الحديثة، عدم معرفتها بالبيانات الداخلية الخاصة بالمؤسسات مثل السياسات والعقود، وكون إعادة تدريب النموذج لتضمين المعلومات الجديدة مكلفة وبطيئة [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p81_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الفرق بين مرحلتي الفهرسة والاستعلام في نظام RAG؟",
+            "expected_answer": "الفهرسة مرحلة تتم مسبقًا وتشمل تحميل الوثائق واستخراج النص وتنظيفه وتقطيعه وتحويله إلى تضمينات وتخزينها. أما الاستعلام فيحدث عند وصول سؤال، حيث يحول السؤال إلى متجه ويسترجع المقاطع الأقرب ثم يستخدمها لتوليد الإجابة.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "02_AsterHome_Installation_Guide_p1_c1",
+                "03_AsterHome_Support_Policies_p6_c1",
+                "03_AsterHome_Support_Policies_p4_c1",
+                "01_AsterHome_Product_Catalog_p18_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25
+        },
+        {
+            "question": "لماذا يعد التقطيع Chunking قرارًا مهمًا في بناء نظام RAG؟",
+            "expected_answer": "لأن المقطع الصغير جدًا قد يفقد سياقه، بينما المقطع الكبير جدًا قد يشتت التضمين ويستهلك مساحة من نافذة السياق. لذلك يؤثر اختيار حجم المقاطع وطريقة تقسيمها في جودة الاسترجاع والإجابة.",
+            "generated_answer": "يعد التقطيع Chunking قرارًا مهمًا في بناء نظام RAG لأنه يؤثر بشكل كبير على جودة النظام. فالتقطيع الصغير جدًا يفقد السياق، بينما التقطيع الكبير جدًا يشتت التضمين ويستهلك سياق النموذج. لذلك، يعتبر اختيار حجم المقاطع واستراتيجيات التقطيع مثل التقطيع بحجم ثابت أو حسب البنية أو الدلالي من العوامل الحاسمة للحفاظ على المعنى وتحسين الأداء العام للنظام [2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p81_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الفرق بين التقطيع الثابت والتقطيع الدلالي؟",
+            "expected_answer": "التقطيع الثابت يقسم النص إلى مقاطع بأحجام محددة مع إمكانية استخدام تداخل بينها، بينما التقطيع الدلالي يقسم الوثيقة عند تغير الموضوع من خلال اكتشاف التغير في التشابه بين الجمل المتتالية.",
+            "generated_answer": "التقطيع الثابت يعتمد على تقسيم النص إلى مقاطع بحجم ثابت، مما قد يؤدي إلى فقدان السياق إذا كانت المقاطع صغيرة جداً أو تشتيت المعنى إذا كانت كبيرة جداً. بينما التقطيع الدلالي يقوم بتقسيم الوثيقة بناءً على تغير الموضوع، مما يساعد في الحفاظ على المعنى من خلال اكتشاف التغيرات في التشابه بين الجمل المتتالية [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p38_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p27_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p26_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c0"
+            ],
+            "precision": 0.14285714285714285,
+            "recall": 1.0,
+            "f1": 0.25
+        },
+        {
+            "question": "ما العوامل التي ينبغي مراعاتها عند اختيار نموذج تضمين لنظام RAG باللغة العربية؟",
+            "expected_answer": "ينبغي مراعاة دعم اللغة العربية، وطول المدخل الأقصى، وعدد أبعاد المتجه، والسرعة والكلفة، والأداء على مقاييس التقييم. كما يجب اختبار النموذج على بيانات فعلية من المشروع بدل الاعتماد على الترتيب العام فقط.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "01_AsterHome_Product_Catalog_p16_c1",
+                "02_AsterHome_Installation_Guide_p1_c1",
+                "03_AsterHome_Support_Policies_p3_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p37_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c1"
+            ],
+            "precision": 0.1,
+            "recall": 1.0,
+            "f1": 0.18181818181818182
+        },
+        {
+            "question": "ما وظيفة التشابه الجيبي Cosine Similarity في البحث بالمتجهات؟",
+            "expected_answer": "يقيس التشابه الجيبي الزاوية بين متجهين لتقدير مدى تقاربهما، وتتراوح قيمته بين -1 و1.",
+            "generated_answer": "وظيفة التشابه الجيبي (Cosine Similarity) في البحث بالمتجهات هي قياس الزاوية بين متجهين، مما يساعد في تحديد مدى تشابه هذين المتجهين. يتم استخدامه عادة لتقييم المسافة بين المتجهات في قواعد بيانات المتجهات [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p18_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الفرق بين Dense Retrieval وSparse Retrieval؟",
+            "expected_answer": "البحث الكثيف Dense Retrieval يعتمد على التضمينات ويفهم التقارب الدلالي بين النصوص، بينما البحث المعجمي Sparse Retrieval يطابق الكلمات بدقة، ولذلك يكون مفيدًا للأسماء الخاصة وأرقام الموديلات والرموز.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "02_AsterHome_Installation_Guide_p9_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c1",
+                "02_AsterHome_Installation_Guide_p8_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c1"
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+        },
+        {
+            "question": "لماذا قد يكون البحث الهجين أفضل من استخدام البحث الدلالي وحده؟",
+            "expected_answer": "لأن البحث الدلالي يفهم المعنى لكنه قد يفشل في مطابقة الكلمات الدقيقة مثل أرقام الموديلات والأسماء، بينما البحث المعجمي يطابق الكلمات لكنه لا يفهم المرادفات. يجمع البحث الهجين بين ميزتي الأسلوبين لتحسين الاسترجاع.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p27_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c1"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25
+        },
+        {
+            "question": "ما وظيفة نموذج إعادة الترتيب Reranker في نظام RAG؟",
+            "expected_answer": "يعيد نموذج إعادة الترتيب تقييم المقاطع المرشحة من خلال قراءة السؤال والمقطع معًا، ثم يمنحها درجات صلة أدق ويحتفظ بأفضل المقاطع لإرسالها إلى النموذج اللغوي.",
+            "generated_answer": "نموذج إعادة الترتيب (Reranker) في نظام RAG يقوم بقراءة السؤال والمقطع معًا ويعطي درجات صلة أدق، مما يساعد في تحسين دقة النتائج المسترجعة. على الرغم من أنه أبطأ من البحث بالمتجهات، إلا أنه يحتفظ بأفضل المقاطع بناءً على درجة الصلة [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما المقصود بتقنية HyDE في تحسين استعلامات RAG؟",
+            "expected_answer": "هي أسلوب يطلب فيه النظام من النموذج كتابة إجابة افتراضية، ثم يستخدم متجه هذه الإجابة في البحث عن المقاطع ذات الصلة.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "01_AsterHome_Product_Catalog_p15_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c0",
+                "02_AsterHome_Installation_Guide_p17_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الفرق بين Recall@k وMRR وnDCG في تقييم الاسترجاع؟",
+            "expected_answer": "يقيس Recall@k ظهور المقطع الصحيح ضمن أول k نتائج، ويقيس MRR متوسط مقلوب ترتيب أول نتيجة صحيحة، بينما يقيس nDCG جودة ترتيب النتائج مع مراعاة درجات الصلة.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1",
+                "03_AsterHome_Support_Policies_p3_c1",
+                "03_AsterHome_Support_Policies_p6_c1",
+                "01_AsterHome_Product_Catalog_p19_c1",
+                "01_AsterHome_Product_Catalog_p16_c1",
+                "03_AsterHome_Support_Policies_p10_c1",
+                "02_AsterHome_Installation_Guide_p9_c1",
+                "03_AsterHome_Support_Policies_p20_c1",
+                "02_AsterHome_Installation_Guide_p10_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p78_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0"
+            ],
+            "precision": 0.07692307692307693,
+            "recall": 1.0,
+            "f1": 0.14285714285714288
+        },
+        {
+            "question": "ما الفرق بين Faithfulness وAnswer Relevancy وCorrectness في تقييم إجابات RAG؟",
+            "expected_answer": "Faithfulness تقيس مدى دعم الإجابة بالمقاطع المسترجعة، وAnswer Relevancy تقيس مدى إجابة النظام عن السؤال فعلًا، بينما Correctness تقيس مدى تطابق الإجابة مع الإجابة المرجعية.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0",
+                "01_AsterHome_Product_Catalog_p19_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "01_AsterHome_Product_Catalog_p18_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما أبرز الأخطاء الشائعة التي تقلل جودة أنظمة RAG؟",
+            "expected_answer": "تشمل استخدام مقاطع كبيرة جدًا أو صغيرة جدًا، واستخراج نص غير سليم من ملفات PDF، واختيار نموذج تضمين ضعيف في العربية، وإهمال البيانات الوصفية، وإدخال مقاطع غير ذات صلة، وعدم إجراء تقييم منهجي، والسماح للنموذج بالإجابة اعتمادًا على معرفته العامة دون وجود دليل في الوثائق.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "01_AsterHome_Product_Catalog_p19_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p81_c0",
+                "03_AsterHome_Support_Policies_p5_c1",
+                "02_AsterHome_Installation_Guide_p1_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c1"
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "متى يكون استخدام GraphRAG مفيدًا مقارنة بنظام RAG التقليدي؟",
+            "expected_answer": "يكون GraphRAG مفيدًا عندما تحتاج الأسئلة إلى جمع معلومات من وثائق متعددة، لأنه يبني رسمًا بيانيًا للكيانات والعلاقات بينها لدعم الاسترجاع.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "03_AsterHome_Support_Policies_p20_c1",
+                "02_AsterHome_Installation_Guide_p6_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الفرق بين تصنيف الصور وكشف الأجسام وتجزيء الصور؟",
+            "expected_answer": "تصنيف الصور يحدد الفئة التي تنتمي إليها الصورة، وكشف الأجسام يحدد مواقع الأجسام داخل الصورة باستخدام مستطيلات، أما التجزيء فيصنف كل بكسل في الصورة.",
+            "generated_answer": "تصنيف الصور (Image Classification) هو عملية تحديد ما في الصورة، مثل القول إنها صورة قطة. كشف الأجسام (Object Detection) يتضمن تحديد مواقع عدة أجسام داخل الصورة باستخدام مستطيلات محيطة. أما تجزئة الصور (Segmentation) فهي تصنيف كل بكسل في الصورة، سواء بتجزئة دلالية أو تجزئة الحالات [3].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p55_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p32_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p51_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p55_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "لماذا يمثل OCR العربي تحديًا أكبر من بعض اللغات الأخرى؟",
+            "expected_answer": "لأن الحروف العربية متصلة ويتغير شكل الحرف حسب موقعه في الكلمة، كما توجد نقاط وحركات، وتتنوع الخطوط، وتكتب اللغة من اليمين إلى اليسار.",
+            "generated_answer": "يمثل OCR العربي تحديًا أكبر من بعض اللغات الأخرى بسبب عدة عوامل، منها أن الحروف العربية متصلة ويتغير شكل الحرف بحسب موضعه في الكلمة. بالإضافة إلى ذلك، توجد نقاط وحركات فوق الحروف وتحتها، مما يزيد من تعقيد عملية التعرف. كما أن الخطوط المستخدمة في الكتابة العربية متعددة المدارس مثل النسخ والثلث والرقعة والديواني، مما يضيف تحديات إضافية. كانت الأنظمة التقليدية تعاني في التعامل مع هذه الخصائص، لكن النماذج الحديثة المبنية على التعلم العميق حسنت الدقة كثيرًا في هذا المجال [3].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p37_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p78_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "لماذا تؤثر جودة OCR في جودة نظام RAG الذي يعتمد على مستندات ممسوحة ضوئيًا؟",
+            "expected_answer": "لأن المستندات الممسوحة ضوئيًا لا يمكن استخراج النص منها مباشرة، ويعتمد النظام على OCR لتحويل الصور إلى نص. لذلك فإن أخطاء التعرف على الحروف تؤثر في النص الذي يتم تقطيعه وفهرسته واسترجاعه لاحقًا.",
+            "generated_answer": "تؤثر جودة OCR في جودة نظام RAG الذي يعتمد على مستندات ممسوحة ضوئيًا لأن OCR هو العامل الحاسم في استخراج النص من المستندات الممسوحة. إذا كانت جودة OCR منخفضة، فلن يتمكن النظام من استخراج النص بدقة، مما يؤثر سلبًا على فعالية النظام ككل [3].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p78_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1"
+            ],
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+        },
+        {
+            "question": "ما الفرق بين ASR وTTS في معالجة الكلام؟",
+            "expected_answer": "ASR هو التعرف على الكلام وتحويل الصوت إلى نص، بينما TTS هو تحويل النص إلى كلام وتوليد صوت بشري منه.",
+            "generated_answer": "ASR (التعرف على الكلام) هو عملية تحويل الصوت إلى نص، بينما TTS (تحويل النص إلى كلام) هو عملية توليد صوت بشري من النص. ASR يركز على فهم الكلام المنطوق وتحويله إلى نص مكتوب، بينما TTS يركز على قراءة النص المكتوب بصوت مسموع [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p40_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p36_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p56_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p38_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p41_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c0"
+            ],
+            "precision": 0.14285714285714285,
+            "recall": 1.0,
+            "f1": 0.25
+        },
+        {
+            "question": "ما المقصود بمفارقة موراڤيك؟",
+            "expected_answer": "تشير مفارقة موراڤيك إلى أن المهام التي يراها البشر صعبة مثل الشطرنج والحسابات قد تكون سهلة للحاسوب، بينما المهام التي يراها البشر سهلة مثل التقاط كوب أو المشي على أرض غير مستوية تتطلب حوسبة هائلة.",
+            "generated_answer": "مفارقة موراڤيك (Moravec's Paradox) هي ملاحظة تشير إلى أن المهام التي تعتبر صعبة بالنسبة للبشر، مثل الشطرنج والحسابات، يمكن أن تؤديها الحواسيب بسهولة. بينما المهام التي تبدو سهلة للبشر، مثل التقاط كوب أو المشي على أرض غير مستوية، تتطلب حوسبة هائلة [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p58_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p59_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p39_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p58_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما المستويات التي حددتها جمعية SAE للقيادة الآلية؟",
+            "expected_answer": "حددت جمعية مهندسي السيارات ستة مستويات للقيادة الآلية، تبدأ من المستوى صفر دون أتمتة، وتنتهي بالمستوى الخامس ذي الأتمتة الكاملة.",
+            "generated_answer": "حددت جمعية مهندسي السيارات (SAE) ستة مستويات للقيادة الآلية كما يلي:\n\n0. لا توجد أتمتة، السائق يفعل كل شيء.\n1. مساعدة السائق، مثل مثبت السرعة التكيفي.\n2. أتمتة جزئية، النظام يتحكم في التوجيه والسرعة والسائق يراقب.\n3. أتمتة مشروطة، النظام يقود في ظروف معينة ويطلب تدخل السائق عند الحاجة.\n4. أتمتة عالية، النظام يقود ذاتيا في مناطق وظروف محددة.\n5. أتمتة كاملة في كل الظروف [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p58_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p70_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p71_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p6_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p67_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p58_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما المراحل الثلاث الأساسية التي يعتمد عليها الروبوت الذكي؟",
+            "expected_answer": "يعتمد الروبوت على الإدراك لاستشعار البيئة، والتخطيط لتحديد ما سيفعله، والتحكم لتنفيذ الحركة أو الفعل بدقة.",
+            "generated_answer": "تعتمد الروبوتات الذكية على ثلاث مراحل أساسية وهي: الإدراك (Perception) بالكاميرات والمستشعرات، والتخطيط (Planning) لتحديد ما سيفعله، والتحكم (Control) لتنفيذ الحركة بدقة [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p19_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p4_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p58_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p57_c1"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما أبرز الاتجاهات المستقبلية للذكاء الاصطناعي وفقًا للكتاب؟",
+            "expected_answer": "يتجه الذكاء الاصطناعي نحو نماذج أكثر قدرة وتعددًا للوسائط، ووكلاء أكثر استقلالية، مع استمرار أهمية المهارات البشرية والتعلم المستمر والاستخدام المسؤول.",
+            "generated_answer": "أبرز الاتجاهات المستقبلية للذكاء الاصطناعي تشمل: \n1. النماذج متعددة الوسائط التي تفهم النص والصورة والصوت والفيديو معًا.\n2. الوكلاء الأذكياء القادرون على تنفيذ مهام معقدة بعدة خطوات.\n3. النماذج الصغيرة الفعالة التي تعمل على الأجهزة الشخصية دون الحاجة إلى السحابة.\n4. تحسين دقة \"التفكير\" من خلال الاستدلال المطول.\n5. استخدام الذكاء الاصطناعي في اكتشاف المواد والأدوية وتحليل البيانات الفلكية والجينية.\n6. الروبوتات التي تستفيد من النماذج الكبيرة لفهم الأوامر الطبيعية.\n7. تطوير رقائق مصممة للذكاء الاصطناعي لخفض كلفة الطاقة [1][2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p82_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p85_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p3_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p2_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p85_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "كم عدد فروع شركة واحة، وفي كم محافظة تعمل؟",
+            "expected_answer": "تمتلك شركة واحة 48 فرعًا وتعمل في سبع محافظات.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p3_c0",
+                "02_AsterHome_Installation_Guide_p14_c1",
+                "03_AsterHome_Support_Policies_p8_c1",
+                "03_AsterHome_Support_Policies_p13_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "من أسس شركة واحة ومتى تأسست؟",
+            "expected_answer": "أسست المهندسة ليلى منصور شركة واحة في القاهرة عام 2009.",
+            "generated_answer": "أسست شركة \"واحة\" على يد المهندسة ليلى في عام 2009 [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p3_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p73_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p10_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما الميزانية والمدة المخصصتان لمشروع نخيل؟",
+            "expected_answer": "خصصت الشركة لمشروع نخيل ميزانية قدرها 85 مليون جنيه، ومدة تنفيذ تبلغ ثلاثين شهرًا.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p27_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "03_AsterHome_Support_Policies_p9_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "ما المشكلات الأربع الرئيسية التي حاول مشروع نخيل معالجتها؟",
+            "expected_answer": "المشكلات هي هدر المنتجات سريعة التلف، ونفاد الأصناف من الأرفف، وتسرب العملاء الجدد، وبطء خدمة العملاء.",
+            "generated_answer": "المشكلات الأربع الرئيسية التي حاول مشروع نخيل معالجتها هي:\n\n1. هدر المخزون، حيث كان معدل الفاقد في المنتجات سريعة التلف يبلغ 9.4% وكلف الشركة نحو 118 مليون جنيه سنوياً.\n2. نفاد الأصناف من الأرفف، حيث كانت 6.1% من الطلبات الإلكترونية تلغى أو تعدل بسبب عدم توفر الصنف.\n3. تسرب العملاء، حيث كان نحو 22% من العملاء الجدد يتوقفون عن الشراء خلال تسعين يوماً من أول عملية شراء.\n4. بطء خدمة العملاء، حيث بلغ متوسط زمن الرد على استفسارات الدعم 5 ساعات، وكان هناك 1800 موظف فقط يتولون خطاً ساخناً يستقبل مكالمات يومياً [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p27_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p74_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p25_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "كيف استخدمت شركة واحة الذكاء الاصطناعي للتنبؤ بالطلب؟",
+            "expected_answer": "بنت الشركة نموذجًا من نوع LightGBM للتنبؤ بالطلب الأسبوعي لكل صنف في كل فرع، واستخدم 41 خاصية تشمل المبيعات التاريخية والأسعار والعروض والمواسم والعطلات الرسمية وشهر رمضان والطقس، ودرب على 96 مليون سجل بيع تغطي ثلاث سنوات.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c1"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "كيف تغير أداء نموذج التنبؤ بالطلب بعد تطبيق LightGBM؟",
+            "expected_answer": "انخفض متوسط الخطأ المطلق النسبي من 31% في الطريقة القديمة المعتمدة على المتوسط المتحرك إلى 19% بعد ستة أشهر من تشغيل النموذج الجديد في 12 فرعًا.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "01_AsterHome_Product_Catalog_p3_c1",
+                "01_AsterHome_Product_Catalog_p18_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p94_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0"
+            ],
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+        },
+        {
+            "question": "كيف ساعد نظام التسعير الذكي في تقليل هدر المنتجات؟",
+            "expected_answer": "اقترح النظام تخفيضات تلقائية على المنتجات التي تقترب صلاحيتها من الانتهاء، مع حساب التخفيض الذي يوازن بين تقليل الفاقد وعدم خسارة هامش الربح. بلغ متوسط التخفيض 25% عند بقاء ثلاثة أيام على الصلاحية و40% عند بقاء يوم واحد.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1",
+                "02_AsterHome_Installation_Guide_p11_c1",
+                "03_AsterHome_Support_Policies_p6_c1",
+                "03_AsterHome_Support_Policies_p13_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما نتيجة تجربة العروض المخصصة للعملاء المعرضين لخطر التسرب؟",
+            "expected_answer": "انخفض معدل تسرب العملاء من 22% إلى 16.5% في المجموعة التي تلقت العروض المخصصة ضمن التجربة المحكمة التي شملت 60 ألف عميل جديد موزعين بالتساوي على مجموعتين.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1",
+                "01_AsterHome_Product_Catalog_p18_c1",
+                "01_AsterHome_Product_Catalog_p16_c1",
+                "02_AsterHome_Installation_Guide_p9_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1"
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+        },
+        {
+            "question": "ما الإعدادات التقنية التي استخدمتها شركة واحة في مساعد خدمة العملاء القائم على RAG؟",
+            "expected_answer": "استخدم المشروع 1250 وثيقة تشمل نحو 9400 صفحة، وحجم مقطع 600 رمز مع تداخل 100 رمز، ونموذج تضمين متعدد اللغات بأبعاد 1024، وبحثًا هجينًا يجمع بين التضمينات وBM25، ثم جلب 25 مقطعًا وإعادة ترتيبها لاختيار أفضل خمسة.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1",
+                "02_AsterHome_Installation_Guide_p20_c1",
+                "01_AsterHome_Product_Catalog_p18_c1",
+                "03_AsterHome_Support_Policies_p17_c1",
+                "03_AsterHome_Support_Policies_p13_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0"
+            ],
+            "precision": 0.2,
+            "recall": 0.5,
+            "f1": 0.28571428571428575
+        },
+        {
+            "question": "ما التحسن الذي حققته شركة واحة في مؤشرات الأداء بعد 18 شهرًا من المشروع؟",
+            "expected_answer": "انخفض الفاقد من 9.4% إلى 5.8%، والطلبات الملغاة بسبب نفاد الأصناف من 6.1% إلى 3.2%، وتسرب العملاء الجدد من 22% إلى 16.5%. كما انخفض متوسط زمن الرد من 14 ساعة إلى 35 دقيقة، وارتفعت المكالمات المحلولة دون تصعيد من 48% إلى 71%، وارتفع رضا العملاء من 3.65 إلى 4.3 من 5.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0",
+                "03_AsterHome_Support_Policies_p10_c1",
+                "03_AsterHome_Support_Policies_p9_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "كيف تحسن Recall@5 لمساعد RAG في شركة واحة؟",
+            "expected_answer": "ارتفع Recall@5 من 87% في النسخة الأولى إلى 94% بعد إضافة البحث الهجين وإعادة الترتيب.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "02_AsterHome_Installation_Guide_p20_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1"
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+        },
+        {
+            "question": "لماذا لم يكن البحث بالتضمينات وحدها كافيًا لاسترجاع أرقام الموديلات في نظام واحة؟",
+            "expected_answer": "لأن أرقام الموديلات مثل WX-4471 تحتاج إلى مطابقة معجمية دقيقة، بينما قد لا يطابق البحث بالتضمينات الكلمات والرموز الدقيقة جيدًا. لذلك فعّل الفريق البحث المعجمي إلى جانب البحث الدلالي.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c1",
+                "03_AsterHome_Support_Policies_p11_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c0",
+                "01_AsterHome_Product_Catalog_p16_c1",
+                "02_AsterHome_Installation_Guide_p9_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "ما أبرز الدروس المستفادة من مشروع نخيل فيما يتعلق بجودة البيانات وبناء النماذج؟",
+            "expected_answer": "أكد المشروع أهمية تخصيص وقت كبير لتنظيف البيانات، والبدء بنموذج بسيط كخط أساس قبل استخدام نموذج أكثر تعقيدًا، وإشراك المستخدمين النهائيين مبكرًا، ومراقبة انحراف البيانات وإعادة التدريب عند الحاجة، مع تطبيق النشر التدريجي وإدارة التغيير.",
+            "generated_answer": "أبرز الدروس المستفادة من مشروع نخيل فيما يتعلق بجودة البيانات وبناء النماذج تشمل:\n\n1. **جودة البيانات أهم من تعقيد النموذج**: تم تخصيص 40% من وقت المشروع لتنظيف البيانات، مما يبرز أهمية جودة البيانات في نجاح المشروع [2].\n   \n2. **بدء بنموذج بسيط**: تم استخدام نموذج الانحدار الخطي كخط أساس، مما يدل على أهمية البدء بنماذج بسيطة قبل الانتقال إلى نماذج أكثر تعقيدًا مثل LightGBM، الذي حقق تحسنًا بلغ نقطة مئوية [2]. \n\nهذه الدروس تشير إلى أن التركيز على جودة البيانات وبناء نماذج بسيطة يمكن أن يؤدي إلى نتائج أفضل في المشاريع المتعلقة بالذكاء الاصطناعي.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p74_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p80_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p27_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p35_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p50_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p44_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p90_c1"
+            ],
+            "precision": 0.1111111111111111,
+            "recall": 0.5,
+            "f1": 0.1818181818181818
+        },
+        {
+            "question": "كيف تعاملت شركة واحة مع مخاطر الخصوصية والتحيز في مشروع نخيل؟",
+            "expected_answer": "قررت الشركة إخفاء هوية بيانات التدريب لحماية بيانات العملاء وفق قانون حماية البيانات الشخصية. ومع ذلك، ظلت هناك مخاطر مثل احتمال تحيز توصيات العروض لصالح العملاء كثيري الشراء، والاعتماد على مورد واحد لخدمة النماذج اللغوية.",
+            "generated_answer": "تعاملت شركة واحة مع مخاطر الخصوصية من خلال إخفاء هوية بيانات التدريب، حيث قررت الشركة حماية بيانات العملاء وفق قانون حماية البيانات الشخصية [1]. كما تم استخدام تقنيات مثل إخفاء الهوية والخصوصية التفاضلية والتعلم الموزع، مما يسمح بتدريب النموذج على أجهزة المستخدمين دون نقل بياناتهم [4].\n\nأما بالنسبة للتحيز، فقد تم تحديد مشكلة التحيز المحتمل في توصيات العروض، حيث كانت تفضل العملاء كثيري الشراء على غيرهم [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p86_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p87_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p68_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p68_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p88_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p91_c0"
+            ],
+            "precision": 0.14285714285714285,
+            "recall": 1.0,
+            "f1": 0.25
+        },
+        {
+            "question": "ما معنى مصطلح Embedding في الذكاء الاصطناعي؟",
+            "expected_answer": "التضمين هو تمثيل النص في صورة متجه رقمي كثيف، بحيث يمكن استخدامه في مقارنة النصوص والبحث عن التقارب الدلالي بينها.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p93_c1"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما الفرق بين Overfitting وUnderfitting؟",
+            "expected_answer": "Overfitting يعني أن النموذج يحفظ بيانات التدريب ويضعف أداؤه على بيانات جديدة، أما Underfitting فيعني أن النموذج أبسط من أن يلتقط الأنماط الموجودة في البيانات.",
+            "generated_answer": "I could not find this in the documents.",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p21_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p24_c0",
+                "01_AsterHome_Product_Catalog_p18_c1",
+                "01_AsterHome_Product_Catalog_p17_c1",
+                "02_AsterHome_Installation_Guide_p14_c1",
+                "01_AsterHome_Product_Catalog_p19_c1",
+                "02_AsterHome_Installation_Guide_p12_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p94_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p94_c1"
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما الحدث الذي وقع عام 2017 وكان مرتبطًا بتطور النماذج اللغوية الحديثة؟",
+            "expected_answer": "نُشرت ورقة Attention Is All You Need التي قدمت معمارية الترانسفورمر القائمة على آلية الانتباه الذاتي.",
+            "generated_answer": "في عام 2017، نشر باحثو جوجل ورقة بعنوان \"الانتباه هو كل ما تحتاجه\" (Attention Is All You Need) وقدموا فيها معمارية الترانسفورمر (Transformer)، وهي أساس معظم النماذج اللغوية الحديثة [2].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p39_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p14_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p47_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p48_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p43_c1"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p95_c0"
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "كيف نحسب Precision وRecall في تقييم نموذج تصنيف؟",
+            "expected_answer": "Precision يساوي TP مقسومًا على مجموع TP وFP، بينما Recall يساوي TP مقسومًا على مجموع TP وFN.",
+            "generated_answer": "Precision وRecall في تقييم نموذج تصنيف يتم حسابهما كما يلي:\n\n- **Precision (الضبط)**: يُحسب باستخدام الصيغة التالية:\n  \\[\n  \\text{Precision} = \\frac{TP}{TP + FP}\n  \\]\n  حيث TP هو عدد التوقعات الإيجابية الصحيحة وFP هو عدد التوقعات الإيجابية الخاطئة [3].\n\n- **Recall (الاستدعاء)**: يُحسب باستخدام الصيغة التالية:\n  \\[\n  \\text{Recall} = \\frac{TP}{TP + FN}\n  \\]\n  حيث TP هو عدد التوقعات الإيجابية الصحيحة وFN هو عدد الإيجابيات الحقيقية التي لم يتم اكتشافها [3].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p53_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p49_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p23_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p96_c0"
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "في مثال كشف الاحتيال الذي اختبر 1000 معاملة، ما قيمة Precision وRecall تقريبًا؟",
+            "expected_answer": "بلغت قيمة Precision نحو 66.7%، وبلغت قيمة Recall نحو 80%.",
+            "generated_answer": "قيمة Precision تقريبًا هي 66.7% وRecall تقريبًا هي 80% [1].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p96_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p97_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p23_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p96_c0"
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+        },
+        {
+            "question": "لماذا لا تكفي الدقة Accuracy وحدها لتقييم نموذج كشف الاحتيال؟",
+            "expected_answer": "لأن الدقة العالية قد تخفي وجود عدد كبير من التنبيهات الإيجابية الكاذبة أو حالات لم يكتشفها النموذج. لذلك ينبغي النظر إلى مقاييس أخرى مثل Precision وRecall وF1 لتكوين صورة أوضح عن الأداء.",
+            "generated_answer": "الدقة وحدها لا تكفي لتقييم نموذج كشف الاحتيال لأنها قد تكون مقياسًا مضللًا في البيانات غير المتوازنة. في حالة وجود عدد كبير من المعاملات السليمة مقارنة بالمعاملات الاحتيالية، يمكن أن يؤدي ارتفاع الدقة إلى نتائج غير دقيقة، حيث قد يتم تصنيف معظم المعاملات السليمة بشكل صحيح بينما يتم تجاهل المعاملات الاحتيالية [4].",
+            "retrieved_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p52_c1",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p97_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p54_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p24_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p96_c0"
+            ],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p96_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p97_c0"
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+        },
+        {
+            "question": "ما اسم المدير التنفيذي لشركة واحة؟",
+            "expected_answer": "لا تتضمن الوثائق المتاحة اسم المدير التنفيذي لشركة واحة.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+        },
+        {
+            "question": "ما اسم قاعدة البيانات السحابية التي استخدمتها شركة واحة لتخزين بيانات مساعد RAG؟",
+            "expected_answer": "لا تحدد الوثائق اسم قاعدة البيانات المتجهية المستخدمة في المشروع؛ بل تذكر فقط أنها قاعدة بيانات مفتوحة المصدر.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        },
+        {
+            "question": "ما قيمة الدقة Accuracy التي حققها مساعد RAG في شركة واحة؟",
+            "expected_answer": "لا تذكر الوثائق قيمة لمقياس Accuracy لمساعد RAG. وتذكر بدلًا من ذلك Recall@5 بنسبة 94%، والأمانة بنسبة 91%.",
+            "generated_answer": "I could not find a useful answer in the documents or on the web.",
+            "retrieved_chunk_ids": [],
+            "relevant_chunk_ids": [
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c0",
+                "الذكاء_الاصطناعي_دليل_شامل_RAG_test_p89_c1"
+            ],
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0
+        }
+    ]
 }

@@ -1,0 +1,979 @@
+[
+  {
+    "question": "What are some key projects and initiatives undertaken by IDSC to support decision-making in Egypt?",
+    "expected_answer": "IDSC has played a pioneering role in setting up the citizen’s ID project, introducing the Internet to Egypt, establishing the Strategic Documents Center and the Public Opinion Poll Center, developing information centers in governorates and ministries, launching the Governmental Complaint Portal, and creating a crisis management system.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p4_c2"
+    ]
+  },
+  {
+    "question": "What recognition did IDSC receive for its response to the COVID-19 pandemic and how did it rank among think tanks globally and in Africa and the Middle East in 2020?",
+    "expected_answer": "IDSC was chosen among the best 20 think tanks in the world responding to the COVID-19 pandemic in 2020, ranked 21st out of 64 think tanks globally for the best new idea or paradigm developed in 2020, and ranked 14th out of 101 think tanks in Africa and the Middle East for 2020.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c1"
+    ]
+  },
+  {
+    "question": "What awards did the IDSC win in 2023 and how do they reflect its achievements in digital government?",
+    "expected_answer": "In 2023, IDSC was awarded 6 awards at the 16th Digital Government Awards in Dubai for government innovation, social and governmental responsibility, remote work, government websites, government social media accounts, and smart applications. Additionally, it received three Globee Business Awards and eight trophies from the Middle East and North Africa Stevie Awards.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c3"
+    ]
+  },
+  {
+    "question": "What awards did IDSC receive in 2022 and 2024, and how many trophies did they win in total from the Middle East and North Africa Stevie Awards?",
+    "expected_answer": "IDSC won a total of eight trophies from the Middle East and North Africa Stevie Awards, including five trophies in April 2022 and three trophies in January 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c3"
+    ]
+  },
+  {
+    "question": "What were the voter turnout statistics and implications of the 2024 Presidential Elections in Egypt?",
+    "expected_answer": "The 2024 Presidential Elections in Egypt saw approximately forty-five million voters participating out of 67.3 million eligible voters, resulting in a turnout of 66.8%, a record percentage for democratic elections. This indicated strong public conviction in President Abdel Fattah El-Sisi as a leader during a critical time, as well as popular support for the ongoing construction of the new republic and authorization for necessary measures to protect national security.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p13_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p13_c1"
+    ]
+  },
+  {
+    "question": "What are the potential economic benefits for Egypt after joining the BRICS group in 2024?",
+    "expected_answer": "Joining BRICS could help Egypt gradually disengage from the US dollar, increase the value of the Egyptian pound against the dollar, diversify its foreign exchange reserves using BRICS currencies, and attract new investments.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p14_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p14_c2"
+    ]
+  },
+  {
+    "question": "What significant events occurred during President Abdel Fattah El-Sisi's visit to China in May 2024, and what was the purpose of the Egypt-China Partnership Year announced in 2024?",
+    "expected_answer": "During President Abdel Fattah El-Sisi's visit to China from May 28 to 31, 2024, he held summit talks with President Xi Jinping and discussed ways to strengthen bilateral relations. The purpose of the Egypt-China Partnership Year, announced on the 10th anniversary of their strategic partnership, was to advance and develop bilateral relations through various diplomatic, economic, and cultural events.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p15_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p15_c1"
+    ]
+  },
+  {
+    "question": "What were the main topics addressed by President Abdel Fattah El-Sisi during the 10th Ministerial Meeting of the China-Arab States Cooperation Forum?",
+    "expected_answer": "President Abdel Fattah El-Sisi addressed enhancing Arab-Chinese cooperation, the war in Gaza, calling for an immediate ceasefire, and the implementation of humanitarian aid.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p15_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p15_c3"
+    ]
+  },
+  {
+    "question": "What role does Egypt play in supporting infrastructure projects in Africa, and what are some specific projects mentioned?",
+    "expected_answer": "Egypt, through its chairmanship of the AUDA-NEPAD Steering Committee, is actively involved in supporting infrastructure projects in Africa, including the Julius Nyerere Hydropower Plant and Dam Project in Tanzania and the expansion project of Moheli Port in the Comoros Islands.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p16_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p17_c0"
+    ]
+  },
+  {
+    "question": "What significant events marked the improvement of Egyptian-Turkish relations in 2024?",
+    "expected_answer": "In February 2024, Turkish President Recep Tayyip Erdogan visited Egypt, marking his first visit in 12 years. Following this, President El-Sisi visited Turkey in September 2024, representing a new milestone in strengthening relations between the two countries.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p17_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p17_c2"
+    ]
+  },
+  {
+    "question": "What initiatives were included in the third executive report of the National Human Rights Strategy submitted to the President on December 11, 2024?",
+    "expected_answer": "The report included initiatives, programs, and procedures aimed at enhancing the human rights situation in Egypt, focusing on civil, political, economic, social, and cultural aspects, as well as the rights of women, youth, children, the elderly, and people with disabilities.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p18_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p18_c1"
+    ]
+  },
+  {
+    "question": "What significant legislation regarding refugees was ratified by the Egyptian President in December 2024, and what are its main features?",
+    "expected_answer": "On December 17, 2024, Egyptian President Abdel Fattah El-Sisi ratified the Asylum Law, which regulates the status of refugees, their rights, and obligations. It is the first legislation of its kind in Egypt, applying to refugees and asylum seekers, and includes the establishment of a Permanent Committee for Refugee Affairs responsible for adjudicating asylum applications and providing support.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p19_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p19_c1"
+    ]
+  },
+  {
+    "question": "What were the main political parties that supported candidates in the 2024 Egyptian elections, and how did they contribute to voter mobilization?",
+    "expected_answer": "The Republican People’s Party supported candidate Hazem Omar, enabling him to win 50 seats in the House of Representatives through a strong electoral program. The Wafd Party backed candidate Abdel-Sanad Yamama, while several opposition parties supported Farid Zahran from the Egyptian Social Democratic Party, who represented the opposition.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p23_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p23_c3"
+    ]
+  },
+  {
+    "question": "What types of media outlets covered the Egyptian presidential elections in December 2023, and what was the geographical scope of this coverage?",
+    "expected_answer": "The Egyptian presidential elections received coverage from various media outlets including news agencies, television stations, websites, newspapers, and news websites. The geographical scope included media outlets from the Americas, Europe, the Arab world, Asia, and Africa.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p26_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p27_c0"
+    ]
+  },
+  {
+    "question": "What were the observations regarding the electoral process in Egypt during the three election days, and how did international media coverage characterize the situation?",
+    "expected_answer": "The electoral process proceeded in an orderly manner with large crowds observed at polling stations from early morning. All sub-polling stations opened their doors to voters without exception, totaling 11,631 stations within 9,376 polling stations. International media coverage was characterized by objectivity, providing comprehensive reports on the electoral process, although some European and American media exaggerated the negative aspects related to high inflation rates affecting many Egyptians.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p27_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p27_c3"
+    ]
+  },
+  {
+    "question": "What were the key factors that contributed to the positive perception of the 2024 presidential elections in Egypt?",
+    "expected_answer": "The key factors included the objective and positive coverage by international media, the absence of negative comments regarding the electoral process, the freedom of movement for media professionals and observers, and the full security of polling stations, which highlighted the regularity of the voting process.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p28_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p28_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p28_c2"
+    ]
+  },
+  {
+    "question": "What are the main focuses of Egypt's legislative reforms in 2024 as outlined in the document?",
+    "expected_answer": "Egypt's legislative reforms in 2024 focus on modernizing its legislative framework, institutions, policies, and practices, aligning with constitutional obligations and international human rights agreements.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p31_c0"
+    ]
+  },
+  {
+    "question": "What significant legislative reforms were proposed in Egypt in 2024 regarding health and elderly rights?",
+    "expected_answer": "In 2024, Egypt proposed a draft law on medical liability and patient protection, which includes establishing a Supreme Committee for Medical Liability and Patient Protection and a mandatory insurance system for medical facilities. Additionally, Law No. 19 of 2024, the Elderly Rights Care Law, was issued to safeguard the rights of elderly people.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p31_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p31_c2"
+    ]
+  },
+  {
+    "question": "What measures were taken by the Egyptian Parliament in December 2024 to enhance social support and human rights?",
+    "expected_answer": "In December 2024, the Egyptian Parliament approved the Social Solidarity Bill to unify financial support programs and empower vulnerable groups, while also agreeing on the new Criminal Procedures Law to protect citizens' homes from unwarranted searches and enhance judicial oversight.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p32_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p32_c1"
+    ]
+  },
+  {
+    "question": "What legal framework was established in Egypt in November 2024 to support refugees and what rights does it guarantee?",
+    "expected_answer": "In November 2024, the House of Representatives approved a draft law on the asylum of foreigners, providing a comprehensive legal framework for refugees. It guarantees their rights to education, property ownership, healthcare, and religious practices, while preventing forced deportation or refoulement to dangerous countries.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p32_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p32_c3"
+    ]
+  },
+  {
+    "question": "What legislative actions did the Egyptian government take in December 2024 to improve the investment climate and maritime trade?",
+    "expected_answer": "In December 2024, the House of Representatives approved a draft law amending provisions of the Maritime Trade Law to promote maritime investment, and also approved amendments to laws concerning ships' safety and marine inspection fees to enhance the national maritime transport fleet and support foreign trade activities.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p33_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p33_c2"
+    ]
+  },
+  {
+    "question": "What significant legislative reforms were approved by the Cabinet in November 2024, and how do they reflect Egypt's commitment to economic growth and social equity?",
+    "expected_answer": "In November 2024, the Cabinet approved the final draft of the new Labor Law and activated the Unified Public Finance Law. These reforms reflect Egypt's commitment to fostering economic growth, enhancing social equity, and aligning with international standards.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p34_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p34_c1"
+    ]
+  },
+  {
+    "question": "What are the main goals of the newly formed Government of Egypt's program for the period 2024/2025 to 2026/2027?",
+    "expected_answer": "The main goals include maximizing the nation's economic potential, fortifying resilience against global challenges, ensuring sound governance, optimizing public spending, boosting revenue generation, and investing in human capital through education, public health, and social protection programs.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p36_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p36_c1"
+    ]
+  },
+  {
+    "question": "What principles does the Egyptian government focus on to enhance economic growth and ensure effective governance?",
+    "expected_answer": "The Egyptian government focuses on principles such as the Provision of Basic Services, Integration with the Private Sector, Efficiency and Effectiveness, and Resilience and Adaptability to enhance economic growth and ensure effective governance.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p38_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p38_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p38_c2"
+    ]
+  },
+  {
+    "question": "What mechanisms does the Egyptian Government use to ensure progress toward achieving its strategic goals?",
+    "expected_answer": "The Egyptian Government incorporates continuous evaluation and regular review mechanisms, monitoring ministerial performance with clearly defined targets, and submitting periodic reports to Parliament and the Office of the President every three or six months.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p38_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p39_c0"
+    ]
+  },
+  {
+    "question": "What key initiatives is the Government of Egypt implementing to achieve sustainable development and economic resilience by 2025?",
+    "expected_answer": "The Government is implementing key initiatives such as restructuring ministries, promoting economic diversification, and prioritizing social protection programs to achieve sustainable development and economic resilience.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p39_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p39_c2"
+    ]
+  },
+  {
+    "question": "What are the key components of Egypt's national security strategy as outlined in the provided chunks?",
+    "expected_answer": "Egypt's national security strategy focuses on protecting the country's borders, resources, and social unity from internal and external threats, enhancing security measures, fighting terrorism, and safeguarding infrastructure.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p41_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p41_c1"
+    ]
+  },
+  {
+    "question": "What were the main activities conducted during the Egyptian-American naval exercise, Eagle Defender, in September 2024?",
+    "expected_answer": "The main activities included theoretical and practical lectures for cohesion and standardization of operational concepts, an exhibition of weapons and equipment, surface artillery live-fire drills, securing a vessel carrying valuable cargo, and conducting fire-fighting operations aboard naval units.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p41_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p41_c3"
+    ]
+  },
+  {
+    "question": "What joint military training exercises were conducted by the Egyptian and American forces in 2024, and what were their main focuses?",
+    "expected_answer": "In November 2024, the Egyptian and American Air Forces conducted a joint air training at an Egyptian air base, focusing on standardizing combat concepts, exchanging training experiences, attacking enemy targets, defending vital assets, and aerial refueling. Additionally, there were exercises involving naval units that included securing vessels, fire-fighting operations, and various sailing formations to enhance operational readiness.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p41_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p42_c0"
+    ]
+  },
+  {
+    "question": "What joint military exercises were conducted by Egyptian and British forces in May 2024, and what were their focuses?",
+    "expected_answer": "In May 2024, the Egyptian and British forces conducted the joint maritime exercise 'Alexandria Defender' at the Alexandria Naval Base, which focused on various maritime operations including the right of visit and inspection for suspected vessels, countering unconventional threats, live-fire drills, and first aid training. Additionally, they engaged in joint training activities for military police and criminal security.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p43_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p43_c1"
+    ]
+  },
+  {
+    "question": "What were the key activities conducted during the joint military exercises between the Egyptian and Serbian Special Forces in September 2024?",
+    "expected_answer": "The joint military exercises included an operation to storm a terrorist stronghold using helicopters, resulting in the successful rescue of hostages and the apprehension of terrorists, as well as standard and unconventional firing exercises.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p43_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p43_c2"
+    ]
+  },
+  {
+    "question": "What were the main activities and objectives of the joint naval exercise 'Red Wave-7' conducted in May 2024?",
+    "expected_answer": "The joint naval exercise 'Red Wave-7' involved naval forces from Egypt, Saudi Arabia, Jordan, Yemen, and Djibouti, focusing on standardizing joint operational concepts, countering Zodiac boat attacks, and executing various sailing formations. The final phase included a live demonstration of storming a coastal island with aerial bombardment support, showcasing high coordination among the forces.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p46_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p46_c1"
+    ]
+  },
+  {
+    "question": "How do the joint military exercises contribute to Egypt's defense relationships with other countries?",
+    "expected_answer": "The joint exercises serve as a vital platform for exchanging knowledge and expertise among participating nations, allowing for the development of standardized operational procedures and fostering mutual trust and understanding.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p46_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p46_c2"
+    ]
+  },
+  {
+    "question": "What role has President Abdel Fattah El-Sisi played in Egypt's foreign policy and how has this been reflected in diplomatic activities in 2024?",
+    "expected_answer": "President Abdel Fattah El-Sisi has led summit diplomacy, significantly increasing presidential diplomatic engagements in regional and international forums, which has shaped Egypt's foreign policy in 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p48_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p48_c1"
+    ]
+  },
+  {
+    "question": "What significant international summits did President Abdel Fattah El-Sisi attend in 2024, and what was a key focus of the G20 Summit?",
+    "expected_answer": "In 2024, President Abdel Fattah El-Sisi attended the BRICS Summit in Russia in October and the G20 Summit in Brazil in November. A key focus of the G20 Summit was the launch of the 'Global Alliance Against Hunger and Poverty', aimed at promoting social inclusion and eliminating poverty and hunger.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p48_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p48_c3"
+    ]
+  },
+  {
+    "question": "What were the main focuses of President Abdel Fattah El-Sisi's participation in the Arab Summit in Bahrain and the Extraordinary Arab-Islamic Summit in Riyadh in 2024?",
+    "expected_answer": "At the Arab Summit in Bahrain, the focus was on restoring regional stability amidst crises in several Arab countries. The Extraordinary Arab-Islamic Summit in Riyadh aimed at achieving a ceasefire in Gaza, West Bank, and Lebanon, and issued a joint statement supporting a unified Arab-Islamic position against the Israeli escalation in the region.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p48_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p49_c0"
+    ]
+  },
+  {
+    "question": "What were the key diplomatic visits made by President Abdel Fattah El-Sisi in 2024, and what were their purposes?",
+    "expected_answer": "In 2024, President Abdel Fattah El-Sisi visited China in May to strengthen bilateral relations and Turkey in September to build upon President Erdoğan's earlier visit to Egypt, marking a new phase of friendship. He also visited Eritrea in October to discuss strengthening bilateral relations and regional stability.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p49_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p49_c2"
+    ]
+  },
+  {
+    "question": "What diplomatic actions did Egypt take to address the humanitarian situation in Gaza during the war, and what was the outcome of these efforts?",
+    "expected_answer": "Egypt played a major role in restoring stability to the region by facilitating negotiations to end the conflict, hosting the Cairo Ministerial Conference to enhance humanitarian response, and overseeing the entry of humanitarian aid into Gaza. These efforts culminated in a ceasefire agreement and a prisoners swap deal on January 15, 2025.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p50_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p50_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p50_c2"
+    ]
+  },
+  {
+    "question": "What actions did President El-Sisi take to address the humanitarian situation in Gaza and the ongoing crisis in Sudan in 2024?",
+    "expected_answer": "President El-Sisi oversaw negotiations to facilitate humanitarian aid entry into Gaza and emphasized the need for a sustainable peace through a two-state solution. Additionally, he hosted a conference in July 2024 to bridge gaps between Sudanese groups and presented humanitarian proposals at the Paris International Conference in April 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p50_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p51_c0"
+    ]
+  },
+  {
+    "question": "What initiatives did Egypt undertake in 2024 to address the Sudanese crisis and strengthen its relationships with Gulf States?",
+    "expected_answer": "In 2024, Egypt hosted a conference titled 'Together to Stop the War' to address the Sudanese crisis and presented humanitarian proposals at the Paris International Conference on Supporting Sudan and Neighboring Countries. Additionally, Egypt strengthened its ties with Gulf States through numerous meetings and a joint ministerial meeting with the Gulf Cooperation Council on March 3, 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p51_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p51_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p51_c2"
+    ]
+  },
+  {
+    "question": "What role does Egypt play in promoting development across African countries and what are some specific projects it is involved in?",
+    "expected_answer": "Egypt, as the chair of the Steering Committee of AUDA-NEPAD, is committed to promoting development across African countries and emphasizes the integration of African nations. It supports infrastructure projects like the Julius Nyerere Hydropower Plant in Tanzania and the expansion of Moheli Port in the Comoros Islands.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p51_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p52_c0"
+    ]
+  },
+  {
+    "question": "What role does the Egyptian Agency of Partnership for Development (EAPD) play in supporting African countries, and what recent agreement did it sign to enhance this support?",
+    "expected_answer": "The Egyptian Agency of Partnership for Development (EAPD) focuses on strengthening South-South cooperation and serves as a platform for communication and knowledge sharing to support friendly nations, particularly African countries. In May 2024, EAPD signed a memorandum of understanding with the Colombian Presidential Agency for International Cooperation to provide development support to African countries through capacity building.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p52_c2"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian Agency of Partnership for Development (EAPD) undertaken to support African countries in 2024?",
+    "expected_answer": "In 2024, the EAPD signed a memorandum of understanding with the Colombian Presidential Agency for International Cooperation to provide development support through capacity building and training programs. Additionally, they signed a MoU with the Food and Agriculture Organization to promote South-South cooperation aimed at improving food security and transforming agrifood systems.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p52_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p52_c3"
+    ]
+  },
+  {
+    "question": "What significant agreements did Egypt sign during the Egypt-European Union Investment Conference in June 2024, and how do these agreements reflect Egypt's diplomatic efforts?",
+    "expected_answer": "During the Egypt-European Union Investment Conference in June 2024, Egypt signed 29 agreements and memorandums of understanding worth EUR 49 billion with EU-affiliated companies, along with six agreements worth EUR 18.7 billion with other consortiums and companies. These agreements reflect Egypt's active role in fostering economic cooperation and strengthening its international relationships.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p55_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p55_c3"
+    ]
+  },
+  {
+    "question": "What role did Egypt play in the Middle East and Africa in 2024 according to the provided chunks?",
+    "expected_answer": "Egypt played an active role in fostering regional stability and maintained strategic international relationships, reinforcing its central position in the Middle East and Africa.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p55_c3"
+    ]
+  },
+  {
+    "question": "What is the purpose of the Egyptian government's task force established for human development, and what financial commitment has been made for the fiscal year 2024/2025?",
+    "expected_answer": "The task force aims to enhance and improve human development for Egyptian citizens, and the government has allocated approximately 118.3 billion Egyptian pounds toward human and social development for the fiscal year 2024/2025.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p59_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p59_c2"
+    ]
+  },
+  {
+    "question": "What are the main objectives of the 'Bedaya' initiative launched by Prime Minister Dr. Mostafa Madbouly, and how many services has it provided within its first 100 days?",
+    "expected_answer": "The 'Bedaya' initiative aims to establish a comprehensive healthcare system, improve education, provide decent employment opportunities, foster sustainable urban development, ensure a dignified life for all Egyptians, and empower women. It has delivered approximately 288 million services within its first 100 days.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p59_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p60_c0"
+    ]
+  },
+  {
+    "question": "What are some of the key achievements of the 'Bedaya' initiative in its first 100 days, particularly in healthcare and women's empowerment?",
+    "expected_answer": "In its first 100 days, the 'Bedaya' initiative provided approximately 288 million services, including 224.8 million diverse healthcare services and benefited around 2.3 million women through family development and women's empowerment services.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p60_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p60_c1"
+    ]
+  },
+  {
+    "question": "What significant achievements were made in healthcare and education as part of the initiative in Egypt by 2025?",
+    "expected_answer": "The initiative achieved significant progress in healthcare by providing approximately 224.8 million healthcare services, completing 148,819 surgical procedures, and deploying 1,525 medical convoys. In education, five technical schools were renovated, two became operational, and ten schools were developed, with three more set to open in the 2025/2026 academic year.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p61_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p61_c1"
+    ]
+  },
+  {
+    "question": "What initiatives were taken to improve vocational training and education in Egypt as part of the program leading to 2025?",
+    "expected_answer": "The initiative provided essential vocational training through 34 mobile training centers and 48 fixed training centers, covering 49 professions and benefiting 3,721 participants. Additionally, it renovated five technical schools, with two becoming operational in the 2024/2025 academic year, and funded the development of ten more schools, aiming to launch 100 technical schools.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p61_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p62_c0"
+    ]
+  },
+  {
+    "question": "What types of support were provided to vulnerable families through the initiatives mentioned in the chunks?",
+    "expected_answer": "The initiatives provided food support by distributing 54,830 food cartons and 4,825 tons of meat and poultry, benefiting 297,195 vulnerable families. Additionally, they offered school supplies through 53 exhibitions and organized clothing exhibitions that distributed 375,000 items to 165,000 individuals.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p62_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p62_c3"
+    ]
+  },
+  {
+    "question": "What initiatives were implemented to empower women and support family development in Egypt, and how many women benefited from these initiatives?",
+    "expected_answer": "The initiatives included financial inclusion, productive workshops, training units, financial literacy programs, and awareness campaigns. A total of 2,284,436 women received targeted services, while 6,230,167 women benefited from awareness campaigns, and 648,846 women received the '1,000 Days Grant.'",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p63_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p63_c2"
+    ]
+  },
+  {
+    "question": "How many individuals benefited from the youth and sports programs under the initiative, and what was the total number of initiatives implemented?",
+    "expected_answer": "A total of 11,195,623 individuals benefited from 24,502 youth and sports programs and activities.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p64_c1"
+    ]
+  },
+  {
+    "question": "What are the key achievements of the Bedaya initiative in terms of environmental services and community welfare in Egypt?",
+    "expected_answer": "The Bedaya initiative achieved significant accomplishments in environmental services by removing 9,976,941 tons of waste, planting 38,846 trees through the '100 Million Trees' initiative, and conducting 1,079 seminars to raise environmental awareness. Additionally, it promoted entrepreneurship, generated employment opportunities, and improved community welfare, benefiting over 5 million individuals.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p65_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p65_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p65_c2"
+    ]
+  },
+  {
+    "question": "What significant changes occurred in Egypt's healthcare budget and infrastructure projects between 2014/2015 and 2024/2025?",
+    "expected_answer": "The healthcare budget for 2024/2025 rose to approximately EGP 319.6 billion, compared to EGP 42.4 billion in 2014/2015. Additionally, a total of 1219 healthcare infrastructure projects have been implemented at a cost of EGP 177 billion.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p67_c2"
+    ]
+  },
+  {
+    "question": "What were the key achievements in Egypt's healthcare sector in 2024 regarding training, digital transformation, and emergency management?",
+    "expected_answer": "In 2024, Egypt conducted over 30,000 training programs for healthcare personnel, delivered more than 60.5 million medical services, and digitized primary care units and 90% of hospitals in the first phase of the Universal Health Insurance System. Additionally, 22 crisis and emergency management centers were established to enhance healthcare service efficiency.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p68_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p68_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p68_c2"
+    ]
+  },
+  {
+    "question": "What advancements were made in Egypt's healthcare system in 2024 regarding digital transformation and infrastructure development?",
+    "expected_answer": "In 2024, Egypt completed the digitization of the Universal Health Insurance System, established 22 crisis and emergency management centers, issued over 54 million electronic prescriptions, created 5 million unified medical records, and accredited 422 new healthcare facilities across 21 governorates.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p68_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p69_c0"
+    ]
+  },
+  {
+    "question": "What significant healthcare infrastructure developments occurred in Egypt in 2024, and what was one notable facility inaugurated during this time?",
+    "expected_answer": "In 2024, Egypt accredited 422 new healthcare facilities across 21 governorates, including the largest liver transplant center in the Middle East and Africa at Mansoura University, which cost EGP 1 billion.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p69_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p69_c2"
+    ]
+  },
+  {
+    "question": "What key initiatives have contributed to Egypt's healthcare transformation in 2024?",
+    "expected_answer": "Key initiatives include the Universal Health Insurance System, advancements in digital healthcare, extensive infrastructure upgrades, and impactful national programs.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p71_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p71_c1"
+    ]
+  },
+  {
+    "question": "What strategies did the Ministry implement to address the shortage of teachers and improve the quality of education in Egypt?",
+    "expected_answer": "The Ministry addressed over 90% of the teachers' shortage by appointing 30,000 teachers annually, regularizing the status of teaching specialists, employing approximately 50,000 part-time teachers for core subjects, and increasing part-time payment rates. Additionally, they developed curricula to meet global standards and collaborated with UNICEF Egypt to enhance educational resources.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p74_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p74_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p74_c3"
+    ]
+  },
+  {
+    "question": "What new university was established in 2024 to enhance Egypt's technological education, and what fields does it focus on?",
+    "expected_answer": "Obour University for Science and Technology was established in Al-Sharkia Governorate, focusing on innovative programs in Engineering and Technology, Pharmacy, Business Administration and Entrepreneurship, and Computer Science and Artificial Intelligence.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p77_c2"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian government undertaken to improve the quality of higher education and integrate technical education with workforce readiness?",
+    "expected_answer": "The Egyptian government has fostered partnerships with internationally renowned institutions to modernize university curricula and provide accredited training programs. Additionally, a high-level committee was formed to harmonize the work of industrial and technological schools, universities, and vocational training centers, creating clear pathways from education to employment.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p78_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p78_c1"
+    ]
+  },
+  {
+    "question": "What achievements have Egyptian universities made in international rankings and how has the government supported higher education integration with workforce readiness?",
+    "expected_answer": "Egyptian universities have achieved notable milestones, with 69 universities and research institutions included in the SCImago Institutions Rankings, 15 universities ranked in the 2025 QS World University Rankings, and another 15 featured in the Dutch Leiden Ranking. The government has supported higher education integration with workforce readiness by forming a high-level committee to harmonize the work of educational institutions and create pathways from education to employment.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p78_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p78_c2"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian government implemented to enhance higher education and support students in 2024?",
+    "expected_answer": "The Egyptian government has prioritized cultural affairs and scholarship programs, enhanced cultural representation abroad, launched scholarship initiatives, supported Egyptian students overseas, and fostered ties with international academic institutions through agreements and joint research projects.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p79_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p79_c1"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian government implemented to support talented students and enhance academic research in 2024?",
+    "expected_answer": "The Egyptian government has implemented comprehensive plans for student activities to discover, nurture, and support talented students, providing them with necessary resources. Additionally, it has emphasized advancing academic research through joint projects, collaborations with renowned institutions, and aligning research with national development goals.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p79_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p79_c3"
+    ]
+  },
+  {
+    "question": "What is the total amount allocated by the Egyptian government for social benefits in the fiscal year 2024/2025, and how does this compare to the previous fiscal year?",
+    "expected_answer": "The Egyptian government allocated EGP 635.9 billion for social benefits in the fiscal year 2024/2025, which is a 20.1% increase from the previous fiscal year 2023/2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p82_c1"
+    ]
+  },
+  {
+    "question": "What are the main features and benefits of the Takaful and Karama cash transfer programs in Egypt?",
+    "expected_answer": "The Takaful program targets families with children, linking financial support to health and education outcomes, while Karama provides unconditional aid to elderly citizens and individuals with disabilities. Beneficiaries gain access to complementary social services, including health insurance, fee exemptions for public education, and food subsidy cards. The program also aims to eradicate illiteracy through the 'No Illiteracy with Takaful' initiative.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p82_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p82_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p82_c4"
+    ]
+  },
+  {
+    "question": "What was the impact of the 'No Illiteracy with Takaful' initiative on the literacy rate among Takaful and Karama recipients, and how does it relate to Egypt's broader social support framework?",
+    "expected_answer": "The 'No Illiteracy with Takaful' initiative reduced the illiteracy rate among Takaful and Karama recipients from 62% to 45%, with 220,000 individuals completing literacy courses. This initiative is part of a holistic approach to poverty alleviation that integrates education, healthcare, and food support, ensuring long-term socio-economic empowerment for millions of vulnerable Egyptians.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p82_c4",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p83_c0"
+    ]
+  },
+  {
+    "question": "What financial assistance measures has the Egyptian government implemented to support low-income families, and how much has been allocated for social services in 2024?",
+    "expected_answer": "The Egyptian government has distributed food baskets to 18 thousand families at a cost of EGP 2.16 million and meat to 308 thousand families at a cost of EGP 69.6 million. Additionally, EGP 231.6 billion has been allocated for social services in 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p83_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p84_c0"
+    ]
+  },
+  {
+    "question": "What initiatives did the Egyptian government implement in 2024 to support low-income households and ensure access to essential goods?",
+    "expected_answer": "The Egyptian government launched the 'Welcome Ramadan' initiative, providing over 3,000 outlets with goods at 15-30% discounts, and the 'Sanad Al-Kheir' initiative, which generated sales exceeding EGP 431.4 million to benefit underserved areas with mobile units offering high-quality goods at affordable prices.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p84_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p84_c2"
+    ]
+  },
+  {
+    "question": "What initiatives did the Egyptian government undertake in 2024 to improve housing conditions for families in informal settlements?",
+    "expected_answer": "In 2024, the Egyptian government rehabilitated informal settlements by relocating thousands of families from unsafe dwellings to secure housing, developing over 25,000 units through the Takaful program at a cost of EGP 810 million. Additionally, 74,370 housing units were completed in 51 informal areas across 19 governorates, offered at affordable rental rates, which significantly improved rent collection rates from 10% in 2022 to 60% in 2024.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p84_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p85_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p85_c1"
+    ]
+  },
+  {
+    "question": "What initiatives has Egypt implemented to provide affordable housing for low- and middle-income citizens, and what financial support mechanisms are in place?",
+    "expected_answer": "Egypt has launched the 'Housing for All Egyptians' initiative, which has completed over 1 million housing units benefiting nearly 3 million citizens. Financial support includes EGP 78.6 billion from banks for flexible financing options, EGP 10.1 billion in direct subsidies, and EGP 15.5 billion allocated to subsidize interest rates for affordable mortgage payments.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p85_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p85_c3"
+    ]
+  },
+  {
+    "question": "What are the key features of the Housing for All Egyptians 5 program, and how does it support low-income families?",
+    "expected_answer": "The Housing for All Egyptians 5 program introduced 78,700 housing units with areas ranging from 75 to 90 square meters, offering reduced down payments starting at EGP 20,000 and installment plans up to 20 years at interest rates of 8% for low-income families. It aims to enable 1 million low-income families to access affordable housing and achieve greater stability.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p85_c3"
+    ]
+  },
+  {
+    "question": "What are the key features and impacts of the 'Housing for All Egyptians' initiative and the 'Hayah Karima' initiative as described in the provided chunks?",
+    "expected_answer": "'Housing for All Egyptians' introduced 78,700 housing units aimed at low and middle-income families, with reduced down payments and long installment plans, benefiting about 3 million people. The 'Hayah Karima' initiative focuses on rural transformation, addressing infrastructure and poverty, with a completion rate of 85.5% for its first phase, impacting 18 million citizens across 1,500 villages.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c2"
+    ]
+  },
+  {
+    "question": "What were the key achievements of the Hayah Karima initiative by the end of November 2024 in terms of project completion and impact on citizens?",
+    "expected_answer": "By the end of November 2024, the Hayah Karima initiative achieved an 85.5% completion rate with 16,812 projects finalized, impacting 18 million citizens across 1,500 villages. Additionally, 100 villages were fully developed, benefiting 1.2 million citizens.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p86_c3"
+    ]
+  },
+  {
+    "question": "What were the key achievements in education and sanitation as part of the initiative between 2021 and 2024?",
+    "expected_answer": "The initiative refurbished and constructed over 15,000 classrooms, renovated 1,300 schools, and reduced illiteracy rates by 7% benefiting 510,000 citizens. In sanitation, it completed 21 wastewater treatment plants, established 937 sanitation projects, and increased the number of beneficiaries of sanitation services by 45%. Additionally, it developed 248 water stations and ensured universal access to clean drinking water in the covered villages.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p87_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p87_c1"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian government implemented to support economic empowerment and financial inclusion for rural populations and irregular workers?",
+    "expected_answer": "The Egyptian government has implemented the Hayah Karima initiative, which disbursed over EGP 65.6 billion to support 2.9 million beneficiaries in establishing micro, small, and medium enterprises, resulting in an 11% improvement in financial inclusion indicators. Additionally, in 2024, the Ministry of Social Solidarity finalized a draft law for an emergency relief fund aimed at providing financial relief to irregular workers during crises.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p87_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p88_c0"
+    ]
+  },
+  {
+    "question": "What significant changes were made to Egypt's pension system in 2024 to enhance financial security for retirees?",
+    "expected_answer": "In 2024, Egypt increased pension payments by 15% for over 11.5 million beneficiaries, costing EGP 74 billion, and raised the minimum insured wage from EGP 400 in 2014 to EGP 2,000, while the maximum insured wage rose to EGP 12,600.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p89_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p89_c1"
+    ]
+  },
+  {
+    "question": "What measures has Egypt taken in 2024 to enhance its social protection framework for the elderly and the broader population?",
+    "expected_answer": "In 2024, Egypt fortified its pension infrastructure to support the elderly, ensuring financial assistance and peace of mind. Additionally, the government's social protection efforts included cash transfers, subsidies, slum rehabilitation, and community empowerment, reflecting a comprehensive approach to societal welfare.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p89_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p90_c0"
+    ]
+  },
+  {
+    "question": "What initiatives did the Egyptian Government implement in 2024 to empower women and youth, and what was a significant milestone in women's leadership during that year?",
+    "expected_answer": "In 2024, the Egyptian Government launched initiatives aimed at enhancing the capabilities of women and youth, including establishing 48 Safe Women Clinics and promoting their participation in the workforce. A significant milestone was the appointment of Counselor Amal Ammar as the first female judge to head the National Council for Women.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p92_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p92_c1"
+    ]
+  },
+  {
+    "question": "What advancements were made in women's representation in leadership roles and legislative bodies in Egypt by 2024?",
+    "expected_answer": "By 2024, four women were appointed as ministers, and women deputy ministers represented 27% of the total deputies. In the House of Representatives, women's representation reached 165 seats, and in the Senate, it reached 41 seats. Additionally, there are currently 130 female members in the regular judiciary and 137 female judges in the State Council.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p93_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p93_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p93_c2"
+    ]
+  },
+  {
+    "question": "What initiatives have been launched to improve women's economic empowerment and financial inclusion in Egypt between 2022 and 2024?",
+    "expected_answer": "The National Council for Women (NCW) launched numerous initiatives focused on financial inclusion, workshops, productive units, financial literacy, and entrepreneurship. Over 315,000 women received training in financial literacy, more than 219,000 participated in entrepreneurship training, and over 57,000 benefited from productive training opportunities. Additionally, the Joint Regional Project between the European Union and the OECD was launched to enhance women entrepreneurs' access to financing.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p93_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p94_c0"
+    ]
+  },
+  {
+    "question": "What improvements have been observed in female education and health in Egypt from 2013/2014 to 2023/2024?",
+    "expected_answer": "The percentage of females enrolled in higher education increased from 45.4% to 49.8%, and in postgraduate studies from 47.9% to 58%. The dropout rate among females at the primary stage decreased from 0.45% to 0.23%. Additionally, there has been significant progress in women's literacy rates, healthy years of life, and regular prenatal care, along with a decline in the maternal mortality rate.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p95_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p95_c1"
+    ]
+  },
+  {
+    "question": "What initiatives have been implemented in Egypt to improve women's health and education by 2024?",
+    "expected_answer": "The NCW facilitated the issuance of over 1.3 million national ID cards for women and contributed to medical caravans and awareness seminars. The 'Dawwie' Initiative reached approximately 270,000 girls, providing digital education certificates and focusing on gender equality through healthcare, education, and empowerment.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p95_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p95_c2"
+    ]
+  },
+  {
+    "question": "What initiatives were implemented in Egypt to address violence against women and support community development by June 2024?",
+    "expected_answer": "The initiatives included the establishment of 33 safe spaces for women in university hospitals and primary healthcare centers, the setup of 28 women's complaints offices that received over 255,000 complaints (80% resolved), the '16 Days of Activism to End Violence Against Women' campaign benefiting 11 million people, the 'Awareness Campaign to Combat Harmful Practices' reaching 876,000 beneficiaries, and the 'Her Marriage before 18 Abolishes Her Rights' campaign which reached 30 million beneficiaries.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p96_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p97_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p97_c1"
+    ]
+  },
+  {
+    "question": "What initiatives were launched in 2024 to empower Egyptian youth and enhance their skills in media and decision-making?",
+    "expected_answer": "In 2024, the Presidential Initiative 'Bedaya' was launched to empower Egyptian youth by enhancing their participation in national development and decision-making. Additionally, the first edition of the Arab Youth Media Creativity Summit was launched to develop youth skills in media and address contemporary challenges.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p98_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p98_c3"
+    ]
+  },
+  {
+    "question": "What initiatives have been implemented by the Ministry of Youth and Sports in Egypt to empower youth and combat illegal migration?",
+    "expected_answer": "The Ministry of Youth and Sports has established youth centers, organized youth camps in villages, and implemented initiatives focused on youth training, employment, and empowerment in various fields, including sports, economy, society, culture, and arts.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p99_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p99_c1"
+    ]
+  },
+  {
+    "question": "What initiatives have been launched in Egypt to enhance financial culture and digital literacy among youth in 2024?",
+    "expected_answer": "In 2024, the Ministry of Youth and Sports signed a cooperation protocol with the National Bank of Egypt to enhance financial culture and launched a national campaign alongside the Digital Egypt Youth (DEY) initiative to educate young people about financial inclusion and digital literacy.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p99_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p99_c2"
+    ]
+  },
+  {
+    "question": "What initiatives were launched by the Ministry of Youth and Sports in 2024 to empower student leaders and youth participation in environmental issues?",
+    "expected_answer": "In February 2024, the Ministry launched a nationwide 'National Project for Rehabilitation, Training, and Awareness-raising for Student Leaders' to develop leadership and communication skills among student leaders at 27 public universities. Additionally, in April 2024, a cooperation protocol was signed with the Ministry of Environment to enhance youth capacity in environmental work and participation in climate-related initiatives.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p100_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p100_c1"
+    ]
+  },
+  {
+    "question": "What initiatives were launched by the Ministry of Youth and Sports in collaboration with other organizations to empower youth in Egypt in 2024?",
+    "expected_answer": "In 2024, the Ministry of Youth and Sports launched the Arab Youth Parliament Simulation Model in July to foster sustainable community participation, and the second edition of the Youth Financial and Digital Inclusion Summit in September to prepare youth for sound investment decisions.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p100_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p100_c2"
+    ]
+  },
+  {
+    "question": "What initiatives has Egypt undertaken in 2024 to enhance youth development and sports infrastructure?",
+    "expected_answer": "In 2024, Egypt commenced the development of 1056 youth centers under the 'Haya Karim' initiative and established its first regional center for water sports development, while also signing a cooperation protocol between the Ministries of Youth and Sports and Social Solidarity to improve services at youth centers.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p100_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p101_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p101_c1"
+    ]
+  },
+  {
+    "question": "What initiatives has Egypt implemented in 2024 to empower both women and youth, and how do these initiatives contribute to the country's development?",
+    "expected_answer": "In 2024, Egypt has implemented initiatives such as legislative changes, economic support for women entrepreneurs, and programs to combat gender-based violence to empower women. For youth, the government has focused on skill development, education, and leadership opportunities. These efforts promote gender equality and youth leadership, contributing to sustainable economic growth, social cohesion, and innovation, thereby ensuring a more equitable future for the nation.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p101_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p101_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p101_c3"
+    ]
+  },
+  {
+    "question": "What key initiatives and legal frameworks has Egypt implemented to support persons with disabilities as of 2024?",
+    "expected_answer": "Egypt has established the National Council for Persons with Disabilities in 2019, enacted a landmark Disability Rights Law, and launched the 'Differently-Abled' Fund in 2020. Additionally, proposed amendments to the Persons with Disabilities Law aim to increase vehicle import capacity for severe disabilities and finalize a national disability strategy.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p103_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p103_c1"
+    ]
+  },
+  {
+    "question": "What initiatives were implemented in Egypt to support the education of visually impaired and deaf students in 2024?",
+    "expected_answer": "In 2024, Egypt provided 2,000 laptops to visually impaired university students, offered scholarships worth EGP 900,000 per year to visually impaired students across 19 public universities, and integrated 587 deaf and hard-of-hearing students into 13 universities with the support of 83 sign-language interpreters at an annual cost of EGP 2.9 million.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p104_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p104_c1"
+    ]
+  },
+  {
+    "question": "What initiatives are being implemented in Egypt to support persons with disabilities, and how do international partnerships contribute to these efforts?",
+    "expected_answer": "Egypt is implementing initiatives that focus on mental health for children and adolescents with disabilities, reproductive health for women and girls with disabilities, and early detection and intervention programs. International partnerships, such as with Malta for autism support and Italy for safeguarding human rights, enhance these efforts through expertise exchange, funding, and the development of strategic action plans.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p104_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p105_c0"
+    ]
+  },
+  {
+    "question": "What initiatives were launched in Egypt to support individuals with disabilities and their families in 2024?",
+    "expected_answer": "In 2024, Egypt launched several initiatives to support individuals with disabilities, including the 'Ahsan Saheb' initiative for societal integration, the 'My Family, My Strength' initiative providing resources and counseling to families, and the 'Ektashefny' initiative promoting inclusion through workshops. Additionally, cultural events were organized to celebrate the talents of disabled individuals.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p105_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p105_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p106_c0"
+    ]
+  },
+  {
+    "question": "What initiatives have been implemented in Egypt to promote the inclusion of persons with disabilities in cultural and social activities?",
+    "expected_answer": "Egypt has implemented the 'Ektashefny' initiative, which includes 64 workshops benefiting 3,200 individuals, and organized over 150 cultural and artistic events for the International Day of Persons with Disabilities. Additionally, the 'Mawada' initiative provides training for marriage preparation, and there are efforts to integrate sign language into media and improve accessibility through technology.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p106_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p106_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p106_c2"
+    ]
+  },
+  {
+    "question": "What initiatives have been implemented in Egypt to support the economic empowerment and inclusion of persons with disabilities?",
+    "expected_answer": "Egypt has implemented various initiatives for the economic empowerment and inclusion of persons with disabilities, including accessible banking services through the Central Bank of Egypt and Banque Misr, the 'Touch Card' by the National Bank of Egypt for visually impaired citizens, and the Vodafone Hackathon for Artificial Intelligence showcasing assistive technologies. Additionally, the Ministry of Labor has facilitated the employment of over 57,000 individuals with disabilities in private sector companies since 2014.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p107_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p107_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p107_c2"
+    ]
+  },
+  {
+    "question": "What initiatives has Egypt implemented in 2024 to support persons with disabilities?",
+    "expected_answer": "In 2024, Egypt implemented robust laws, enhanced social services, impactful awareness campaigns, and innovative technological solutions to support persons with disabilities, reflecting a commitment to equity and justice.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p109_c0"
+    ]
+  },
+  {
+    "question": "What are the key areas of focus for Egypt's government in child development as part of its Vision 2030?",
+    "expected_answer": "Egypt's government focuses on health, education, and social protection in child development as part of its Vision 2030.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p111_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p111_c1"
+    ]
+  },
+  {
+    "question": "What are the main focus areas of the National Strategy for Early Childhood Development in Egypt launched by NCCM in 2024?",
+    "expected_answer": "The strategy focuses on creating a supportive political environment, adopting effective governance, raising community awareness, providing high-quality services in health, nutrition, and early learning, and ensuring sustainability through the development of funding sources.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p112_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p112_c3"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian government implemented to support orphans and improve their living conditions in 2024?",
+    "expected_answer": "In 2024, the Egyptian government supported the purchase of 1,023 housing units for orphaned youth to aid their transition to independence, provided marriage grants to 74 care home residents, and distributed 801 housing units across 12 governorates. Additionally, a dedicated hotline for orphans was established, operated by trained graduates with personal experience in alternative care.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p113_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p114_c0"
+    ]
+  },
+  {
+    "question": "What initiatives were launched in 2024 to support children's rights and empower families in Egypt?",
+    "expected_answer": "In 2024, NCCM launched several initiatives including a campaign to promote positive behaviors among parents and children, the 'Diverse, But United' campaign in collaboration with UNICEF to eliminate discrimination and promote inclusion, and the national 'Dawwie' initiative to empower children and parents through intergenerational understanding.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p115_c0"
+    ]
+  },
+  {
+    "question": "What initiatives did the NCCM launch in 2024 to support children's rights and empower families in Egypt?",
+    "expected_answer": "In 2024, the NCCM launched several initiatives including a campaign to encourage parents to befriend their children, the 'Diverse, But United' campaign in collaboration with UNICEF to eliminate discrimination and promote inclusion, and the national 'Dawwie' initiative to empower children and parents through intergenerational understanding and safe communication spaces.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p115_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p115_c1"
+    ]
+  },
+  {
+    "question": "How is Egypt's investment in early childhood development linked to its cultural initiatives in 2024?",
+    "expected_answer": "Egypt is investing in early childhood development, child protection, and family empowerment to ensure the next generation has the tools for sustainable growth, which aligns with the government's broader cultural initiatives that promote inclusivity and innovation.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p115_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c0"
+    ]
+  },
+  {
+    "question": "What initiatives has the Egyptian Government implemented to enhance cultural access and engagement in 2024?",
+    "expected_answer": "The Egyptian Government organized 120,000 cultural and artistic activities, benefiting over 11 million citizens, with 30,000 events specifically tailored for border regions and underserved communities. Key initiatives included launching virtual cultural platforms, reinvigorating the performing arts, and organizing landmark book fairs.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c2"
+    ]
+  },
+  {
+    "question": "What initiatives were taken in 2024 to enhance access to culture in Egypt, and how many citizens benefited from these efforts?",
+    "expected_answer": "In 2024, Egypt launched the presidential initiative 'Bedaya' to promote cultural and artistic development, organizing 120,000 cultural and artistic activities that benefited over 11 million citizens, including 30,000 events specifically for border regions and underserved communities.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p117_c3"
+    ]
+  },
+  {
+    "question": "What initiatives were implemented in 2024 to enhance cultural access and education in underserved areas of Egypt?",
+    "expected_answer": "In 2024, the 'Hayah Karima' initiative organized 336 cultural events benefiting over 25,000 citizens, while the 'You Are Life' initiative reached 70,000 citizens through 352 events. Additionally, 35,000 translated books were distributed to schools, 15,000 to universities, and 36,000 to youth centers. Four new cultural venues were inaugurated to foster creative expression.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p118_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p118_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p118_c3"
+    ]
+  },
+  {
+    "question": "What initiatives did the Egyptian government undertake in 2024 to enhance cultural access and preserve heritage?",
+    "expected_answer": "In 2024, the Egyptian government inaugurated four new cultural venues, including the Egypt Public Library in Aswan and the Palace of Artistic Creativity in the 6th of October City, to enhance access to culture. Additionally, Egypt added Henna and the Semsemiah Musical Instrument to UNESCO’s list of intangible cultural heritage, reinforcing its commitment to heritage preservation.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p118_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p119_c1"
+    ]
+  },
+  {
+    "question": "What initiatives did Egypt undertake in 2024 to preserve its cultural heritage and enhance its global cultural presence?",
+    "expected_answer": "In 2024, Egypt added two elements to UNESCO’s intangible cultural heritage list, bringing the total to ten. It also advanced domestic preservation efforts through the National Organization for Urban Harmony, documenting over 7,000 significant buildings and installing 1,000 commemorative plaques. Additionally, Egypt showcased its cultural richness as the Guest of Honor at the Abu Dhabi International Book Fair.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p119_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p119_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p119_c3"
+    ]
+  },
+  {
+    "question": "What initiatives did Egypt undertake in 2024 to promote its cultural heritage and literature?",
+    "expected_answer": "In 2024, Egypt organized events like the Aswan International Festival of Art and Culture and the Samaa International Festival, showcasing its cultural heritage and fostering international collaborations. Additionally, the General Egyptian Book Organization published 500 titles across various disciplines, promoting literature and cultural awareness.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p120_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p121_c0"
+    ]
+  },
+  {
+    "question": "What were some key features and initiatives of the 55th Cairo International Book Fair held in January 2024?",
+    "expected_answer": "The 55th Cairo International Book Fair featured over 5 million visitors, celebrated inclusivity and innovation with a pavilion for emerging publishers, launched a One-Day Conference program with five conferences on cultural topics, and introduced the 'Everyone Reads' initiative offering discounts to readers. It also adopted digital payment systems for secure transactions.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p121_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p121_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p122_c0"
+    ]
+  },
+  {
+    "question": "What initiatives were launched at the Cairo International Book Fair in 2024 to promote cultural and social development in Egypt?",
+    "expected_answer": "The Cairo International Book Fair launched the 'Everyone Reads' initiative, which offered discounts to readers and cultural institutions, and featured the 'One-Day Conference' program with five conferences on pressing cultural topics. Additionally, initiatives like 'Dawwie' and 'Waai' promoted cultural and social development, and the 'Roa’ya' Project released 200 titles for youth in collaboration with the Ministry of Awqaf.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p122_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p122_c1"
+    ]
+  },
+  {
+    "question": "What initiatives were taken in 2024 to enhance Egypt's cultural scene, particularly in the performing arts, and how many events were held at the Egyptian Opera House?",
+    "expected_answer": "In 2024, Egypt focused on enriching its performing arts scene by staging 8,000 performances nationwide, with the Egyptian Opera House hosting over 1,000 events, including more than 140 concerts in its Main Hall.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p122_c2",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p123_c0"
+    ]
+  },
+  {
+    "question": "What initiatives did the Egyptian government undertake in 2024 to enhance cultural engagement and preserve heritage using technology?",
+    "expected_answer": "In 2024, the Egyptian government signed a protocol between the Ministry of Culture and the Ministry of Communications and Information Technology to develop an interactive platform for Virtual Cultural Palaces, utilizing technologies like 3D modeling, virtual reality, and artificial intelligence. This initiative aims to enhance cultural awareness and provide opportunities for talent discovery, while also introducing mobile applications like the TUT App to engage younger audiences.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p124_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p124_c1"
+    ]
+  },
+  {
+    "question": "What innovative applications were introduced by the Ministry of Culture to engage younger audiences with Egypt's heritage?",
+    "expected_answer": "The Ministry of Culture introduced the TUT App for children's books and magazines, and the Thoth App, which allows children to interact with AI-powered avatars of historical figures to learn about Egypt's cultural legacy.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p124_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p124_c2"
+    ]
+  },
+  {
+    "question": "How has the Egyptian Government integrated technology to enhance cultural accessibility and preserve heritage in 2024?",
+    "expected_answer": "The Egyptian Government has integrated cutting-edge technologies, such as virtual cultural platforms and AI-driven educational tools, to enhance cultural accessibility while preserving heritage. This approach ensures that cultural content is more accessible and positions Egypt as a leader in digital cultural innovation.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p124_c3",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p125_c1"
+    ]
+  },
+  {
+    "question": "How has the Egyptian government integrated technology to enhance its cultural legacy?",
+    "expected_answer": "The Egyptian government has integrated cutting-edge technologies such as virtual cultural platforms and AI-driven educational tools to ensure that Egypt's cultural legacy continues to inspire new audiences.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p125_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p125_c2"
+    ]
+  },
+  {
+    "question": "What are the key aspects of Egypt's political trajectory as it approaches the parliamentary elections in 2025?",
+    "expected_answer": "Egypt's political trajectory is influenced by challenges and opportunities that will affect governance, the strengthening of democratic institutions, and its role in global politics. The upcoming parliamentary elections will be a critical moment for testing democratic development and advancing political stability, economic growth, and international cooperation.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p127_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p127_c1"
+    ]
+  },
+  {
+    "question": "What measures did the Prime Minister discuss regarding the National Dialogue and the reconstruction of Gaza during the meetings held in 2024?",
+    "expected_answer": "The Prime Minister praised the regular meetings with officials of the National Dialogue and civil society organizations, indicated that a social package would be applied before Ramadan with exceptional measures during Ramadan and Eid, and confirmed there were many ideas related to reconstructing Gaza and preventing the displacement of its residents.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p128_c1",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p128_c2"
+    ]
+  },
+  {
+    "question": "What are the key factors influencing Egypt's political stability and future opportunities as of 2024 and looking ahead to 2025?",
+    "expected_answer": "Egypt's political stability is supported by strong popular backing for its leadership, friendly relations with major powers, and its strategic geopolitical position. Looking ahead to 2025, the country faces challenges but also opportunities for growth through parliamentary elections, economic reforms, and youth engagement.",
+    "relevant_chunk_ids": [
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p129_c0",
+      "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p129_c2"
+    ]
+  }
+]

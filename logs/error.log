@@ -59,3 +59,529 @@ Traceback (most recent call last):
     f"URL: {result['url']}\n"
             ~~~~~~^^^^^^^
 KeyError: 'url'
+2026-11-22T11:15:15.931247+00:00 | ERROR | Request ID: 4e3302f85b1a | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 97123.24}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1024, in answer
+    decision = route_question(
+        standalone_question,
+        available_sources
+    )
+  File "D:\AdabtiveRag\modules\rag.py", line 221, in route_question
+    result = ask_llm(
+        prompt,
+    ...<2 lines>...
+        json_mode=True,
+    )
+  File "D:\AdabtiveRag\modules\llm.py", line 267, in ask_llm
+    raise RuntimeError(
+        f"LLM call failed after {retries} attempts: {last_error}"
+    )
+RuntimeError: LLM call failed after 3 attempts: Request timed out.
+2026-11-22T11:24:43.936339+00:00 | ERROR | Request ID: ba8e6b76fc29 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 28493.69}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-22T11:55:19.410526+00:00 | ERROR | Request ID: 9e7af02bbf5f | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 24483.62}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:43:13.887590+00:00 | ERROR | Request ID: 99a6c0408f9b | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 5698.42}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:43:44.991232+00:00 | ERROR | Request ID: 18f0bd3a8a43 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 5807.52}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:44:13.005281+00:00 | ERROR | Request ID: d3298b9e2d64 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 7036.73}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:44:57.858248+00:00 | ERROR | Request ID: 5f514a667a80 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 6953.88}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:45:04.837094+00:00 | ERROR | Request ID: c0039a15f0df | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 6970.75}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:45:30.520241+00:00 | ERROR | Request ID: e6984d554dd5 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 4683.73}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:45:47.388330+00:00 | ERROR | Request ID: 220c4e45685a | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 8413.48}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:45:56.927525+00:00 | ERROR | Request ID: 559fca436004 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 9501.78}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:46:24.487586+00:00 | ERROR | Request ID: e51bd51475d7 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 4431.81}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:46:29.385198+00:00 | ERROR | Request ID: 1fd877646717 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 4886.29}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:46:43.158732+00:00 | ERROR | Request ID: a10f742e0d83 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 7134.68}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:46:55.216078+00:00 | ERROR | Request ID: c194260ba8a6 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 5580.29}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:01.912627+00:00 | ERROR | Request ID: 8e81fbdff853 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 6689.74}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:15.228323+00:00 | ERROR | Request ID: 35c17df45896 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 8230.23}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:23.095379+00:00 | ERROR | Request ID: fc547e1b2ffa | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 7860.76}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:28.697796+00:00 | ERROR | Request ID: c993012867d9 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 5596.23}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:35.716198+00:00 | ERROR | Request ID: 7242dd303baf | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 7013.26}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:47:41.177776+00:00 | ERROR | Request ID: faef7601cc4b | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 5441.47}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:59:19.930199+00:00 | ERROR | Request ID: 0e6d56fae80d | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 6327.55}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T00:59:35.478789+00:00 | ERROR | Request ID: 315da12a2e65 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 8231.03}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'
+2026-11-23T01:00:53.466632+00:00 | ERROR | Request ID: 365faea29b94 | Component: pipeline | Event: request_failed | Message: RAG request failed | Details: {'latency_ms': 10839.7}
+Traceback (most recent call last):
+  File "D:\AdabtiveRag\modules\rag.py", line 78, in wrapper
+    result = func(question, *args, **kwargs)
+  File "D:\AdabtiveRag\modules\rag.py", line 1226, in answer
+    web_result = answer_from_web(standalone_question)
+  File "D:\AdabtiveRag\modules\rag.py", line 620, in answer_from_web
+    context = build_web_context(results)
+  File "D:\AdabtiveRag\modules\rag.py", line 572, in build_web_context
+    return "\n\n".join(
+           ~~~~~~~~~~~^
+        f"[{i}] {result['title']}\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        for i, result in enumerate(results, start=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\AdabtiveRag\modules\rag.py", line 574, in <genexpr>
+    f"URL: {result['url']}\n"
+            ~~~~~~^^^^^^^
+KeyError: 'url'

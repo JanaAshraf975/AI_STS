@@ -113,7 +113,14 @@ def get_summary(source):
         "text": result["documents"][0],
     }
 
-def search(question, k=5, source=None, collection_name=COLLECTION):
+
+def search(
+    question,
+    k=5,
+    source=None,
+    collection_name=COLLECTION,
+    threshold=0.65
+):
     collection = get_collection(collection_name=collection_name)
 
     query_embedding = embed_question(question)
@@ -127,12 +134,19 @@ def search(question, k=5, source=None, collection_name=COLLECTION):
     output = []
 
     for i in range(len(results["ids"][0])):
+
+        similarity = 1 - results["distances"][0][i]
+
+        # Ignore chunks below the similarity threshold
+        if similarity < threshold:
+            continue
+
         output.append({
             "id": results["ids"][0][i],
             "text": results["documents"][0][i],
             "source": results["metadatas"][0][i]["source"],
             "page": results["metadatas"][0][i]["page"],
-            "score": 1 - results["distances"][0][i]
+            "score": similarity
         })
 
     return output
