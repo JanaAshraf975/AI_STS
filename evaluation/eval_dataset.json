@@ -1,0 +1,81 @@
+
+{
+  "data": [
+    {
+      "question": "What is the main mission of IDSC, and how does it support decision-makers in Egypt?",
+      "expected_answer": "IDSC aims to reinforce decision-makers' efforts on developmental issues by providing supportive alternatives, recommendations, and scenarios.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p4_c0",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p4_c1"
+      ]
+    },
+    {
+      "question": "Which major digital and information infrastructure initiatives did IDSC contribute to establishing?",
+      "expected_answer": "IDSC contributed to the citizen's ID project, introducing the Internet to Egypt, establishing the Strategic Documents Center and Public Opinion Poll Center, and developing information centers and government services.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p4_c2"
+      ]
+    },
+    {
+      "question": "What strategic economic documents did IDSC produce?",
+      "expected_answer": "IDSC produced the State Ownership Policy for Assets and the Egyptian Economy's Most Prominent Strategic Directions (2024-2030) document.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p4_c3"
+      ]
+    },
+    {
+      "question": "How was IDSC recognized internationally for its work as a think tank?",
+      "expected_answer": "IDSC received international recognition through its rankings in the University of Pennsylvania's Think Tanks and Civil Societies Program, including being among the top 20 think tanks responding to COVID-19 in 2020 and ranking 14th in Africa and the Middle East.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c0",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c1"
+      ]
+    },
+    {
+      "question": "What awards did IDSC receive in 2023?",
+      "expected_answer": "In 2023, IDSC received six Digital Government Awards in Dubai and three Globee Business Awards.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c2"
+      ]
+    },
+    {
+      "question": "How many international awards did IDSC win over the last five years, and what recognition did it receive in 2024?",
+      "expected_answer": "IDSC won 18 international awards over five years. In January 2024, it received three Middle East and North Africa Stevie Awards trophies, including two gold awards.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c1",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c2",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p5_c3"
+      ]
+    },
+    {
+      "question": "What were the major political and social transformations Egypt pursued in 2024?",
+      "expected_answer": "Egypt pursued political reforms, institutional and legal modernization, and social welfare programs focused on food security, employment, housing support, and poverty alleviation.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p10_c0",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p10_c1"
+      ]
+    },
+    {
+      "question": "What role did the 2024 presidential elections play in Egypt's transformation?",
+      "expected_answer": "The presidential elections held in 2024 were described as one of the most significant milestones in Egypt's democratic journey.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p10_c0"
+      ]
+    },
+    {
+      "question": "What economic characteristics does Egypt aim to strengthen as it moves toward 2025?",
+      "expected_answer": "Egypt aims to build a more resilient, inclusive, and diversified economy while consolidating reforms and strengthening democratic institutions.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p11_c0"
+      ]
+    },
+    {
+      "question": "Which chapters of the report focus on Egypt's political achievements and social development?",
+      "expected_answer": "The report covers political topics such as democratic elections, legislative changes, the government program, national security, and diplomacy. Its social development topics include healthcare, education, social protection, women and youth empowerment, disability rights, children, and culture.",
+      "relevant_chunk_ids": [
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p8_c0",
+        "Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025_p9_c0"
+      ]
+    }
+  ]
+}
