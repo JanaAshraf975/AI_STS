@@ -8,7 +8,7 @@ from vectoredb import search
 DATASET_FILE = "../evaluation/eval2_dataset.json"
 
 K_VALUES = [3]
-THRESHOLD = 0.
+THRESHOLD = 0.6
 
 
 def remove_duplicates(items):

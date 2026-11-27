@@ -150,21 +150,22 @@ def get_summary(source):
 def search(
     question,
     k=3,
+    threshold=0.65,
     source=None,
     collection_name=COLLECTION,
-    threshold=0.30,
     candidate_multiplier=CANDIDATE_MULTIPLIER
 ):
     """
-    Semantic search using OpenAI Embeddings and Cosine Similarity.
+    Semantic search using embeddings and cosine similarity.
 
     1. Embed the question.
     2. Retrieve more candidates than k.
-    3. Convert cosine distance to similarity.
-    4. Apply similarity threshold.
-    5. Remove duplicate chunks.
-    6. Sort by similarity score.
-    7. Return top k results.
+    3. Print raw Top 10 results before threshold.
+    4. Convert cosine distance to similarity.
+    5. Apply similarity threshold.
+    6. Remove duplicate chunks.
+    7. Sort by similarity score.
+    8. Return top k results.
     """
 
     if not question or not question.strip() or k <= 0:
@@ -202,12 +203,35 @@ def search(
     results = collection.query(**query_args)
 
     if not results["ids"] or not results["ids"][0]:
+        print("No raw retrieval results.")
         return []
 
     ids = results["ids"][0]
     documents = results["documents"][0]
     metadatas = results["metadatas"][0]
     distances = results["distances"][0]
+
+    # DEBUG: Print raw results BEFORE threshold
+    print("\n========== RAW RETRIEVAL TOP 10 ==========")
+    print(f"Question: {question}")
+    print(f"Candidates retrieved: {len(ids)}")
+    print(f"Threshold: {threshold}")
+
+    for i in range(min(10, len(ids))):
+
+        distance = float(distances[i])
+        similarity = 1.0 - distance
+        metadata = metadatas[i] or {}
+
+        print(
+            f"Rank: {i + 1} | "
+            f"ID: {ids[i]} | "
+            f"Similarity: {similarity:.4f} | "
+            f"Source: {metadata.get('source')} | "
+            f"Page: {metadata.get('page')}"
+        )
+
+    print("===========================================\n")
 
     output = []
     seen_ids = set()
@@ -241,7 +265,14 @@ def search(
         reverse=True
     )
 
-    return output[:k]
+    final_results = output[:k]
+
+    print(
+        f"Results after threshold: {len(output)} | "
+        f"Final returned: {len(final_results)}"
+    )
+
+    return final_results
 
 
 def count():

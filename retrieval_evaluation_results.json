@@ -1,13 +1,13 @@
 {
   "top_3": {
-    "threshold": 0.7,
+    "threshold": 0.6,
     "answerable": {
-      "total_questions": 247,
-      "precision": 0.45209176788124156,
-      "recall": 0.8157894736842105,
-      "mrr": 0.8839406207827261,
-      "hit_rate": 0.9392712550607287,
-      "questions_with_results": 247,
+      "total_questions": 228,
+      "precision": 0.5533625730994152,
+      "recall": 0.7817982456140351,
+      "mrr": 0.8866959064327485,
+      "hit_rate": 0.9605263157894737,
+      "questions_with_results": 228,
       "questions_without_results": 0
     },
     "unanswerable": {
@@ -21,13 +21,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 0.5,
-        "mrr": 0.5,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p8_c0",
           "coralina_island_guide_p3_c0",
-          "coralina_island_guide_p50_c0"
+          "coralina_island_guide_p50_c0",
+          "coralina_island_guide_p8_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p3_c1",
@@ -36,15 +36,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p3_c0",
           "coralina_island_guide_p8_c0",
-          "coralina_island_guide_p28_c0"
+          "coralina_island_guide_p3_c2"
         ],
         "relevant_ids": [
           "coralina_island_guide_p3_c2"
@@ -59,62 +59,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p3_c0",
-          "coralina_island_guide_p5_c1",
-          "coralina_island_guide_p27_c0"
+          "coralina_island_guide_p27_c0",
+          "coralina_island_guide_p7_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p3_c1",
           "coralina_island_guide_p3_c2"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p3_c0",
-          "coralina_island_guide_p8_c0",
-          "coralina_island_guide_p50_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p3_c1",
-          "coralina_island_guide_p3_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p1_c0",
-          "coralina_island_guide_p29_c0",
-          "coralina_island_guide_p45_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p3_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p2_c0",
-          "coralina_island_guide_p1_c1",
-          "coralina_island_guide_p1_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p2_c1",
-          "coralina_island_guide_p2_c0"
         ]
       },
       {
@@ -125,9 +75,59 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "coralina_island_guide_p3_c0",
+          "coralina_island_guide_p8_c0",
+          "coralina_island_guide_p3_c1"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p3_c1",
+          "coralina_island_guide_p3_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "coralina_island_guide_p29_c0",
+          "coralina_island_guide_p3_c1",
+          "coralina_island_guide_p3_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p3_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "hit_rate": 0.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "coralina_island_guide_p37_c0",
+          "coralina_island_guide_p33_c0",
+          "coralina_island_guide_p50_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p2_c1",
+          "coralina_island_guide_p2_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "coralina_island_guide_p8_c0",
           "coralina_island_guide_p4_c1",
-          "coralina_island_guide_p4_c0",
-          "coralina_island_guide_p8_c0"
+          "coralina_island_guide_p4_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p4_c0",
@@ -143,8 +143,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p4_c2",
-          "coralina_island_guide_p41_c1",
-          "coralina_island_guide_p38_c1"
+          "coralina_island_guide_p4_c0",
+          "coralina_island_guide_p6_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p4_c2"
@@ -154,17 +154,17 @@
         "is_answerable": true,
         "precision": 0.6666666666666666,
         "recall": 1.0,
-        "mrr": 0.5,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p5_c0",
           "coralina_island_guide_p5_c1",
+          "coralina_island_guide_p5_c0",
           "coralina_island_guide_p5_c2"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p5_c1",
-          "coralina_island_guide_p5_c2"
+          "coralina_island_guide_p5_c2",
+          "coralina_island_guide_p5_c1"
         ]
       },
       {
@@ -185,19 +185,19 @@
       },
       {
         "is_answerable": true,
-        "precision": 1.0,
-        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p5_c0",
           "coralina_island_guide_p5_c1",
-          "coralina_island_guide_p5_c2"
+          "coralina_island_guide_p35_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p5_c2",
           "coralina_island_guide_p5_c1",
+          "coralina_island_guide_p5_c2",
           "coralina_island_guide_p5_c0"
         ]
       },
@@ -209,9 +209,9 @@
         "hit_rate": 0.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p6_c1",
           "coralina_island_guide_p39_c0",
-          "coralina_island_guide_p6_c2"
+          "coralina_island_guide_p6_c2",
+          "coralina_island_guide_p6_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p6_c0"
@@ -219,31 +219,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p6_c2",
-          "coralina_island_guide_p1_c0",
-          "coralina_island_guide_p1_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p6_c2"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p6_c0",
-          "coralina_island_guide_p27_c1",
-          "coralina_island_guide_p18_c1"
+          "coralina_island_guide_p6_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p6_c1"
@@ -257,9 +240,9 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p6_c1",
-          "coralina_island_guide_p13_c1",
-          "coralina_island_guide_p16_c2"
+          "coralina_island_guide_p6_c2",
+          "coralina_island_guide_p20_c0",
+          "coralina_island_guide_p13_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p6_c1",
@@ -275,8 +258,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p7_c0",
-          "coralina_island_guide_p7_c1",
-          "coralina_island_guide_p1_c0"
+          "coralina_island_guide_p1_c0",
+          "coralina_island_guide_p7_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p7_c1",
@@ -293,79 +276,77 @@
         "retrieved_ids": [
           "coralina_island_guide_p8_c0",
           "coralina_island_guide_p50_c0",
-          "coralina_island_guide_p4_c0"
+          "coralina_island_guide_p8_c2"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p8_c1",
-          "coralina_island_guide_p8_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p43_c0",
-          "coralina_island_guide_p7_c2",
-          "coralina_island_guide_p43_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p7_c2"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p9_c0",
-          "coralina_island_guide_p23_c0",
-          "coralina_island_guide_p9_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p9_c1",
-          "coralina_island_guide_p9_c0"
+          "coralina_island_guide_p8_c0",
+          "coralina_island_guide_p8_c1"
         ]
       },
       {
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 0.5,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p10_c1",
-          "coralina_island_guide_p10_c0",
-          "coralina_island_guide_p24_c0"
+          "coralina_island_guide_p43_c0",
+          "coralina_island_guide_p7_c1",
+          "coralina_island_guide_p20_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p10_c1",
-          "coralina_island_guide_p10_c2"
+          "coralina_island_guide_p7_c2",
+          "coralina_island_guide_p7_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.3333333333333333,
-        "mrr": 0.3333333333333333,
+        "precision": 1.0,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "coralina_island_guide_p9_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p9_c0",
+          "coralina_island_guide_p9_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.5,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "coralina_island_guide_p10_c1",
+          "coralina_island_guide_p10_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p10_c2",
+          "coralina_island_guide_p10_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p7_c2",
+          "coralina_island_guide_p11_c0",
           "coralina_island_guide_p39_c0",
-          "coralina_island_guide_p11_c0"
+          "coralina_island_guide_p11_c2"
         ],
         "relevant_ids": [
+          "coralina_island_guide_p11_c2",
           "coralina_island_guide_p11_c1",
-          "coralina_island_guide_p11_c0",
-          "coralina_island_guide_p11_c2"
+          "coralina_island_guide_p11_c0"
         ]
       },
       {
@@ -377,8 +358,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p8_c2",
-          "coralina_island_guide_p14_c1",
-          "coralina_island_guide_p8_c1"
+          "coralina_island_guide_p8_c0",
+          "coralina_island_guide_p36_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p8_c2"
@@ -386,15 +367,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 0.5,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p9_c1",
-          "coralina_island_guide_p45_c1",
-          "coralina_island_guide_p9_c0"
+          "coralina_island_guide_p9_c0",
+          "coralina_island_guide_p9_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p9_c1",
@@ -403,19 +383,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p10_c0",
-          "coralina_island_guide_p9_c0",
-          "coralina_island_guide_p7_c2"
+          "coralina_island_guide_p9_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p9_c0",
-          "coralina_island_guide_p10_c0"
+          "coralina_island_guide_p10_c0",
+          "coralina_island_guide_p9_c0"
         ]
       },
       {
@@ -428,11 +407,11 @@
         "retrieved_ids": [
           "coralina_island_guide_p11_c1",
           "coralina_island_guide_p11_c0",
-          "coralina_island_guide_p25_c0"
+          "coralina_island_guide_p39_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p11_c1",
-          "coralina_island_guide_p11_c2"
+          "coralina_island_guide_p11_c2",
+          "coralina_island_guide_p11_c1"
         ]
       },
       {
@@ -444,30 +423,13 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p12_c0",
-          "coralina_island_guide_p42_c0",
-          "coralina_island_guide_p12_c1"
+          "coralina_island_guide_p12_c1",
+          "coralina_island_guide_p26_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p12_c2",
           "coralina_island_guide_p12_c1",
           "coralina_island_guide_p12_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p13_c0",
-          "coralina_island_guide_p47_c1",
-          "coralina_island_guide_p49_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p13_c1",
-          "coralina_island_guide_p13_c0"
         ]
       },
       {
@@ -478,9 +440,26 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "coralina_island_guide_p13_c0",
+          "coralina_island_guide_p13_c1",
+          "coralina_island_guide_p47_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p13_c0",
+          "coralina_island_guide_p13_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
           "coralina_island_guide_p13_c1",
           "coralina_island_guide_p47_c0",
-          "coralina_island_guide_p13_c2"
+          "coralina_island_guide_p13_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p13_c2",
@@ -496,8 +475,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p11_c2",
-          "coralina_island_guide_p39_c0",
-          "coralina_island_guide_p36_c0"
+          "coralina_island_guide_p11_c0",
+          "coralina_island_guide_p39_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p11_c2"
@@ -505,35 +484,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p12_c0",
-          "coralina_island_guide_p12_c1",
-          "coralina_island_guide_p26_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p12_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p14_c0",
-          "coralina_island_guide_p14_c1",
-          "coralina_island_guide_p10_c1"
+          "coralina_island_guide_p14_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p14_c1",
-          "coralina_island_guide_p14_c0"
+          "coralina_island_guide_p14_c0",
+          "coralina_island_guide_p14_c1"
         ]
       },
       {
@@ -544,13 +506,13 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p14_c0",
           "coralina_island_guide_p15_c0",
+          "coralina_island_guide_p14_c0",
           "coralina_island_guide_p15_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p15_c1",
           "coralina_island_guide_p15_c0",
+          "coralina_island_guide_p15_c1",
           "coralina_island_guide_p14_c0"
         ]
       },
@@ -564,11 +526,11 @@
         "retrieved_ids": [
           "coralina_island_guide_p16_c0",
           "coralina_island_guide_p16_c1",
-          "coralina_island_guide_p42_c1"
+          "coralina_island_guide_p38_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p16_c0",
-          "coralina_island_guide_p16_c1"
+          "coralina_island_guide_p16_c1",
+          "coralina_island_guide_p16_c0"
         ]
       },
       {
@@ -579,29 +541,13 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "coralina_island_guide_p16_c0",
+          "coralina_island_guide_p14_c1",
+          "coralina_island_guide_p14_c0"
+        ],
+        "relevant_ids": [
           "coralina_island_guide_p14_c0",
           "coralina_island_guide_p16_c0",
-          "coralina_island_guide_p8_c2"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p16_c0",
-          "coralina_island_guide_p16_c1",
-          "coralina_island_guide_p14_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p38_c0",
-          "coralina_island_guide_p16_c1",
-          "coralina_island_guide_p16_c0"
-        ],
-        "relevant_ids": [
           "coralina_island_guide_p16_c1"
         ]
       },
@@ -613,9 +559,24 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "coralina_island_guide_p16_c1",
+          "coralina_island_guide_p16_c0",
+          "coralina_island_guide_p38_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p16_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.5,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
           "coralina_island_guide_p15_c0",
-          "coralina_island_guide_p15_c1",
-          "coralina_island_guide_p9_c1"
+          "coralina_island_guide_p15_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p15_c0"
@@ -623,15 +584,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p17_c1",
           "coralina_island_guide_p17_c0",
-          "coralina_island_guide_p13_c2"
+          "coralina_island_guide_p17_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p17_c0",
@@ -640,15 +600,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p18_c0",
           "coralina_island_guide_p18_c2",
-          "coralina_island_guide_p10_c1"
+          "coralina_island_guide_p18_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p18_c1",
@@ -657,19 +617,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p19_c1",
-          "coralina_island_guide_p8_c2",
-          "coralina_island_guide_p19_c0"
+          "coralina_island_guide_p19_c0",
+          "coralina_island_guide_p19_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p19_c1",
-          "coralina_island_guide_p19_c0"
+          "coralina_island_guide_p19_c0",
+          "coralina_island_guide_p19_c1"
         ]
       },
       {
@@ -681,8 +640,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p18_c0",
-          "coralina_island_guide_p18_c1",
-          "coralina_island_guide_p18_c2"
+          "coralina_island_guide_p18_c2",
+          "coralina_island_guide_p18_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p18_c2",
@@ -691,15 +650,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p17_c0",
-          "coralina_island_guide_p13_c0",
-          "coralina_island_guide_p13_c1"
+          "coralina_island_guide_p17_c1",
+          "coralina_island_guide_p13_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p17_c0",
@@ -708,15 +667,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p19_c1",
           "coralina_island_guide_p19_c0",
-          "coralina_island_guide_p8_c2"
+          "coralina_island_guide_p19_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p19_c1"
@@ -731,63 +689,44 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p20_c0",
-          "coralina_island_guide_p1_c1",
-          "coralina_island_guide_p20_c2"
+          "coralina_island_guide_p37_c0",
+          "coralina_island_guide_p13_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p20_c0",
-          "coralina_island_guide_p20_c1"
+          "coralina_island_guide_p20_c1",
+          "coralina_island_guide_p20_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.5,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p21_c0",
-          "coralina_island_guide_p21_c1",
           "coralina_island_guide_p30_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p21_c1",
-          "coralina_island_guide_p21_c0"
+          "coralina_island_guide_p21_c0",
+          "coralina_island_guide_p21_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p22_c1",
-          "coralina_island_guide_p22_c0",
-          "coralina_island_guide_p15_c1"
-        ],
-        "relevant_ids": [
           "coralina_island_guide_p22_c0",
           "coralina_island_guide_p22_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p20_c0",
-          "coralina_island_guide_p22_c0",
-          "coralina_island_guide_p1_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p22_c0",
-          "coralina_island_guide_p21_c0"
+          "coralina_island_guide_p22_c1",
+          "coralina_island_guide_p22_c0"
         ]
       },
       {
@@ -798,25 +737,25 @@
         "hit_rate": 0.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p1_c0",
           "coralina_island_guide_p20_c0",
-          "coralina_island_guide_p37_c0"
+          "coralina_island_guide_p48_c0",
+          "coralina_island_guide_p13_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p20_c1"
+          "coralina_island_guide_p21_c0",
+          "coralina_island_guide_p22_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p21_c1",
           "coralina_island_guide_p21_c0",
-          "coralina_island_guide_p30_c0"
+          "coralina_island_guide_p21_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p21_c1"
@@ -824,36 +763,34 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p23_c0",
-          "coralina_island_guide_p23_c1",
-          "coralina_island_guide_p20_c1"
+          "coralina_island_guide_p23_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p23_c1",
-          "coralina_island_guide_p23_c0"
+          "coralina_island_guide_p23_c0",
+          "coralina_island_guide_p23_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p24_c0",
-          "coralina_island_guide_p24_c1",
-          "coralina_island_guide_p10_c1"
+          "coralina_island_guide_p24_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p24_c1",
-          "coralina_island_guide_p24_c0"
+          "coralina_island_guide_p24_c0",
+          "coralina_island_guide_p24_c1"
         ]
       },
       {
@@ -864,9 +801,9 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p25_c0",
           "coralina_island_guide_p26_c0",
-          "coralina_island_guide_p26_c1"
+          "coralina_island_guide_p26_c1",
+          "coralina_island_guide_p25_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p25_c0",
@@ -875,15 +812,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "coralina_island_guide_p25_c0",
-          "coralina_island_guide_p25_c1",
-          "coralina_island_guide_p22_c1"
+          "coralina_island_guide_p25_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p25_c0",
@@ -892,19 +827,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p24_c0",
-          "coralina_island_guide_p24_c1",
-          "coralina_island_guide_p20_c1"
-        ],
-        "relevant_ids": [
           "coralina_island_guide_p24_c1",
           "coralina_island_guide_p24_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p24_c0",
+          "coralina_island_guide_p24_c1"
         ]
       },
       {
@@ -917,7 +851,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p26_c0",
           "coralina_island_guide_p26_c1",
-          "coralina_island_guide_p20_c1"
+          "coralina_island_guide_p12_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p26_c0"
@@ -936,8 +870,8 @@
           "coralina_island_guide_p28_c2"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p27_c0",
           "coralina_island_guide_p28_c2",
+          "coralina_island_guide_p27_c0",
           "coralina_island_guide_p28_c0"
         ]
       },
@@ -945,17 +879,17 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 0.5,
-        "mrr": 0.5,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p32_c0",
           "coralina_island_guide_p27_c0",
-          "coralina_island_guide_p32_c1"
+          "coralina_island_guide_p32_c0",
+          "coralina_island_guide_p28_c2"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p27_c1",
-          "coralina_island_guide_p27_c0"
+          "coralina_island_guide_p27_c0",
+          "coralina_island_guide_p27_c1"
         ]
       },
       {
@@ -968,7 +902,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p28_c1",
           "coralina_island_guide_p28_c0",
-          "coralina_island_guide_p12_c1"
+          "coralina_island_guide_p27_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p28_c1",
@@ -984,8 +918,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p29_c0",
-          "coralina_island_guide_p1_c0",
-          "coralina_island_guide_p32_c0"
+          "coralina_island_guide_p32_c0",
+          "coralina_island_guide_p27_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p29_c0"
@@ -1004,8 +938,8 @@
           "coralina_island_guide_p27_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p27_c1",
-          "coralina_island_guide_p27_c0"
+          "coralina_island_guide_p27_c0",
+          "coralina_island_guide_p27_c1"
         ]
       },
       {
@@ -1018,7 +952,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p29_c0",
           "coralina_island_guide_p27_c0",
-          "coralina_island_guide_p1_c0"
+          "coralina_island_guide_p32_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p29_c0"
@@ -1032,17 +966,17 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p29_c0",
           "coralina_island_guide_p27_c0",
-          "coralina_island_guide_p32_c0"
+          "coralina_island_guide_p32_c0",
+          "coralina_island_guide_p29_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p27_c1",
           "coralina_island_guide_p32_c0",
           "coralina_island_guide_p32_c1",
+          "coralina_island_guide_p27_c0",
           "coralina_island_guide_p29_c1",
           "coralina_island_guide_p29_c0",
-          "coralina_island_guide_p27_c0"
+          "coralina_island_guide_p27_c1"
         ]
       },
       {
@@ -1055,7 +989,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p30_c0",
           "coralina_island_guide_p21_c0",
-          "coralina_island_guide_p5_c0"
+          "coralina_island_guide_p27_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p30_c0",
@@ -1071,12 +1005,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p31_c0",
-          "coralina_island_guide_p8_c1",
-          "coralina_island_guide_p4_c1"
+          "coralina_island_guide_p8_c0",
+          "coralina_island_guide_p8_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p31_c0",
-          "coralina_island_guide_p31_c1"
+          "coralina_island_guide_p31_c1",
+          "coralina_island_guide_p31_c0"
         ]
       },
       {
@@ -1092,92 +1026,39 @@
           "coralina_island_guide_p27_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p32_c1",
-          "coralina_island_guide_p32_c0"
+          "coralina_island_guide_p32_c0",
+          "coralina_island_guide_p32_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "coralina_island_guide_p31_c0",
-          "coralina_island_guide_p21_c1",
-          "coralina_island_guide_p31_c1"
+          "coralina_island_guide_p31_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p31_c0",
-          "coralina_island_guide_p31_c1"
+          "coralina_island_guide_p31_c1",
+          "coralina_island_guide_p31_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p30_c0",
-          "coralina_island_guide_p30_c1",
-          "coralina_island_guide_p12_c1"
+          "coralina_island_guide_p30_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p30_c0",
           "coralina_island_guide_p30_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p33_c0",
-          "coralina_island_guide_p33_c1",
-          "coralina_island_guide_p36_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p33_c1",
-          "coralina_island_guide_p33_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p34_c0",
-          "coralina_island_guide_p33_c0",
-          "sunny_hills_farm_guide_p44_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p34_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p34_c1",
-          "coralina_island_guide_p34_c0",
-          "coralina_island_guide_p33_c0"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p34_c1",
-          "coralina_island_guide_p34_c0"
         ]
       },
       {
@@ -1188,13 +1069,60 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p35_c0",
           "coralina_island_guide_p33_c0",
-          "coralina_island_guide_p16_c2"
+          "coralina_island_guide_p20_c0",
+          "coralina_island_guide_p35_c0"
         ],
         "relevant_ids": [
+          "coralina_island_guide_p33_c0",
+          "coralina_island_guide_p33_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "coralina_island_guide_p34_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p34_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "coralina_island_guide_p34_c1",
+          "coralina_island_guide_p34_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p34_c0",
+          "coralina_island_guide_p34_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
           "coralina_island_guide_p35_c0",
+          "coralina_island_guide_p33_c0",
           "coralina_island_guide_p35_c1"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p35_c1",
+          "coralina_island_guide_p35_c0"
         ]
       },
       {
@@ -1206,8 +1134,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p40_c0",
-          "coralina_island_guide_p40_c1",
-          "coralina_island_guide_p18_c2"
+          "coralina_island_guide_p18_c0",
+          "coralina_island_guide_p40_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p40_c0",
@@ -1232,15 +1160,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "hit_rate": 0.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p37_c0",
-          "coralina_island_guide_p37_c1",
-          "coralina_island_guide_p20_c0"
+          "coralina_island_guide_p13_c0",
+          "coralina_island_guide_p33_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p37_c1"
@@ -1248,15 +1176,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p41_c0",
-          "coralina_island_guide_p38_c1",
-          "coralina_island_guide_p41_c1"
+          "coralina_island_guide_p37_c0",
+          "coralina_island_guide_p50_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p41_c1",
@@ -1272,8 +1200,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p42_c0",
-          "coralina_island_guide_p36_c0",
-          "coralina_island_guide_p12_c0"
+          "coralina_island_guide_p12_c0",
+          "coralina_island_guide_p36_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p42_c0",
@@ -1282,34 +1210,33 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 0.5,
+        "precision": 0.3333333333333333,
+        "recall": 0.25,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p43_c0",
-          "coralina_island_guide_p43_c1",
-          "coralina_island_guide_p7_c1"
+          "coralina_island_guide_p7_c1",
+          "coralina_island_guide_p37_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p43_c0",
+          "coralina_island_guide_p45_c0",
           "coralina_island_guide_p44_c0",
-          "coralina_island_guide_p43_c1",
-          "coralina_island_guide_p45_c0"
+          "coralina_island_guide_p43_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 0.5,
         "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "coralina_island_guide_p43_c0",
-          "coralina_island_guide_p44_c0",
-          "coralina_island_guide_p7_c1"
+          "coralina_island_guide_p44_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p44_c0",
@@ -1318,15 +1245,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p43_c0",
-          "coralina_island_guide_p43_c1",
-          "coralina_island_guide_p7_c1"
+          "coralina_island_guide_p7_c1",
+          "coralina_island_guide_p37_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p43_c0",
@@ -1342,8 +1269,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p42_c1",
-          "coralina_island_guide_p47_c0",
-          "coralina_island_guide_p47_c1"
+          "coralina_island_guide_p6_c0",
+          "coralina_island_guide_p13_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p42_c1"
@@ -1351,19 +1278,19 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p45_c0",
-          "coralina_island_guide_p45_c1",
+          "coralina_island_guide_p9_c0",
           "coralina_island_guide_p9_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p45_c0",
-          "coralina_island_guide_p45_c1"
+          "coralina_island_guide_p45_c1",
+          "coralina_island_guide_p45_c0"
         ]
       },
       {
@@ -1375,8 +1302,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p46_c0",
-          "coralina_island_guide_p46_c1",
-          "coralina_island_guide_p33_c0"
+          "coralina_island_guide_p33_c0",
+          "coralina_island_guide_p46_c1"
         ],
         "relevant_ids": [
           "coralina_island_guide_p46_c0",
@@ -1393,7 +1320,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p47_c0",
           "coralina_island_guide_p47_c1",
-          "coralina_island_guide_p49_c0"
+          "coralina_island_guide_p13_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p47_c1",
@@ -1409,12 +1336,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "coralina_island_guide_p48_c0",
-          "coralina_island_guide_p47_c1",
-          "coralina_island_guide_p33_c0"
+          "coralina_island_guide_p33_c0",
+          "coralina_island_guide_p37_c0"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p48_c1",
-          "coralina_island_guide_p48_c0"
+          "coralina_island_guide_p48_c0",
+          "coralina_island_guide_p48_c1"
         ]
       },
       {
@@ -1427,7 +1354,7 @@
         "retrieved_ids": [
           "coralina_island_guide_p47_c0",
           "coralina_island_guide_p47_c1",
-          "coralina_island_guide_p49_c0"
+          "coralina_island_guide_p37_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p47_c1",
@@ -1436,68 +1363,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "coralina_island_guide_p45_c0",
-          "coralina_island_guide_p45_c1",
-          "coralina_island_guide_p43_c0"
-        ],
-        "relevant_ids": [
           "coralina_island_guide_p45_c0",
           "coralina_island_guide_p45_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p49_c0",
-          "coralina_island_guide_p47_c1",
-          "coralina_island_guide_p49_c1"
         ],
         "relevant_ids": [
-          "coralina_island_guide_p49_c1",
-          "coralina_island_guide_p49_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p49_c0",
-          "coralina_island_guide_p5_c1",
-          "coralina_island_guide_p9_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p49_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "coralina_island_guide_p49_c1",
-          "coralina_island_guide_p49_c0",
-          "coralina_island_guide_p47_c1"
-        ],
-        "relevant_ids": [
-          "coralina_island_guide_p49_c1"
+          "coralina_island_guide_p45_c1",
+          "coralina_island_guide_p45_c0"
         ]
       },
       {
@@ -1508,9 +1385,56 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "coralina_island_guide_p50_c1",
-          "coralina_island_guide_p1_c1",
+          "coralina_island_guide_p49_c0",
+          "coralina_island_guide_p13_c0",
           "coralina_island_guide_p37_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p49_c0",
+          "coralina_island_guide_p49_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "coralina_island_guide_p49_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p49_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "coralina_island_guide_p49_c1",
+          "coralina_island_guide_p37_c0",
+          "coralina_island_guide_p13_c0"
+        ],
+        "relevant_ids": [
+          "coralina_island_guide_p49_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "coralina_island_guide_p37_c0",
+          "coralina_island_guide_p50_c1",
+          "coralina_island_guide_p50_c0"
         ],
         "relevant_ids": [
           "coralina_island_guide_p50_c0",
@@ -1525,80 +1449,13 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "nova_bikes_handbook_p3_c0",
           "nova_bikes_handbook_p3_c1",
-          "nova_bikes_handbook_p50_c0",
-          "nova_bikes_handbook_p3_c0"
+          "nova_bikes_handbook_p50_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p3_c1",
           "nova_bikes_handbook_p3_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p3_c1",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p3_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p3_c1",
-          "nova_bikes_handbook_p3_c2"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 0.3333333333333333,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p2_c0",
-          "nova_bikes_handbook_p1_c1",
-          "nova_bikes_handbook_p1_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p2_c1",
-          "nova_bikes_handbook_p1_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p2_c1",
-          "nova_bikes_handbook_p1_c1",
-          "coralina_island_guide_p2_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p2_c1",
-          "nova_bikes_handbook_p1_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p3_c1",
-          "nova_bikes_handbook_p1_c0",
-          "nova_bikes_handbook_p23_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p3_c1"
         ]
       },
       {
@@ -1609,11 +1466,45 @@
         "hit_rate": 0.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p3_c1",
           "nova_bikes_handbook_p3_c0",
+          "nova_bikes_handbook_p4_c0",
           "nova_bikes_handbook_p50_c0"
         ],
         "relevant_ids": [
+          "nova_bikes_handbook_p3_c1",
+          "nova_bikes_handbook_p3_c2"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p2_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p1_c1",
+          "nova_bikes_handbook_p2_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p3_c0",
+          "nova_bikes_handbook_p3_c1",
+          "nova_bikes_handbook_p50_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p3_c1",
+          "nova_bikes_handbook_p3_c0",
           "nova_bikes_handbook_p3_c2"
         ]
       },
@@ -1626,12 +1517,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p4_c0",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p23_c1"
+          "nova_bikes_handbook_p3_c0",
+          "nova_bikes_handbook_p5_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p4_c2",
           "nova_bikes_handbook_p4_c1",
+          "nova_bikes_handbook_p4_c2",
           "nova_bikes_handbook_p4_c0"
         ]
       },
@@ -1644,8 +1535,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p5_c0",
-          "nova_bikes_handbook_p25_c0",
-          "nova_bikes_handbook_p25_c1"
+          "nova_bikes_handbook_p4_c0",
+          "nova_bikes_handbook_p6_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p5_c1",
@@ -1654,15 +1545,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p5_c1",
-          "nova_bikes_handbook_p4_c1",
-          "coralina_island_guide_p4_c2"
+          "nova_bikes_handbook_p5_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p5_c1"
@@ -1677,8 +1566,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p6_c0",
-          "nova_bikes_handbook_p49_c0",
-          "nova_bikes_handbook_p47_c0"
+          "nova_bikes_handbook_p7_c0",
+          "nova_bikes_handbook_p3_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p6_c0",
@@ -1687,31 +1576,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p5_c2",
-          "nova_bikes_handbook_p22_c0",
-          "nova_bikes_handbook_p22_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p5_c2"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p6_c1",
-          "nova_bikes_handbook_p13_c0",
-          "nova_bikes_handbook_p6_c0"
+          "nova_bikes_handbook_p6_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p6_c1"
@@ -1720,36 +1591,36 @@
       {
         "is_answerable": true,
         "precision": 1.0,
-        "recall": 0.75,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p8_c0",
-          "nova_bikes_handbook_p9_c0",
           "nova_bikes_handbook_p8_c1"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p9_c1",
           "nova_bikes_handbook_p9_c0",
           "nova_bikes_handbook_p8_c1",
-          "nova_bikes_handbook_p8_c0"
+          "nova_bikes_handbook_p8_c0",
+          "nova_bikes_handbook_p9_c1"
         ]
       },
       {
         "is_answerable": true,
         "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
+        "recall": 0.5,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "nova_bikes_handbook_p7_c0",
           "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p26_c1",
           "nova_bikes_handbook_p30_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p7_c1"
+          "nova_bikes_handbook_p7_c1",
+          "nova_bikes_handbook_p24_c0"
         ]
       },
       {
@@ -1762,7 +1633,7 @@
         "retrieved_ids": [
           "nova_bikes_handbook_p7_c1",
           "nova_bikes_handbook_p24_c0",
-          "nova_bikes_handbook_p24_c1"
+          "nova_bikes_handbook_p7_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p7_c1"
@@ -1777,8 +1648,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p7_c0",
-          "nova_bikes_handbook_p11_c0",
-          "nova_bikes_handbook_p11_c1"
+          "nova_bikes_handbook_p11_c1",
+          "nova_bikes_handbook_p11_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p7_c0"
@@ -1788,13 +1659,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.3333333333333333,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p7_c2",
           "nova_bikes_handbook_p40_c0",
-          "nova_bikes_handbook_p7_c1"
+          "nova_bikes_handbook_p7_c0",
+          "nova_bikes_handbook_p7_c2"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p7_c2"
@@ -1802,15 +1673,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "nova_bikes_handbook_p8_c0",
           "nova_bikes_handbook_p8_c1",
-          "nova_bikes_handbook_p13_c1"
+          "nova_bikes_handbook_p8_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p8_c1",
@@ -1827,7 +1697,7 @@
         "retrieved_ids": [
           "nova_bikes_handbook_p10_c1",
           "nova_bikes_handbook_p10_c0",
-          "nova_bikes_handbook_p8_c0"
+          "nova_bikes_handbook_p8_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p10_c0",
@@ -1836,15 +1706,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p11_c0",
-          "nova_bikes_handbook_p11_c1",
-          "nova_bikes_handbook_p44_c0"
+          "nova_bikes_handbook_p11_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p11_c1",
@@ -1853,32 +1722,29 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p12_c0",
-          "nova_bikes_handbook_p12_c1",
-          "nova_bikes_handbook_p49_c0"
+          "nova_bikes_handbook_p12_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p12_c0",
-          "nova_bikes_handbook_p12_c1"
+          "nova_bikes_handbook_p12_c1",
+          "nova_bikes_handbook_p12_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p13_c0",
-          "nova_bikes_handbook_p13_c1",
-          "nova_bikes_handbook_p6_c1"
+          "nova_bikes_handbook_p13_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p13_c1",
@@ -1887,13 +1753,12 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.5,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "nova_bikes_handbook_p12_c0",
           "nova_bikes_handbook_p10_c0",
           "nova_bikes_handbook_p10_c1"
         ],
@@ -1904,15 +1769,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p11_c0",
-          "nova_bikes_handbook_p11_c1",
-          "nova_bikes_handbook_p44_c0"
+          "nova_bikes_handbook_p11_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p11_c1",
@@ -1921,38 +1785,36 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p14_c0",
-          "nova_bikes_handbook_p14_c1",
-          "nova_bikes_handbook_p6_c0"
+          "nova_bikes_handbook_p14_c1"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p14_c0",
-          "nova_bikes_handbook_p14_c1"
+          "nova_bikes_handbook_p14_c1",
+          "nova_bikes_handbook_p14_c0"
         ]
       },
       {
         "is_answerable": true,
         "precision": 1.0,
-        "recall": 0.75,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p15_c0",
-          "nova_bikes_handbook_p14_c0",
           "nova_bikes_handbook_p15_c1"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p14_c0",
           "nova_bikes_handbook_p15_c1",
+          "nova_bikes_handbook_p14_c1",
           "nova_bikes_handbook_p15_c0",
-          "nova_bikes_handbook_p14_c1"
+          "nova_bikes_handbook_p14_c0"
         ]
       },
       {
@@ -1964,8 +1826,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p16_c0",
-          "nova_bikes_handbook_p11_c0",
-          "nova_bikes_handbook_p7_c0"
+          "nova_bikes_handbook_p7_c0",
+          "nova_bikes_handbook_p30_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p16_c1",
@@ -1974,15 +1836,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p14_c1",
-          "nova_bikes_handbook_p45_c1",
-          "nova_bikes_handbook_p39_c0"
+          "nova_bikes_handbook_p14_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p14_c1"
@@ -1990,15 +1851,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p29_c0",
-          "nova_bikes_handbook_p17_c0",
-          "nova_bikes_handbook_p17_c1"
+          "nova_bikes_handbook_p22_c0",
+          "nova_bikes_handbook_p17_c1",
+          "nova_bikes_handbook_p18_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p17_c1",
@@ -2007,15 +1868,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p15_c0",
-          "nova_bikes_handbook_p15_c1",
-          "nova_bikes_handbook_p11_c0"
+          "nova_bikes_handbook_p15_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p15_c1",
@@ -2024,15 +1884,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p18_c0",
-          "nova_bikes_handbook_p17_c1",
-          "nova_bikes_handbook_p6_c2"
+          "nova_bikes_handbook_p18_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p18_c0",
@@ -2041,69 +1899,48 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.5,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p19_c0",
-          "nova_bikes_handbook_p19_c1",
           "nova_bikes_handbook_p4_c2"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p19_c1",
-          "nova_bikes_handbook_p19_c0"
+          "nova_bikes_handbook_p19_c0",
+          "nova_bikes_handbook_p19_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.5,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p20_c0",
-          "nova_bikes_handbook_p20_c1",
           "nova_bikes_handbook_p18_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p20_c1",
-          "nova_bikes_handbook_p20_c0"
+          "nova_bikes_handbook_p20_c0",
+          "nova_bikes_handbook_p20_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p21_c0",
-          "nova_bikes_handbook_p21_c1",
-          "nova_bikes_handbook_p14_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p21_c1",
           "nova_bikes_handbook_p21_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p21_c1",
-          "nova_bikes_handbook_p19_c1",
-          "nova_bikes_handbook_p19_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p19_c1",
+          "nova_bikes_handbook_p21_c0",
           "nova_bikes_handbook_p21_c1"
         ]
       },
@@ -2113,14 +1950,13 @@
         "recall": 0.0,
         "mrr": 0.0,
         "hit_rate": 0.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p18_c0",
-          "nova_bikes_handbook_p37_c0",
-          "nova_bikes_handbook_p17_c1"
+          "nova_bikes_handbook_p19_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p18_c1"
+          "nova_bikes_handbook_p19_c1",
+          "nova_bikes_handbook_p21_c1"
         ]
       },
       {
@@ -2131,25 +1967,8 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p22_c0",
-          "nova_bikes_handbook_p22_c1",
-          "nova_bikes_handbook_p29_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p22_c1",
-          "nova_bikes_handbook_p22_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
           "nova_bikes_handbook_p23_c0",
-          "nova_bikes_handbook_p22_c0",
+          "nova_bikes_handbook_p23_c1",
           "nova_bikes_handbook_p25_c0"
         ],
         "relevant_ids": [
@@ -2165,8 +1984,39 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "nova_bikes_handbook_p24_c1",
           "nova_bikes_handbook_p24_c0",
-          "nova_bikes_handbook_p7_c1",
+          "nova_bikes_handbook_p7_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p24_c1",
+          "nova_bikes_handbook_p24_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p25_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p25_c1",
+          "nova_bikes_handbook_p25_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p24_c0",
           "nova_bikes_handbook_p24_c1"
         ],
         "relevant_ids": [
@@ -2182,43 +2032,9 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p25_c0",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p24_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p25_c1",
-          "nova_bikes_handbook_p25_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p24_c0",
-          "nova_bikes_handbook_p24_c1",
-          "nova_bikes_handbook_p26_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p24_c1",
-          "nova_bikes_handbook_p24_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
           "nova_bikes_handbook_p23_c0",
-          "nova_bikes_handbook_p42_c1",
-          "nova_bikes_handbook_p17_c1"
+          "nova_bikes_handbook_p25_c0",
+          "nova_bikes_handbook_p24_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p23_c1",
@@ -2227,15 +2043,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p26_c0",
+          "nova_bikes_handbook_p22_c1",
           "nova_bikes_handbook_p26_c1",
-          "nova_bikes_handbook_p29_c0"
+          "nova_bikes_handbook_p22_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p26_c1",
@@ -2252,28 +2068,28 @@
         "retrieved_ids": [
           "nova_bikes_handbook_p27_c0",
           "nova_bikes_handbook_p27_c1",
-          "nova_bikes_handbook_p22_c0"
+          "nova_bikes_handbook_p42_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p27_c0",
-          "nova_bikes_handbook_p27_c1"
+          "nova_bikes_handbook_p27_c1",
+          "nova_bikes_handbook_p27_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p28_c0",
           "nova_bikes_handbook_p23_c0",
-          "nova_bikes_handbook_p28_c1"
+          "nova_bikes_handbook_p23_c1"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p28_c1",
-          "nova_bikes_handbook_p28_c0"
+          "nova_bikes_handbook_p28_c0",
+          "nova_bikes_handbook_p28_c1"
         ]
       },
       {
@@ -2285,25 +2101,24 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p29_c0",
-          "nova_bikes_handbook_p39_c1",
-          "nova_bikes_handbook_p7_c1"
+          "nova_bikes_handbook_p30_c0",
+          "nova_bikes_handbook_p30_c1"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p29_c1",
-          "nova_bikes_handbook_p29_c0"
+          "nova_bikes_handbook_p29_c0",
+          "nova_bikes_handbook_p29_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 0.5,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p24_c1",
-          "nova_bikes_handbook_p26_c1",
-          "nova_bikes_handbook_p7_c1"
+          "nova_bikes_handbook_p26_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p26_c1"
@@ -2313,13 +2128,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p29_c1",
           "nova_bikes_handbook_p29_c0",
-          "nova_bikes_handbook_p18_c1"
+          "nova_bikes_handbook_p29_c1",
+          "nova_bikes_handbook_p17_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p29_c1"
@@ -2327,36 +2142,19 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "mrr": 0.3333333333333333,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p30_c1",
           "nova_bikes_handbook_p30_c0",
-          "nova_bikes_handbook_p29_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p30_c0",
-          "nova_bikes_handbook_p30_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
           "nova_bikes_handbook_p29_c0",
-          "nova_bikes_handbook_p31_c1",
           "nova_bikes_handbook_p31_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p31_c1",
-          "nova_bikes_handbook_p31_c0"
+          "nova_bikes_handbook_p31_c0",
+          "nova_bikes_handbook_p31_c1"
         ]
       },
       {
@@ -2368,8 +2166,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p32_c0",
-          "nova_bikes_handbook_p39_c0",
-          "nova_bikes_handbook_p33_c1"
+          "nova_bikes_handbook_p30_c0",
+          "nova_bikes_handbook_p16_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p32_c1",
@@ -2384,15 +2182,15 @@
         "hit_rate": 0.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p47_c1",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p1_c1"
+          "nova_bikes_handbook_p25_c0",
+          "nova_bikes_handbook_p50_c0",
+          "nova_bikes_handbook_p7_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p30_c0",
-          "nova_bikes_handbook_p30_c1",
           "nova_bikes_handbook_p33_c0",
-          "nova_bikes_handbook_p33_c1"
+          "nova_bikes_handbook_p30_c0",
+          "nova_bikes_handbook_p33_c1",
+          "nova_bikes_handbook_p30_c1"
         ]
       },
       {
@@ -2404,8 +2202,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p32_c1",
-          "nova_bikes_handbook_p38_c1",
-          "nova_bikes_handbook_p31_c0"
+          "nova_bikes_handbook_p31_c1",
+          "nova_bikes_handbook_p38_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p32_c1"
@@ -2413,19 +2211,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p33_c1",
-          "nova_bikes_handbook_p33_c0",
-          "nova_bikes_handbook_p1_c1"
+          "nova_bikes_handbook_p33_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p33_c0",
-          "nova_bikes_handbook_p33_c1"
+          "nova_bikes_handbook_p33_c1",
+          "nova_bikes_handbook_p33_c0"
         ]
       },
       {
@@ -2438,7 +2235,7 @@
         "retrieved_ids": [
           "nova_bikes_handbook_p34_c0",
           "nova_bikes_handbook_p25_c1",
-          "nova_bikes_handbook_p37_c1"
+          "nova_bikes_handbook_p17_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p34_c0"
@@ -2454,7 +2251,7 @@
         "retrieved_ids": [
           "nova_bikes_handbook_p34_c0",
           "nova_bikes_handbook_p33_c0",
-          "nova_bikes_handbook_p34_c1"
+          "nova_bikes_handbook_p33_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p34_c0"
@@ -2486,12 +2283,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p36_c0",
-          "nova_bikes_handbook_p33_c0",
-          "nova_bikes_handbook_p36_c1"
-        ],
-        "relevant_ids": [
           "nova_bikes_handbook_p36_c1",
-          "nova_bikes_handbook_p36_c0"
+          "nova_bikes_handbook_p35_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p36_c0",
+          "nova_bikes_handbook_p36_c1"
         ]
       },
       {
@@ -2503,29 +2300,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p37_c1",
-          "nova_bikes_handbook_p22_c0",
-          "nova_bikes_handbook_p25_c1"
+          "nova_bikes_handbook_p25_c1",
+          "nova_bikes_handbook_p25_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p37_c0",
-          "nova_bikes_handbook_p37_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
           "nova_bikes_handbook_p37_c1",
-          "nova_bikes_handbook_p33_c1",
-          "nova_bikes_handbook_p33_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p37_c0",
-          "nova_bikes_handbook_p37_c1"
+          "nova_bikes_handbook_p37_c0"
         ]
       },
       {
@@ -2536,43 +2316,40 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p38_c0",
-          "nova_bikes_handbook_p38_c1",
+          "nova_bikes_handbook_p37_c1",
+          "nova_bikes_handbook_p37_c0",
+          "nova_bikes_handbook_p25_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p37_c1",
           "nova_bikes_handbook_p37_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p38_c1",
-          "nova_bikes_handbook_p38_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
-          "nova_bikes_handbook_p41_c1",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p29_c0"
+          "nova_bikes_handbook_p38_c0",
+          "yasmine_sweets_ar_p42_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p41_c0",
-          "nova_bikes_handbook_p41_c1"
+          "nova_bikes_handbook_p38_c0",
+          "nova_bikes_handbook_p38_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p40_c0",
-          "nova_bikes_handbook_p39_c0",
-          "nova_bikes_handbook_p7_c1"
+          "nova_bikes_handbook_p40_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p40_c0",
@@ -2581,19 +2358,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.5,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p38_c0",
-          "nova_bikes_handbook_p37_c0",
+          "nova_bikes_handbook_p37_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p38_c0",
           "nova_bikes_handbook_p38_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p38_c1",
-          "nova_bikes_handbook_p38_c0"
         ]
       },
       {
@@ -2605,8 +2381,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p39_c1",
-          "nova_bikes_handbook_p41_c1",
-          "nova_bikes_handbook_p39_c0"
+          "nova_bikes_handbook_p39_c0",
+          "nova_bikes_handbook_p17_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p39_c1",
@@ -2621,8 +2397,8 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p40_c1",
           "nova_bikes_handbook_p40_c0",
+          "nova_bikes_handbook_p40_c1",
           "nova_bikes_handbook_p7_c2"
         ],
         "relevant_ids": [
@@ -2632,15 +2408,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p42_c0",
-          "nova_bikes_handbook_p42_c1",
-          "nova_bikes_handbook_p44_c0"
+          "nova_bikes_handbook_p42_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p42_c1",
@@ -2649,36 +2423,97 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "nova_bikes_handbook_p43_c0",
-          "nova_bikes_handbook_p42_c0",
-          "nova_bikes_handbook_p43_c1"
+          "nova_bikes_handbook_p43_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p43_c1",
-          "nova_bikes_handbook_p43_c0"
+          "nova_bikes_handbook_p43_c0",
+          "nova_bikes_handbook_p43_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "nova_bikes_handbook_p44_c0",
-          "nova_bikes_handbook_p44_c1",
-          "nova_bikes_handbook_p42_c0"
+          "nova_bikes_handbook_p44_c1"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p44_c1",
           "nova_bikes_handbook_p44_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.5,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p45_c0",
+          "nova_bikes_handbook_p35_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p45_c1",
+          "nova_bikes_handbook_p45_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p42_c0",
+          "nova_bikes_handbook_p42_c1",
+          "nova_bikes_handbook_p44_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p42_c1"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p44_c0",
+          "nova_bikes_handbook_p44_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p44_c1",
+          "nova_bikes_handbook_p44_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p46_c0",
+          "nova_bikes_handbook_p46_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p46_c0",
+          "nova_bikes_handbook_p46_c1"
         ]
       },
       {
@@ -2689,110 +2524,43 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p45_c0",
-          "nova_bikes_handbook_p42_c0",
-          "nova_bikes_handbook_p35_c0"
+          "nova_bikes_handbook_p47_c0",
+          "nova_bikes_handbook_p49_c1",
+          "nova_bikes_handbook_p5_c0"
         ],
         "relevant_ids": [
-          "nova_bikes_handbook_p45_c0",
-          "nova_bikes_handbook_p45_c1"
+          "nova_bikes_handbook_p47_c1",
+          "nova_bikes_handbook_p47_c0"
         ]
       },
       {
         "is_answerable": true,
         "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p42_c1",
-          "nova_bikes_handbook_p38_c1",
-          "nova_bikes_handbook_p16_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p42_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p44_c0",
-          "nova_bikes_handbook_p42_c0",
-          "nova_bikes_handbook_p44_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p44_c1",
-          "nova_bikes_handbook_p44_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p46_c0",
-          "nova_bikes_handbook_p46_c1",
-          "nova_bikes_handbook_p43_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p46_c0",
-          "nova_bikes_handbook_p46_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p47_c1",
-          "nova_bikes_handbook_p47_c0",
-          "nova_bikes_handbook_p48_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p47_c1",
-          "nova_bikes_handbook_p47_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p48_c0",
+          "nova_bikes_handbook_p49_c0",
+          "nova_bikes_handbook_p47_c1"
+        ],
+        "relevant_ids": [
           "nova_bikes_handbook_p48_c1",
-          "nova_bikes_handbook_p47_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p48_c0",
-          "nova_bikes_handbook_p48_c1"
+          "nova_bikes_handbook_p48_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p49_c0",
-          "nova_bikes_handbook_p49_c1",
-          "nova_bikes_handbook_p6_c0"
+          "nova_bikes_handbook_p6_c0",
+          "nova_bikes_handbook_p4_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p49_c1",
@@ -2808,8 +2576,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "nova_bikes_handbook_p47_c1",
-          "nova_bikes_handbook_p7_c1",
-          "nova_bikes_handbook_p49_c1"
+          "nova_bikes_handbook_p49_c1",
+          "nova_bikes_handbook_p7_c0"
         ],
         "relevant_ids": [
           "nova_bikes_handbook_p47_c1"
@@ -2817,83 +2585,64 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 1.0,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
+          "nova_bikes_handbook_p48_c0"
+        ],
+        "relevant_ids": [
           "nova_bikes_handbook_p48_c1",
-          "nova_bikes_handbook_p48_c0",
-          "nova_bikes_handbook_p37_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p48_c0",
-          "nova_bikes_handbook_p48_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p2_c0",
-          "nova_bikes_handbook_p1_c0",
-          "nova_bikes_handbook_p1_c1"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p50_c0"
+          "nova_bikes_handbook_p48_c0"
         ]
       },
       {
         "is_answerable": true,
         "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p50_c0",
-          "nova_bikes_handbook_p3_c0",
-          "nova_bikes_handbook_p2_c2"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p50_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "nova_bikes_handbook_p50_c1",
-          "nova_bikes_handbook_p3_c0",
-          "nova_bikes_handbook_p50_c0"
-        ],
-        "relevant_ids": [
-          "nova_bikes_handbook_p50_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
         "recall": 1.0,
         "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "nova_bikes_handbook_p5_c2",
+          "nova_bikes_handbook_p3_c0",
           "nova_bikes_handbook_p50_c0",
-          "nova_bikes_handbook_p50_c1"
+          "nova_bikes_handbook_p1_c0"
         ],
         "relevant_ids": [
+          "nova_bikes_handbook_p50_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
           "nova_bikes_handbook_p50_c0",
+          "nova_bikes_handbook_p3_c0",
+          "nova_bikes_handbook_p6_c0"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p50_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "nova_bikes_handbook_p3_c0",
+          "nova_bikes_handbook_p50_c1",
+          "nova_bikes_handbook_p50_c0"
+        ],
+        "relevant_ids": [
           "nova_bikes_handbook_p50_c1"
         ]
       },
@@ -2905,8 +2654,25 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
+          "nova_bikes_handbook_p50_c0",
+          "nova_bikes_handbook_p33_c1",
+          "nova_bikes_handbook_p50_c1"
+        ],
+        "relevant_ids": [
+          "nova_bikes_handbook_p50_c1",
+          "nova_bikes_handbook_p50_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "mrr": 0.5,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "sunny_hills_farm_guide_p6_c0",
           "sunny_hills_farm_guide_p4_c0",
-          "sunny_hills_farm_guide_p4_c1",
           "sunny_hills_farm_guide_p6_c1"
         ],
         "relevant_ids": [
@@ -2924,11 +2690,11 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p3_c0",
           "sunny_hills_farm_guide_p3_c1",
-          "sunny_hills_farm_guide_p6_c1"
+          "sunny_hills_farm_guide_p6_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p3_c0",
-          "sunny_hills_farm_guide_p3_c1"
+          "sunny_hills_farm_guide_p3_c1",
+          "sunny_hills_farm_guide_p3_c0"
         ]
       },
       {
@@ -2940,8 +2706,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p5_c0",
-          "sunny_hills_farm_guide_p23_c0",
-          "sunny_hills_farm_guide_p6_c1"
+          "sunny_hills_farm_guide_p6_c1",
+          "sunny_hills_farm_guide_p23_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p5_c0"
@@ -2950,48 +2716,14 @@
       {
         "is_answerable": true,
         "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 0.3333333333333333,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p6_c1",
-          "sunny_hills_farm_guide_p4_c1",
-          "sunny_hills_farm_guide_p4_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p4_c0",
-          "sunny_hills_farm_guide_p3_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p5_c0",
-          "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p4_c1"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p5_c0",
-          "sunny_hills_farm_guide_p4_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p3_c0",
-          "sunny_hills_farm_guide_p6_c0",
-          "sunny_hills_farm_guide_p3_c1"
+          "sunny_hills_farm_guide_p5_c0",
+          "sunny_hills_farm_guide_p6_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p3_c0"
@@ -2999,13 +2731,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 0.5,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p19_c0",
+          "sunny_hills_farm_guide_p4_c1",
           "sunny_hills_farm_guide_p4_c0",
           "sunny_hills_farm_guide_p6_c1"
         ],
@@ -3018,13 +2750,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 0.3333333333333333,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p3_c1",
-          "sunny_hills_farm_guide_p5_c0"
+          "sunny_hills_farm_guide_p5_c0",
+          "sunny_hills_farm_guide_p3_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p5_c0"
@@ -3039,7 +2771,7 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p5_c0",
-          "sunny_hills_farm_guide_p5_c1",
+          "sunny_hills_farm_guide_p6_c1",
           "sunny_hills_farm_guide_p23_c0"
         ],
         "relevant_ids": [
@@ -3049,19 +2781,19 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p6_c0",
           "sunny_hills_farm_guide_p3_c0",
-          "sunny_hills_farm_guide_p6_c1"
+          "sunny_hills_farm_guide_p5_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p6_c1",
-          "sunny_hills_farm_guide_p6_c0"
+          "sunny_hills_farm_guide_p6_c0",
+          "sunny_hills_farm_guide_p6_c1"
         ]
       },
       {
@@ -3074,7 +2806,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p7_c0",
           "sunny_hills_farm_guide_p7_c1",
-          "sunny_hills_farm_guide_p24_c0"
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p7_c1",
@@ -3083,15 +2815,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p8_c0",
-          "sunny_hills_farm_guide_p8_c1",
-          "sunny_hills_farm_guide_p7_c0"
+          "sunny_hills_farm_guide_p7_c0",
+          "sunny_hills_farm_guide_p6_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p8_c0",
@@ -3100,15 +2832,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p9_c0",
-          "sunny_hills_farm_guide_p7_c0",
-          "sunny_hills_farm_guide_p9_c1"
+          "sunny_hills_farm_guide_p7_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p9_c0"
@@ -3122,24 +2853,8 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p6_c1",
-          "sunny_hills_farm_guide_p3_c0",
-          "sunny_hills_farm_guide_p6_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p6_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
           "sunny_hills_farm_guide_p7_c1",
-          "sunny_hills_farm_guide_p24_c1",
+          "sunny_hills_farm_guide_p7_c0",
           "sunny_hills_farm_guide_p45_c0"
         ],
         "relevant_ids": [
@@ -3155,8 +2870,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p8_c1",
-          "sunny_hills_farm_guide_p8_c0",
-          "sunny_hills_farm_guide_p9_c1"
+          "sunny_hills_farm_guide_p7_c0",
+          "sunny_hills_farm_guide_p8_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p8_c1"
@@ -3172,7 +2887,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p10_c0",
           "sunny_hills_farm_guide_p7_c0",
-          "sunny_hills_farm_guide_p9_c0"
+          "sunny_hills_farm_guide_p6_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p10_c0"
@@ -3187,8 +2902,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p11_c0",
-          "sunny_hills_farm_guide_p12_c0",
-          "sunny_hills_farm_guide_p11_c1"
+          "sunny_hills_farm_guide_p11_c1",
+          "sunny_hills_farm_guide_p12_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p11_c0"
@@ -3196,19 +2911,19 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p12_c0",
-          "sunny_hills_farm_guide_p12_c1",
+          "sunny_hills_farm_guide_p11_c1",
           "sunny_hills_farm_guide_p7_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p12_c0",
-          "sunny_hills_farm_guide_p12_c1"
+          "sunny_hills_farm_guide_p12_c1",
+          "sunny_hills_farm_guide_p12_c0"
         ]
       },
       {
@@ -3220,12 +2935,12 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p13_c0",
-          "sunny_hills_farm_guide_p36_c0",
-          "sunny_hills_farm_guide_p7_c0"
+          "sunny_hills_farm_guide_p11_c0",
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p13_c0",
-          "sunny_hills_farm_guide_p11_c1"
+          "sunny_hills_farm_guide_p11_c1",
+          "sunny_hills_farm_guide_p13_c0"
         ]
       },
       {
@@ -3247,15 +2962,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p11_c0",
-          "sunny_hills_farm_guide_p11_c1",
-          "sunny_hills_farm_guide_p24_c0"
+          "sunny_hills_farm_guide_p11_c1"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p11_c0"
@@ -3269,13 +2983,13 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p12_c1",
-          "sunny_hills_farm_guide_p7_c0",
-          "sunny_hills_farm_guide_p11_c0"
+          "sunny_hills_farm_guide_p12_c0",
+          "sunny_hills_farm_guide_p11_c0",
+          "sunny_hills_farm_guide_p7_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p12_c0",
-          "sunny_hills_farm_guide_p12_c1"
+          "sunny_hills_farm_guide_p12_c1",
+          "sunny_hills_farm_guide_p12_c0"
         ]
       },
       {
@@ -3288,7 +3002,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p10_c0",
           "sunny_hills_farm_guide_p10_c1",
-          "sunny_hills_farm_guide_p7_c1"
+          "sunny_hills_farm_guide_p7_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p10_c1",
@@ -3304,8 +3018,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p14_c0",
-          "sunny_hills_farm_guide_p7_c1",
-          "sunny_hills_farm_guide_p7_c0"
+          "sunny_hills_farm_guide_p7_c0",
+          "sunny_hills_farm_guide_p7_c1"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p14_c0"
@@ -3313,15 +3027,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 0.6666666666666666,
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
         "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p15_c0",
-          "sunny_hills_farm_guide_p15_c1",
-          "sunny_hills_farm_guide_p41_c0"
+          "sunny_hills_farm_guide_p41_c0",
+          "sunny_hills_farm_guide_p7_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p19_c0",
@@ -3339,25 +3053,25 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p16_c0",
           "sunny_hills_farm_guide_p6_c0",
-          "sunny_hills_farm_guide_p4_c0"
+          "sunny_hills_farm_guide_p3_c0"
         ],
         "relevant_ids": [
+          "sunny_hills_farm_guide_p4_c1",
           "sunny_hills_farm_guide_p16_c0",
-          "sunny_hills_farm_guide_p16_c1",
-          "sunny_hills_farm_guide_p4_c1"
+          "sunny_hills_farm_guide_p16_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "mrr": 0.3333333333333333,
+        "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p7_c1",
           "sunny_hills_farm_guide_p7_c0",
-          "sunny_hills_farm_guide_p24_c1"
+          "sunny_hills_farm_guide_p16_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p16_c0",
@@ -3373,42 +3087,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p5_c1",
-          "sunny_hills_farm_guide_p36_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p17_c1",
-          "sunny_hills_farm_guide_p17_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.6666666666666666,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p14_c0",
-          "coralina_island_guide_p16_c2",
-          "sunny_hills_farm_guide_p14_c1"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p14_c0",
-          "sunny_hills_farm_guide_p14_c1"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p17_c0",
-          "sunny_hills_farm_guide_p18_c0",
-          "sunny_hills_farm_guide_p21_c0"
+          "sunny_hills_farm_guide_p43_c0",
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p17_c1",
@@ -3423,9 +3103,9 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p45_c0",
+          "sunny_hills_farm_guide_p15_c0",
           "sunny_hills_farm_guide_p15_c1",
-          "sunny_hills_farm_guide_p7_c1"
+          "sunny_hills_farm_guide_p41_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p15_c1"
@@ -3433,19 +3113,18 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
+        "precision": 1.0,
+        "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p19_c0",
-          "sunny_hills_farm_guide_p39_c0",
-          "sunny_hills_farm_guide_p16_c0"
+          "sunny_hills_farm_guide_p19_c1"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p19_c0",
-          "sunny_hills_farm_guide_p19_c1"
+          "sunny_hills_farm_guide_p19_c1",
+          "sunny_hills_farm_guide_p19_c0"
         ]
       },
       {
@@ -3467,15 +3146,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p21_c0",
-          "sunny_hills_farm_guide_p22_c0",
-          "sunny_hills_farm_guide_p18_c0"
+          "sunny_hills_farm_guide_p21_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p21_c0"
@@ -3490,8 +3167,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p22_c0",
-          "sunny_hills_farm_guide_p18_c0",
-          "sunny_hills_farm_guide_p21_c0"
+          "sunny_hills_farm_guide_p36_c0",
+          "sunny_hills_farm_guide_p16_c1"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p22_c0"
@@ -3507,7 +3184,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p20_c0",
           "sunny_hills_farm_guide_p34_c0",
-          "sunny_hills_farm_guide_p18_c0"
+          "sunny_hills_farm_guide_p17_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p20_c0"
@@ -3515,47 +3192,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p18_c0",
-          "sunny_hills_farm_guide_p16_c1",
-          "sunny_hills_farm_guide_p18_c1"
-        ],
-        "relevant_ids": [
           "sunny_hills_farm_guide_p18_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p21_c0",
-          "sunny_hills_farm_guide_p22_c0",
-          "sunny_hills_farm_guide_p18_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p21_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p18_c0",
-          "sunny_hills_farm_guide_p19_c0",
-          "sunny_hills_farm_guide_p22_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p18_c0"
@@ -3567,33 +3210,45 @@
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "sunny_hills_farm_guide_p21_c0"
+        ],
+        "relevant_ids": [
+          "sunny_hills_farm_guide_p21_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p23_c0",
           "sunny_hills_farm_guide_p6_c0",
-          "sunny_hills_farm_guide_p23_c1"
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p23_c0",
           "sunny_hills_farm_guide_p6_c0",
+          "sunny_hills_farm_guide_p23_c0",
           "sunny_hills_farm_guide_p23_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p24_c0",
-          "sunny_hills_farm_guide_p7_c0",
-          "sunny_hills_farm_guide_p23_c0"
+          "sunny_hills_farm_guide_p24_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p24_c0",
-          "sunny_hills_farm_guide_p24_c1"
+          "sunny_hills_farm_guide_p24_c1",
+          "sunny_hills_farm_guide_p24_c0"
         ]
       },
       {
@@ -3605,42 +3260,39 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p25_c0",
-          "sunny_hills_farm_guide_p23_c0",
-          "sunny_hills_farm_guide_p28_c0"
+          "sunny_hills_farm_guide_p23_c1",
+          "sunny_hills_farm_guide_p23_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p25_c1",
-          "sunny_hills_farm_guide_p25_c0"
+          "sunny_hills_farm_guide_p25_c0",
+          "sunny_hills_farm_guide_p25_c1"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 0.5,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p26_c0",
-          "sunny_hills_farm_guide_p37_c0",
+          "sunny_hills_farm_guide_p37_c0"
+        ],
+        "relevant_ids": [
+          "sunny_hills_farm_guide_p39_c0",
+          "sunny_hills_farm_guide_p26_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 1.0,
+        "recall": 0.5,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 1,
+        "retrieved_ids": [
           "sunny_hills_farm_guide_p27_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p26_c0",
-          "sunny_hills_farm_guide_p39_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p27_c0",
-          "coralina_island_guide_p20_c2",
-          "sunny_hills_farm_guide_p29_c1"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p27_c1",
@@ -3656,8 +3308,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p23_c1",
-          "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p23_c0"
+          "sunny_hills_farm_guide_p23_c0",
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p23_c1"
@@ -3665,15 +3317,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p25_c0",
-          "sunny_hills_farm_guide_p28_c0",
-          "sunny_hills_farm_guide_p23_c0"
+          "sunny_hills_farm_guide_p25_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p25_c0"
@@ -3681,15 +3331,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p27_c0",
-          "nova_bikes_handbook_p37_c0",
-          "nova_bikes_handbook_p19_c1"
+          "sunny_hills_farm_guide_p27_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p27_c0"
@@ -3699,12 +3347,12 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p28_c0",
           "sunny_hills_farm_guide_p23_c0",
+          "sunny_hills_farm_guide_p28_c0",
           "sunny_hills_farm_guide_p24_c0"
         ],
         "relevant_ids": [
@@ -3720,13 +3368,13 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p13_c0",
-          "sunny_hills_farm_guide_p10_c0"
+          "sunny_hills_farm_guide_p43_c0",
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p31_c0",
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p30_c0"
+          "sunny_hills_farm_guide_p30_c0",
+          "sunny_hills_farm_guide_p31_c0"
         ]
       },
       {
@@ -3739,7 +3387,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p32_c0",
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p2_c0"
+          "sunny_hills_farm_guide_p43_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p32_c0"
@@ -3747,15 +3395,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p33_c0",
-          "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p27_c0"
+          "sunny_hills_farm_guide_p33_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p33_c0"
@@ -3787,7 +3433,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p33_c0",
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p16_c0"
+          "sunny_hills_farm_guide_p19_c1"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p33_c0"
@@ -3797,13 +3443,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 0.5,
+        "mrr": 1.0,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p27_c0",
           "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p36_c0"
+          "sunny_hills_farm_guide_p7_c1",
+          "sunny_hills_farm_guide_p43_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p29_c0"
@@ -3811,15 +3457,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p32_c0",
-          "sunny_hills_farm_guide_p29_c0",
-          "sunny_hills_farm_guide_p45_c0"
+          "sunny_hills_farm_guide_p32_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p32_c0"
@@ -3827,15 +3471,13 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 1.0,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 1,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p34_c0",
-          "sunny_hills_farm_guide_p20_c0",
-          "sunny_hills_farm_guide_p16_c1"
+          "sunny_hills_farm_guide_p34_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p34_c0"
@@ -3850,7 +3492,7 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p36_c0",
-          "sunny_hills_farm_guide_p29_c1",
+          "sunny_hills_farm_guide_p50_c0",
           "sunny_hills_farm_guide_p29_c0"
         ],
         "relevant_ids": [
@@ -3861,30 +3503,29 @@
         "is_answerable": true,
         "precision": 0.6666666666666666,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.5,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p39_c0",
           "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p38_c0"
-        ],
-        "relevant_ids": [
           "sunny_hills_farm_guide_p38_c0",
           "sunny_hills_farm_guide_p39_c0"
+        ],
+        "relevant_ids": [
+          "sunny_hills_farm_guide_p39_c0",
+          "sunny_hills_farm_guide_p38_c0"
         ]
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p35_c0",
-          "sunny_hills_farm_guide_p29_c0",
-          "nova_bikes_handbook_p42_c0"
+          "rayhan_zoo_guide_ar_p46_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p35_c0"
@@ -3900,7 +3541,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p43_c0",
           "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p32_c0"
+          "sunny_hills_farm_guide_p50_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p37_c0"
@@ -3908,15 +3549,14 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.3333333333333333,
+        "precision": 0.5,
         "recall": 1.0,
         "mrr": 1.0,
         "hit_rate": 1.0,
-        "retrieved_count": 3,
+        "retrieved_count": 2,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p40_c0",
-          "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p26_c0"
+          "sunny_hills_farm_guide_p37_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p40_c0"
@@ -3932,7 +3572,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p41_c0",
           "sunny_hills_farm_guide_p15_c0",
-          "sunny_hills_farm_guide_p29_c0"
+          "sunny_hills_farm_guide_p37_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p41_c0"
@@ -3947,8 +3587,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p36_c0",
-          "sunny_hills_farm_guide_p29_c1",
-          "sunny_hills_farm_guide_p27_c1"
+          "sunny_hills_farm_guide_p50_c0",
+          "sunny_hills_farm_guide_p43_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p36_c0"
@@ -3964,7 +3604,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p42_c0",
           "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p5_c1"
+          "sunny_hills_farm_guide_p40_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p42_c0"
@@ -3979,8 +3619,8 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p43_c0",
-          "sunny_hills_farm_guide_p37_c0",
-          "sunny_hills_farm_guide_p50_c0"
+          "sunny_hills_farm_guide_p50_c0",
+          "sunny_hills_farm_guide_p37_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p43_c0"
@@ -3990,13 +3630,13 @@
         "is_answerable": true,
         "precision": 0.3333333333333333,
         "recall": 1.0,
-        "mrr": 1.0,
+        "mrr": 0.3333333333333333,
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p44_c0",
-          "sunny_hills_farm_guide_p36_c0",
-          "sunny_hills_farm_guide_p29_c0"
+          "sunny_hills_farm_guide_p43_c0",
+          "sunny_hills_farm_guide_p50_c0",
+          "sunny_hills_farm_guide_p44_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p44_c0"
@@ -4012,7 +3652,7 @@
         "retrieved_ids": [
           "sunny_hills_farm_guide_p45_c0",
           "sunny_hills_farm_guide_p7_c1",
-          "sunny_hills_farm_guide_p16_c1"
+          "sunny_hills_farm_guide_p43_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p45_c0"
@@ -4027,44 +3667,11 @@
         "retrieved_count": 3,
         "retrieved_ids": [
           "sunny_hills_farm_guide_p46_c0",
-          "sunny_hills_farm_guide_p6_c0",
-          "sunny_hills_farm_guide_p5_c1"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p46_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 1.0,
-        "mrr": 0.5,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p46_c0",
-          "sunny_hills_farm_guide_p47_c0",
+          "sunny_hills_farm_guide_p50_c0",
           "sunny_hills_farm_guide_p43_c0"
         ],
         "relevant_ids": [
-          "sunny_hills_farm_guide_p47_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "mrr": 1.0,
-        "hit_rate": 1.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p49_c0",
-          "sunny_hills_farm_guide_p46_c0",
-          "sunny_hills_farm_guide_p5_c1"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p49_c0",
-          "sunny_hills_farm_guide_p48_c0"
+          "sunny_hills_farm_guide_p46_c0"
         ]
       },
       {
@@ -4085,47 +3692,15 @@
       },
       {
         "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p4_c0",
-          "sunny_hills_farm_guide_p3_c0",
+          "sunny_hills_farm_guide_p50_c0",
+          "sunny_hills_farm_guide_p43_c0",
           "sunny_hills_farm_guide_p6_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p50_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p6_c0",
-          "sunny_hills_farm_guide_p46_c0",
-          "sunny_hills_farm_guide_p29_c0"
-        ],
-        "relevant_ids": [
-          "sunny_hills_farm_guide_p50_c0"
-        ]
-      },
-      {
-        "is_answerable": true,
-        "precision": 0.0,
-        "recall": 0.0,
-        "mrr": 0.0,
-        "hit_rate": 0.0,
-        "retrieved_count": 3,
-        "retrieved_ids": [
-          "sunny_hills_farm_guide_p1_c0",
-          "sunny_hills_farm_guide_p36_c0",
-          "sunny_hills_farm_guide_p2_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p50_c0"
@@ -4139,9 +3714,25 @@
         "hit_rate": 1.0,
         "retrieved_count": 3,
         "retrieved_ids": [
-          "sunny_hills_farm_guide_p43_c0",
+          "sunny_hills_farm_guide_p36_c0",
           "sunny_hills_farm_guide_p50_c0",
-          "sunny_hills_farm_guide_p23_c0"
+          "sunny_hills_farm_guide_p43_c0"
+        ],
+        "relevant_ids": [
+          "sunny_hills_farm_guide_p50_c0"
+        ]
+      },
+      {
+        "is_answerable": true,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "hit_rate": 1.0,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "sunny_hills_farm_guide_p50_c0",
+          "sunny_hills_farm_guide_p43_c0",
+          "sunny_hills_farm_guide_p37_c0"
         ],
         "relevant_ids": [
           "sunny_hills_farm_guide_p50_c0"

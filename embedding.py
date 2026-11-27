@@ -40,12 +40,11 @@
 #     ).tolist()
 
 
-
 import os
+import tiktoken
 
 from openai import OpenAI
 from dotenv import load_dotenv
-from transformers import AutoTokenizer
 
 
 # Load environment variables
@@ -53,18 +52,21 @@ load_dotenv()
 
 
 # OpenRouter embedding model
-MODEL_NAME = "intfloat/multilingual-e5-large"
+MODEL_NAME = "qwen/qwen3-embedding-8b"
 
-# Hugging Face tokenizer
-TOKENIZER_MODEL = "intfloat/multilingual-e5-large"
+# Tokenizer settings
+# Used for approximate token statistics.
+# Qwen uses its own tokenizer, so tiktoken counts are estimates.
+TOKENIZER_MODEL = "cl100k_base"
+MAX_INPUT_TOKENS = 32768
 
-# Model configuration
-MAX_INPUT_TOKENS = 512
 BATCH_SIZE = 100
 
-# E5 prefixes
-DOCUMENT_PREFIX = "passage: "
-QUERY_PREFIX = "query: "
+# Qwen3 retrieval instruction
+QUERY_INSTRUCTION = (
+    "Instruct: Given a question, retrieve relevant passages "
+    "that answer the question.\nQuery: "
+)
 
 _model = None
 _tokenizer = None
@@ -76,143 +78,122 @@ def load_model():
     global _model
 
     if _model is None:
-
         api_key = os.getenv("OPENROUTER_API_KEY")
 
         if not api_key:
             raise ValueError(
-                "OPENROUTER_API_KEY not found. Check your .env file."
+                "OPENROUTER_API_KEY not found in environment variables."
             )
 
         _model = OpenAI(
-            api_key=api_key,
-            base_url="https://openrouter.ai/api/v1"
+            base_url="https://openrouter.ai/api/v1",
+            api_key=api_key
         )
 
     return _model
 
 
 def load_tokenizer():
-    """Load the original E5 tokenizer for accurate token counting."""
+    """Load tokenizer once and reuse it."""
 
     global _tokenizer
 
     if _tokenizer is None:
-
-        _tokenizer = AutoTokenizer.from_pretrained(
-            TOKENIZER_MODEL
-        )
+        _tokenizer = tiktoken.get_encoding(TOKENIZER_MODEL)
 
     return _tokenizer
 
 
 def count_tokens(texts):
-    """Count tokens using the original E5 tokenizer."""
+    """
+    Count approximate tokens for a list of texts.
+
+    Note:
+    tiktoken is not Qwen's native tokenizer.
+    Counts are useful for statistics, not exact limit validation.
+    """
 
     tokenizer = load_tokenizer()
 
-    if isinstance(texts, str):
-        texts = [texts]
-
-    counts = [
-        len(
-            tokenizer.encode(
-                text,
-                add_special_tokens=True
-            )
-        )
+    tokens_per_text = [
+        len(tokenizer.encode(text, disallowed_special=()))
         for text in texts
     ]
 
+    total_tokens = sum(tokens_per_text)
+    number_of_texts = len(texts)
+
+    if number_of_texts == 0:
+        return {
+            "total_tokens": 0,
+            "tokens_per_text": [],
+            "number_of_texts": 0,
+            "average_tokens": 0,
+            "min_tokens": 0,
+            "max_tokens": 0,
+            "model_max_length": MAX_INPUT_TOKENS,
+            "chunks_over_limit": []
+        }
+
+    chunks_over_limit = [
+        i for i, count in enumerate(tokens_per_text)
+        if count > MAX_INPUT_TOKENS
+    ]
+
     return {
-        "total_tokens": sum(counts),
-
-        "tokens_per_text": counts,
-
-        "number_of_texts": len(counts),
-
-        "average_tokens": (
-            sum(counts) / len(counts)
-            if counts else 0
-        ),
-
-        "min_tokens": min(counts) if counts else 0,
-
-        "max_tokens": max(counts) if counts else 0,
-
+        "total_tokens": total_tokens,
+        "tokens_per_text": tokens_per_text,
+        "number_of_texts": number_of_texts,
+        "average_tokens": total_tokens / number_of_texts,
+        "min_tokens": min(tokens_per_text),
+        "max_tokens": max(tokens_per_text),
         "model_max_length": MAX_INPUT_TOKENS,
-
-        "chunks_over_limit": sum(
-            count > MAX_INPUT_TOKENS
-            for count in counts
-        ),
+        "chunks_over_limit": chunks_over_limit
     }
 
 
 def embed_documents(texts, batch_size=BATCH_SIZE):
     """
-    Convert document chunks into Multilingual-E5 embeddings.
+    Generate document embeddings using Qwen3 through OpenRouter.
 
-    E5 requires the passage: prefix for documents.
+    Documents are processed in batches.
+    The original order of embeddings is preserved.
     """
 
     if not texts:
         return []
 
-    if batch_size <= 0:
-        raise ValueError(
-            "Batch size must be greater than zero."
-        )
-
     client = load_model()
 
-    # Add E5 document prefix
-    prepared_texts = [
-        DOCUMENT_PREFIX + text
-        for text in texts
-    ]
-
-    usage = count_tokens(prepared_texts)
+    # Count tokens before embedding
+    usage = count_tokens(texts)
 
     print(f"Chunks: {usage['number_of_texts']}")
-
-    print(
-        f"Total embedding tokens: "
-        f"{usage['total_tokens']}"
-    )
-
+    print(f"Total approximate tokens: {usage['total_tokens']}")
     print(
         f"Average tokens per chunk: "
         f"{usage['average_tokens']:.2f}"
     )
-
+    print(f"Maximum tokens in a chunk: {usage['max_tokens']}")
+    print(f"Model max length: {usage['model_max_length']}")
     print(
-        f"Maximum tokens in a chunk: "
-        f"{usage['max_tokens']}"
+        f"Chunks over approximate model limit: "
+        f"{len(usage['chunks_over_limit'])}"
     )
 
-    print(
-        f"Model max length: "
-        f"{usage['model_max_length']}"
-    )
-
-    print(
-        f"Chunks over model limit: "
-        f"{usage['chunks_over_limit']}"
-    )
-
-    if usage["chunks_over_limit"] > 0:
-
+    if usage["chunks_over_limit"]:
         raise ValueError(
-            "Some chunks exceed the 512-token limit. "
-            "Reduce chunk size before indexing."
+            f"Some chunks exceed the configured token limit. "
+            f"Chunk indexes: {usage['chunks_over_limit'][:10]}"
         )
 
     all_embeddings = []
 
-    for start in range(0, len(prepared_texts), batch_size):
+    # Process documents in batches
+    for start in range(0, len(texts), batch_size):
 
-        batch = prepared_texts[start:start + batch_size]
+        end = min(start + batch_size, len(texts))
+        batch = texts[start:end]
 
         response = client.embeddings.create(
             model=MODEL_NAME,
@@ -220,60 +201,46 @@ def embed_documents(texts, batch_size=BATCH_SIZE):
             encoding_format="float"
         )
 
-        # Preserve original input order
-        batch_embeddings = [
-            item.embedding
-            for item in sorted(
-                response.data,
-                key=lambda item: item.index
-            )
-        ]
-
-        all_embeddings.extend(batch_embeddings)
-
-        print(
-            f"Embedded "
-            f"{min(start + batch_size, len(prepared_texts))}"
-            f"/{len(prepared_texts)}"
+        # Preserve original order
+        batch_embeddings = sorted(
+            response.data,
+            key=lambda item: item.index
         )
+
+        all_embeddings.extend([
+            item.embedding for item in batch_embeddings
+        ])
+
+        print(f"Embedded {end}/{len(texts)}")
 
     return all_embeddings
 
 
 def embed_question(question):
     """
-    Convert a user query into a Multilingual-E5 embedding.
+    Generate query embedding using Qwen3.
 
-    E5 requires the query: prefix for questions.
+    Adds a retrieval instruction to the question.
     """
-
-    if not question or not question.strip():
-
-        raise ValueError(
-            "Question cannot be empty."
-        )
 
     client = load_model()
 
-    # Add E5 query prefix
-    prepared_question = QUERY_PREFIX + question
+    formatted_question = QUERY_INSTRUCTION + question
 
-    usage = count_tokens(prepared_question)
+    # Count approximate query tokens
+    usage = count_tokens([formatted_question])
 
-    print(
-        f"Query embedding tokens: "
-        f"{usage['total_tokens']}"
-    )
+    query_tokens = usage["tokens_per_text"][0]
 
-    if usage["chunks_over_limit"] > 0:
-
+    if query_tokens > MAX_INPUT_TOKENS:
         raise ValueError(
-            "Question exceeds the 512-token limit."
+            f"Question exceeds the configured token limit. "
+            f"Approximate tokens: {query_tokens}"
         )
 
     response = client.embeddings.create(
         model=MODEL_NAME,
-        input=prepared_question,
+        input=formatted_question,
         encoding_format="float"
     )
 
