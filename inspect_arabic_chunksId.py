@@ -2,7 +2,7 @@ from pathlib import Path
 from vectoredb import get_all_chunks
 
 chunks = get_all_chunks(
-    source="Building the Future Egypt’s Political and Social Achievements in 2024 and the Road to 2025.pdf"
+    source="032_NLP_Resolving_Gendered_Ambiguous_Pronouns_with_BERT.pdf"
 )
 
 output_path = Path("all_chunks.txt")

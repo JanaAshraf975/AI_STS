@@ -4,9 +4,13 @@ import hashlib
 
 from embedding import embed_documents, embed_question
 
+
 DB_PATH = "./chroma_db"
+
 COLLECTION = "docs"
 SUMMARY_COLLECTION = "pdf_summaries"
+
+CANDIDATE_MULTIPLIER = 10
 
 _client = None
 
@@ -34,26 +38,47 @@ def get_collection(collection_name=COLLECTION, reset=False):
         metadata={"hnsw:space": "cosine"}
     )
 
+
 def get_summary_collection():
     client = _get_client()
 
     return client.get_or_create_collection(
         name=SUMMARY_COLLECTION,
-        metadata={"hnsw:space": "cosine"},
+        metadata={"hnsw:space": "cosine"}
     )
 
 
-def index_chunks(chunks, reset=False, batch=256, collection_name=COLLECTION):
+def index_chunks(
+    chunks,
+    reset=False,
+    batch=256,
+    collection_name=COLLECTION
+):
+    if not chunks:
+        print("No chunks to index.")
+        return
+
     collection = get_collection(
         collection_name=collection_name,
         reset=reset
     )
 
-    for start in range(0, len(chunks), batch):
+    total = len(chunks)
+
+    for start in range(0, total, batch):
+
         batch_chunks = chunks[start:start + batch]
 
-        ids = [chunk["id"] for chunk in batch_chunks]
-        documents = [chunk["text"] for chunk in batch_chunks]
+        ids = [
+            chunk["id"]
+            for chunk in batch_chunks
+        ]
+
+        documents = [
+            chunk["text"]
+            for chunk in batch_chunks
+        ]
+
         metadatas = [
             {
                 "source": chunk["source"],
@@ -71,10 +96,17 @@ def index_chunks(chunks, reset=False, batch=256, collection_name=COLLECTION):
             embeddings=embeddings
         )
 
-    print(f"Indexed {len(chunks)} chunks in '{collection_name}'")
+        print(
+            f"Indexed {min(start + batch, total)}/{total}"
+        )
+
+    print(
+        f"Successfully indexed {total} chunks "
+        f"in '{collection_name}'"
+    )
+
 
 def save_summary(source, summary):
-    """Save or update one final summary for a PDF."""
 
     if not summary or not summary.strip():
         return False
@@ -85,24 +117,25 @@ def save_summary(source, summary):
         source.encode("utf-8")
     ).hexdigest()
 
+    embeddings = embed_documents([summary])
+
     collection.upsert(
         ids=[summary_id],
         documents=[summary],
-        embeddings=embed_documents([summary]),
-        metadatas=[{"source": source}],
+        embeddings=embeddings,
+        metadatas=[{"source": source}]
     )
 
     return True
 
 
 def get_summary(source):
-    """Retrieve the saved summary of one PDF."""
 
     collection = get_summary_collection()
 
     result = collection.get(
         where={"source": source},
-        include=["documents", "metadatas"],
+        include=["documents", "metadatas"]
     )
 
     if not result["ids"]:
@@ -110,77 +143,152 @@ def get_summary(source):
 
     return {
         "source": result["metadatas"][0]["source"],
-        "text": result["documents"][0],
+        "text": result["documents"][0]
     }
 
 
 def search(
     question,
-    k=5,
+    k=3,
     source=None,
     collection_name=COLLECTION,
-    threshold=0.65
+    threshold=0.30,
+    candidate_multiplier=CANDIDATE_MULTIPLIER
 ):
-    collection = get_collection(collection_name=collection_name)
+    """
+    Semantic search using OpenAI Embeddings and Cosine Similarity.
+
+    1. Embed the question.
+    2. Retrieve more candidates than k.
+    3. Convert cosine distance to similarity.
+    4. Apply similarity threshold.
+    5. Remove duplicate chunks.
+    6. Sort by similarity score.
+    7. Return top k results.
+    """
+
+    if not question or not question.strip() or k <= 0:
+        return []
+
+    collection = get_collection(
+        collection_name=collection_name
+    )
+
+    total_count = collection.count()
+
+    if total_count == 0:
+        return []
 
     query_embedding = embed_question(question)
 
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=k,
-        where={"source": source} if source else None
+    candidate_k = min(
+        max(k * candidate_multiplier, 20),
+        total_count
     )
 
+    query_args = {
+        "query_embeddings": [query_embedding],
+        "n_results": candidate_k,
+        "include": [
+            "documents",
+            "metadatas",
+            "distances"
+        ]
+    }
+
+    if source:
+        query_args["where"] = {"source": source}
+
+    results = collection.query(**query_args)
+
+    if not results["ids"] or not results["ids"][0]:
+        return []
+
+    ids = results["ids"][0]
+    documents = results["documents"][0]
+    metadatas = results["metadatas"][0]
+    distances = results["distances"][0]
+
     output = []
+    seen_ids = set()
 
-    for i in range(len(results["ids"][0])):
+    for i in range(len(ids)):
 
-        similarity = 1 - results["distances"][0][i]
+        chunk_id = ids[i]
 
-        # Ignore chunks below the similarity threshold
+        if chunk_id in seen_ids:
+            continue
+
+        similarity = 1.0 - float(distances[i])
+
         if similarity < threshold:
             continue
 
+        metadata = metadatas[i] or {}
+
         output.append({
-            "id": results["ids"][0][i],
-            "text": results["documents"][0][i],
-            "source": results["metadatas"][0][i]["source"],
-            "page": results["metadatas"][0][i]["page"],
+            "id": chunk_id,
+            "text": documents[i],
+            "source": metadata.get("source"),
+            "page": metadata.get("page"),
             "score": similarity
         })
 
-    return output
+        seen_ids.add(chunk_id)
+
+    output.sort(
+        key=lambda item: item["score"],
+        reverse=True
+    )
+
+    return output[:k]
 
 
 def count():
     return get_collection().count()
 
 
-def get_all_chunks(batch_size=1000, source=None, collection_name=COLLECTION):
-    collection = get_collection(collection_name=collection_name)
+def get_all_chunks(
+    batch_size=1000,
+    source=None,
+    collection_name=COLLECTION
+):
+
+    collection = get_collection(
+        collection_name=collection_name
+    )
 
     all_chunks = []
     offset = 0
 
     while True:
-        res = collection.get(
-            limit=batch_size,
-            offset=offset,
-            where={"source": source} if source else None,
-            include=["documents", "metadatas"]
-        )
+
+        get_args = {
+            "limit": batch_size,
+            "offset": offset,
+            "include": [
+                "documents",
+                "metadatas"
+            ]
+        }
+
+        if source:
+            get_args["where"] = {"source": source}
+
+        res = collection.get(**get_args)
 
         if not res["ids"]:
             break
 
         for i in range(len(res["ids"])):
-            metadata = res["metadatas"][i]
+
+            metadata = res["metadatas"][i] or {}
 
             all_chunks.append({
                 "id": res["ids"][i],
                 "text": res["documents"][i],
-                "source": metadata["source"],
-                "page": metadata["page"]
+                "source": metadata.get("source"),
+                "page": metadata.get("page")
             })
 
         offset += len(res["ids"])
